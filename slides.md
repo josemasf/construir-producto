@@ -1,10 +1,11 @@
 ---
 theme: default
 layout: cover
+background: /images/cover-producto.png
 title: "De escribir código a construir producto"
 info: |
   Guion detallado para ponencia técnica en Slidev.
-class: text-center
+class: text-left
 transition: slide-left
 mdc: true
 ---
@@ -60,7 +61,9 @@ Construir es necesario. Pero construir sin aprender puede convertirse en una for
 -->
 
 ---
-layout: default
+layout: cover
+background: /images/progreso-visible.png
+class: text-right
 ---
 
 # La trampa del progreso visible
@@ -214,7 +217,8 @@ No hace falta convertirnos en Product Managers, pero sí necesitamos criterio de
 -->
 
 ---
-layout: default
+layout: cover
+background: /images/feature-peligrosa.png
 ---
 
 # La feature más peligrosa
