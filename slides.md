@@ -286,16 +286,22 @@ El usuario convierte el juguete técnico en algo que tiene consecuencias. Aunque
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # El usuario rompe nuestras fantasías
+
+::left::
 
 ## Usa el sistema como necesita, no como nosotros imaginamos.
 
 Lo que tú considerabas secundario puede ser crítico.  
 Lo que tú querías enseñar puede no importarle a nadie.  
 Lo que tú pensabas que estaba claro puede ser invisible.
+
+::right::
+
+<img class="side-asset" src="/images/usuario-realidad-side-right.png" alt="Una persona sigue un camino distinto del flujo previsto en un mapa de software" />
 
 <!--
 Notas del ponente:
@@ -343,10 +349,12 @@ layout: section
 ## La decisión más madura no siempre añade código.
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # La madurez técnica también consiste en frenar
+
+::left::
 
 No todo problema necesita código nuevo.
 
@@ -358,6 +366,10 @@ A veces necesitas:
 - Hacer una prueba manual.
 - Medir antes de escalar.
 - Decidir que no compensa.
+
+::right::
+
+<img class="side-asset" src="/images/madurez-frenar-side-right.png" alt="Una persona frena una carretilla cargada de bloques de software" />
 
 <!--
 Notas del ponente:
@@ -391,12 +403,14 @@ Hay deuda técnica real que sí hay que abordar. Pero incluso ahí deberíamos e
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # Experimentos baratos,
 
 # aprendizaje rápido
+
+::left::
 
 Antes de construir la versión “buena”, prueba la versión que aprende más rápido.
 
@@ -405,6 +419,10 @@ Antes de construir la versión “buena”, prueba la versión que aprende más 
 - Prototipo antes que arquitectura definitiva.
 - Beta cerrada antes que lanzamiento público.
 - Métrica concreta antes que dashboard universal.
+
+::right::
+
+<img class="side-asset" src="/images/experimentos-baratos-side-right.png" alt="Un experimento manual ligero frente a una plataforma compleja aún en construcción" />
 
 <!--
 Notas del ponente:
@@ -738,12 +756,14 @@ Construir software es una habilidad poderosa. Precisamente por eso conviene usar
 .slidev-layout ul { margin-top: 1.2rem; }
 .slidev-layout li::marker { color: var(--slidev-theme-primary); }
 
-.slidev-layout.default {
+.slidev-layout.default,
+.slidev-layout.two-cols-header {
   padding: 3.2rem 4.5rem;
   background-image: radial-gradient(circle at 92% 8%, rgba(249, 115, 22, .13), transparent 27%), linear-gradient(135deg, #0b1120, #111827);
 }
 
-.slidev-layout.default::after {
+.slidev-layout.default::after,
+.slidev-layout.two-cols-header::after {
   content: "";
   position: absolute;
   right: 4.5rem;
@@ -781,6 +801,7 @@ Construir software es una habilidad poderosa. Precisamente por eso conviene usar
   padding: 3.2rem 4.5rem;
   isolation: isolate;
   background-color: #0b1120;
+  background-position: center;
 }
 
 .slidev-layout.cover::before {
@@ -791,10 +812,20 @@ Construir software es una habilidad poderosa. Precisamente por eso conviene usar
   background: linear-gradient(90deg, rgba(5, 10, 20, .88) 0%, rgba(5, 10, 20, .54) 57%, rgba(5, 10, 20, .22) 100%);
 }
 
-.slidev-layout.cover h1 { font-size: 3.55rem; text-wrap: balance; }
+.slidev-layout.cover h1 { font-size: 3.55rem; max-width: 14ch; text-wrap: balance; }
 .slidev-layout.cover h2 { color: #e2e8f0; max-width: 34ch; }
 .slidev-layout.cover p { max-width: 45ch; }
-.slidev-layout.cover.text-right::before { background: linear-gradient(270deg, rgba(5, 10, 20, .88) 0%, rgba(5, 10, 20, .48) 58%, rgba(5, 10, 20, .18) 100%); }
+.slidev-layout.cover.text-right { background-position: left center; }
+.slidev-layout.cover.text-right > * { margin-left: auto; text-align: right; }
+.slidev-layout.cover.text-right::before { background: linear-gradient(270deg, rgba(5, 10, 20, .92) 0%, rgba(5, 10, 20, .7) 48%, rgba(5, 10, 20, .12) 100%); }
+
+.side-asset {
+  display: block;
+  width: min(100%, 19rem);
+  max-height: 52vh;
+  margin: 0 auto;
+  object-fit: contain;
+}
 
 .slidev-layout.end {
   padding: 3.2rem 4.5rem;

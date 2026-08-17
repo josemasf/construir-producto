@@ -282,32 +282,29 @@ No repitas literalmente el contenido visible de la slide.
 
 ## Uso del agente visual
 
-Cuando una diapositiva necesite una imagen, ilustración o recurso conceptual, invoca al agente `Visual Asset Prompt Designer`.
+Cuando delegues en `Visual Asset Prompt Designer`, proporciona siempre:
 
-Antes de delegar define:
+- objetivo narrativo de la diapositiva;
+- idea que el público debe recordar;
+- layout previsto de Slidev;
+- tipo de recurso visual (`background-full`, `background-safe-left`,
+  `background-safe-right`, `side-asset-left`, `side-asset-right`, `inline-support`);
+- orientación o relación de aspecto;
+- lado donde estará el texto visible;
+- espacio seguro que debe quedar limpio;
+- si el recurso debe llevar fondo completo o canal alfa;
+- nivel de protagonismo de la imagen;
+- tono y lenguaje visual del deck.
 
-- la idea que el público debe recordar;
-- la metáfora visual;
-- el elemento protagonista;
-- la diapositiva y su layout;
-- la orientación o relación de aspecto;
-- el espacio seguro que debe quedar libre para títulos o texto;
-- la audiencia;
-- el tono de la presentación;
-- cómo encaja el recurso en el lenguaje visual del deck.
-
-Pide al agente visual:
+Pide como salida mínima:
 
 - prompt principal;
 - prompt negativo;
-- variantes necesarias;
 - alt text;
 - recomendaciones de recorte;
-- checklist de publicación.
-
-El agente visual no debe editar `slides.md` ni decidir la composición final de la diapositiva.
-
-Tú mantienes el control de narrativa, layout, texto y composición.
+- recomendación de nombre de archivo;
+- recomendación de integración en Slidev;
+- checklist de validación visual.
 
 ## Accesibilidad
 
@@ -393,6 +390,41 @@ Evalúa sus observaciones.
 No apliques automáticamente todas sus sugerencias: corrige únicamente aquellas que mejoren realmente la presentación y respeten la intención original.
 
 Después de aplicar correcciones relevantes, vuelve a ejecutar las validaciones afectadas.
+
+## Estrategia visual específica para Slidev
+
+Cuando una diapositiva necesite un recurso visual, decide primero qué papel cumple
+esa imagen dentro de la composición de la slide.
+
+Tipos de recurso visual permitidos:
+
+- `background-full`: imagen protagonista a pantalla completa para `cover`, `section`,
+  `statement` o slides muy visuales.
+- `background-safe-left`: fondo 16:9 con el contenido visual concentrado a la derecha
+  y zona segura limpia a la izquierda para superponer título o texto.
+- `background-safe-right`: fondo 16:9 con el contenido visual concentrado a la izquierda
+  y zona segura limpia a la derecha para superponer título o texto.
+- `side-asset-left`: ilustración o recurso conceptual para ocupar la parte izquierda
+  de una slide con layout `image-left`, `two-cols` o equivalente.
+- `side-asset-right`: ilustración o recurso conceptual para ocupar la parte derecha
+  de una slide con layout `image-right`, `two-cols` o equivalente.
+- `inline-support`: recurso pequeño de apoyo dentro de una composición más textual.
+
+Decide el tipo de recurso según la función de la slide:
+
+- usa `background-full` cuando la imagen sea la idea dominante;
+- usa `background-safe-left` o `background-safe-right` cuando haya texto superpuesto;
+- usa `side-asset-left` o `side-asset-right` cuando imagen y texto compartan protagonismo;
+- usa `inline-support` cuando la imagen solo refuerce una idea ya explicada.
+
+No pidas una imagen genérica. Pide siempre:
+- tipo de asset;
+- orientación o relación de aspecto;
+- si necesita transparencia;
+- lado que debe quedar libre;
+- densidad visual;
+- recorte seguro;
+- rol narrativo de la imagen en la slide.
 
 ## Definition of Done
 
