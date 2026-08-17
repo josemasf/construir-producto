@@ -556,10 +556,12 @@ layout: section
 ## El criterio de producto no reemplaza a la ingeniería: le da dirección.
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # Cambia la forma de priorizar
+
+::left::
 
 Antes:
 
@@ -568,6 +570,14 @@ Antes:
 Después:
 
 > ¿Qué necesitamos aprender o mejorar ahora?
+
+::right::
+
+<div style="display:grid; gap:1rem; padding:1.5rem 1rem" aria-label="La prioridad cambia de construir funcionalidades a aprender o mejorar">
+  <div style="padding:1.25rem; border:1px solid rgba(255,255,255,.2); border-radius:.85rem; background:rgba(100,116,139,.18)"><small style="display:block; color:#cbd5e1">ANTES</small><strong style="display:block; margin:.35rem 0; font-size:1.55rem">Más cosas</strong><small style="color:#cbd5e1">features · backlog · entrega</small></div>
+  <div style="color:#f97316; font-size:2rem; text-align:center">↓</div>
+  <div style="padding:1.25rem; border:1px solid rgba(249,115,22,.8); border-radius:.85rem; background:rgba(249,115,22,.18)"><small style="display:block; color:#fed7aa">DESPUÉS</small><strong style="display:block; margin:.35rem 0; font-size:1.55rem">Más criterio</strong><small style="color:#fed7aa">aprendizaje · impacto · riesgo</small></div>
+</div>
 
 <!--
 Notas del ponente:
@@ -850,6 +860,20 @@ Construir software es una habilidad poderosa. Precisamente por eso conviene usar
   margin: .5rem auto 1.5rem;
   object-fit: contain;
 }
+
+.side-asset-on-paper {
+  background: #f8fafc;
+  border-radius: .8rem;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .28);
+}
+
+.priority-shift { display: grid; gap: .7rem; align-content: center; height: 100%; padding: 1rem; }
+.priority-card { padding: 1.25rem; border-radius: .85rem; border: 1px solid rgba(255, 255, 255, .18); }
+.priority-card span, .priority-card i { display: block; color: var(--muted); font-size: .8rem; font-style: normal; }
+.priority-card strong { display: block; margin: .3rem 0; font-size: 1.55rem; }
+.priority-card-old { background: rgba(100, 116, 139, .18); }
+.priority-card-new { background: rgba(249, 115, 22, .18); border-color: rgba(249, 115, 22, .7); }
+.priority-arrow { color: var(--slidev-theme-primary); font-size: 2rem; line-height: 1; text-align: center; }
 
 .slidev-layout.end {
   padding: 3.2rem 4.5rem;
