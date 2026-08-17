@@ -301,7 +301,7 @@ Lo que tú pensabas que estaba claro puede ser invisible.
 
 ::right::
 
-<img class="side-asset" src="/images/usuario-realidad-side-right.png" alt="Una persona sigue un camino distinto del flujo previsto en un mapa de software" />
+<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/usuario-realidad-side-right.png" alt="Una persona sigue un camino distinto del flujo previsto en un mapa de software" />
 
 <!--
 Notas del ponente:
@@ -369,7 +369,7 @@ A veces necesitas:
 
 ::right::
 
-<img class="side-asset" src="/images/madurez-frenar-side-right.png" alt="Una persona frena una carretilla cargada de bloques de software" />
+<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/madurez-frenar-side-right.png" alt="Una persona frena una carretilla cargada de bloques de software" />
 
 <!--
 Notas del ponente:
@@ -422,7 +422,7 @@ Antes de construir la versión “buena”, prueba la versión que aprende más 
 
 ::right::
 
-<img class="side-asset" src="/images/experimentos-baratos-side-right.png" alt="Un experimento manual ligero frente a una plataforma compleja aún en construcción" />
+<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/experimentos-baratos-side-right.png" alt="Un experimento manual ligero frente a una plataforma compleja aún en construcción" />
 
 <!--
 Notas del ponente:
@@ -821,9 +821,9 @@ Construir software es una habilidad poderosa. Precisamente por eso conviene usar
 
 .side-asset {
   display: block;
-  width: min(100%, 19rem);
-  max-height: 52vh;
-  margin: 0 auto;
+  max-width: 100%;
+  max-height: 48vh;
+  margin: .5rem auto 1.5rem;
   object-fit: contain;
 }
 
