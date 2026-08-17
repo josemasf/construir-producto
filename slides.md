@@ -8,11 +8,14 @@ info: |
 class: text-left
 transition: slide-left
 mdc: true
+colorSchema: dark
 ---
 
-# De escribir código a construir producto
+# De escribir código
 
-## Por qué desarrollar más no siempre significa avanzar
+# a construir producto
+
+## Por qué desarrollar más no siempre es avanzar
 
 José María Santos  
 Tech Lead
@@ -29,7 +32,11 @@ No vengo a decir que el código no importe. Vengo a decir que el código importa
 layout: statement
 ---
 
-# Un producto técnicamente impecable que nadie necesita sigue siendo algo que nadie necesita.
+# Un producto técnicamente impecable
+
+# que nadie necesita sigue siendo
+
+# algo que nadie necesita.
 
 <!--
 Notas del ponente:
@@ -43,14 +50,14 @@ Esta frase duele un poco, sobre todo a quienes disfrutamos construyendo. Pero es
 layout: default
 ---
 
-# El problema no es desarrollar
+# El problema no es desarrollar.
 
-El problema es pensar que desarrollar siempre equivale a avanzar.
+## El problema es confundir desarrollo con avance.
 
-- Más features no siempre significan más valor.
-- Más arquitectura no siempre significa más futuro.
-- Más automatización no siempre significa más foco.
-- Más IA no siempre significa mejor criterio.
+- Más funcionalidades ≠ más valor.
+- Más arquitectura ≠ más futuro.
+- Más automatización ≠ más foco.
+- Más IA ≠ mejor criterio.
 
 <!--
 Notas del ponente:
@@ -68,8 +75,9 @@ class: text-right
 
 # La trampa del progreso visible
 
-Desarrollar se ve.  
-Medir, escuchar, borrar, decidir y renunciar se ve bastante menos.
+## Desarrollar se ve.
+
+Medir, escuchar, borrar, decidir y renunciar se ve mucho menos.
 
 Por eso muchas veces premiamos lo que parece avance, aunque no reduzca ninguna incertidumbre importante.
 
@@ -89,13 +97,15 @@ Y luego lanzar la pregunta:
 layout: section
 ---
 
-# 1. Una web no es un producto
+# 1 · Una web no es un producto
+
+## Construir algo no demuestra todavía que alguien lo necesite.
 
 ---
 layout: default
 ---
 
-# Tres conceptos que conviene separar
+# Tres cosas que conviene separar
 
 ## Web
 
@@ -123,11 +133,11 @@ Un producto no tiene por qué ser de pago desde el primer día, pero sí debe te
 layout: default
 ---
 
-# La web responde a una pregunta técnica
+# Una web responde a una pregunta técnica
 
 ¿Soy capaz de construir esto?
 
-# El producto responde a otra pregunta
+# Un producto responde a otra
 
 ¿Tiene esto suficiente valor para alguien?
 
@@ -144,7 +154,7 @@ El problema es que podemos pasar meses respondiendo muy bien a la pregunta equiv
 layout: default
 ---
 
-# La evolución natural no está garantizada
+# La evolución no es automática
 
 ```mermaid
 flowchart LR
@@ -170,15 +180,19 @@ No dramatizar: quedarse en servicio no es un fracaso. El problema es no verlo.
 layout: section
 ---
 
-# 2. El espejismo de seguir construyendo
+# 2 · El espejismo de seguir construyendo
+
+## Cuando no sabemos qué hacer, solemos hacer más de lo que ya dominamos.
 
 ---
 layout: default
 ---
 
-# Cuando algo no despega, solemos hacer lo que sabemos hacer
+# Cuando algo no despega,
 
-Construir más.
+# hacemos lo que sabemos hacer
+
+## Construir más.
 
 - Otra funcionalidad.
 - Otro rediseño.
@@ -200,7 +214,7 @@ La idea es que construir más nos da sensación de control, porque es el terreno
 layout: default
 ---
 
-# Pero algunas preguntas no se contestan programando
+# Hay preguntas que no se contestan programando
 
 - ¿Quién tiene realmente este problema?
 - ¿Con qué frecuencia lo sufre?
@@ -243,15 +257,17 @@ A veces una feature no es una solución. Es una forma elegante de aplazar una de
 layout: section
 ---
 
-# 3. Cuando aparecen usuarios, cambia el juego
+# 3 · Cuando aparecen usuarios, cambia el juego
+
+## El juguete técnico empieza a tener consecuencias.
 
 ---
 layout: default
 ---
 
-# Tener usuarios no convierte algo en producto
+# Tener usuarios no lo convierte en producto
 
-Pero sí cambia tus responsabilidades.
+## Pero sí cambia tus responsabilidades.
 
 - Ya no solo construyes.
 - Ahora mantienes.
@@ -275,7 +291,7 @@ layout: default
 
 # El usuario rompe nuestras fantasías
 
-Porque usa el sistema como necesita, no como nosotros imaginamos.
+## Usa el sistema como necesita, no como nosotros imaginamos.
 
 Lo que tú considerabas secundario puede ser crítico.  
 Lo que tú querías enseñar puede no importarle a nadie.  
@@ -297,7 +313,7 @@ layout: default
 
 # La analítica no sirve para decorar dashboards
 
-Sirve para tomar decisiones incómodas.
+## Sirve para tomar decisiones incómodas.
 
 - Qué se usa.
 - Qué no se usa.
@@ -322,7 +338,9 @@ Un dashboard que no cambia decisiones es un salvapantallas caro.
 layout: section
 ---
 
-# 4. Aprender a no construir
+# 4 · Aprender a no construir
+
+## La decisión más madura no siempre añade código.
 
 ---
 layout: default
@@ -353,7 +371,7 @@ Como perfiles técnicos solemos defender la calidad construyendo mejor. Pero tam
 layout: default
 ---
 
-# Pregunta antes de desarrollar
+# Antes de desarrollar, pregunta
 
 ¿Qué incertidumbre reduce esta funcionalidad?
 
@@ -376,7 +394,9 @@ Hay deuda técnica real que sí hay que abordar. Pero incluso ahí deberíamos e
 layout: default
 ---
 
-# Experimentos baratos
+# Experimentos baratos,
+
+# aprendizaje rápido
 
 Antes de construir la versión “buena”, prueba la versión que aprende más rápido.
 
@@ -397,7 +417,8 @@ Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerl
 -->
 
 ---
-layout: default
+layout: cover
+background: /images/coste-feature.png
 ---
 
 # El coste oculto de una feature
@@ -425,7 +446,9 @@ La funcionalidad que nadie usa no es gratis. Es un okupa en tu base de código.
 layout: section
 ---
 
-# 5. Saber cerrar también es ingeniería
+# 5 · Saber cerrar también es ingeniería
+
+## No todo aprendizaje tiene que convertirse en producto.
 
 ---
 layout: default
@@ -492,7 +515,9 @@ No todo proyecto tiene que acabar en producto. Algunos proyectos cumplen su func
 layout: section
 ---
 
-# 6. Qué cambia cuando piensas como producto
+# 6 · Qué cambia cuando piensas como producto
+
+## El criterio de producto no reemplaza a la ingeniería: le da dirección.
 
 ---
 layout: default
@@ -572,7 +597,7 @@ La IA ayuda en las tres fases, pero no sustituye el criterio.
 layout: default
 ---
 
-# Research → Plan → Implement
+# Research → Plan → Implement → Measure
 
 ```mermaid
 flowchart LR
@@ -614,15 +639,21 @@ Measure:
 layout: section
 ---
 
-# 7. Cierre
+# 7 · Cierre
+
+## Construir bien también es saber qué no construir.
 
 ---
 layout: statement
 ---
 
-# La pregunta no es “¿qué más podemos desarrollar?”
+# La pregunta no es
 
-# La pregunta es “¿qué decisión estamos evitando?”
+# “¿qué más podemos desarrollar?”
+
+# La pregunta es
+
+# “¿qué decisión estamos evitando?”
 
 <!--
 Notas del ponente:
@@ -638,11 +669,11 @@ layout: default
 # Ideas para llevarse
 
 - Una web que funciona no es necesariamente un producto.
-- Tener usuarios cambia tus responsabilidades, no garantiza sostenibilidad.
-- Desarrollar más puede ser una forma elegante de aplazar decisiones.
+- Tener usuarios cambia tus responsabilidades; no garantiza sostenibilidad.
+- Desarrollar más puede aplazar una decisión.
 - La buena ingeniería también elimina, simplifica y frena.
-- Cerrar un proyecto puede ser una decisión madura.
-- La IA acelera, pero el criterio sigue siendo humano.
+- Cerrar puede ser una decisión madura.
+- La IA acelera; el criterio sigue siendo humano.
 
 <!--
 Notas del ponente:
@@ -673,3 +704,109 @@ Cerrar con pregunta, no con moraleja excesiva.
 Posible frase final:
 Construir software es una habilidad poderosa. Precisamente por eso conviene usarla con criterio.
 -->
+
+<style>
+/* Dirección visual: editorial sobria, con el naranja como señal de decisión. */
+:root {
+  --slidev-theme-primary: #f97316;
+  --ink: #f8fafc;
+  --muted: #cbd5e1;
+  --surface: #111827;
+}
+
+.slidev-layout {
+  color: var(--ink);
+  background: #0b1120;
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.03;
+}
+
+.slidev-layout h1 { font-size: 2.85rem; max-width: 17ch; }
+.slidev-layout h2 { color: var(--muted); font-size: 1.24rem; font-weight: 500; letter-spacing: -0.02em; }
+.slidev-layout p, .slidev-layout li { font-size: 1.08rem; line-height: 1.55; }
+.slidev-layout strong { color: #fff7ed; }
+.slidev-layout ul { margin-top: 1.2rem; }
+.slidev-layout li::marker { color: var(--slidev-theme-primary); }
+
+.slidev-layout.default {
+  padding: 3.2rem 4.5rem;
+  background-image: radial-gradient(circle at 92% 8%, rgba(249, 115, 22, .13), transparent 27%), linear-gradient(135deg, #0b1120, #111827);
+}
+
+.slidev-layout.default::after {
+  content: "";
+  position: absolute;
+  right: 4.5rem;
+  top: 3.55rem;
+  width: 2.4rem;
+  height: 3px;
+  background: var(--slidev-theme-primary);
+}
+
+.slidev-layout.section {
+  padding: 3.2rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f97316;
+  color: #19100a;
+}
+
+.slidev-layout.section h1,
+.slidev-layout.section h2 { color: #19100a; max-width: 19ch; }
+.slidev-layout.section h1 { font-size: 3.6rem; }
+.slidev-layout.section h2 { margin-top: 1.2rem; font-family: "Aptos", "Segoe UI", sans-serif; font-size: 1.25rem; }
+
+.slidev-layout.statement {
+  padding: 3.2rem 4.5rem;
+  display: flex;
+  align-items: center;
+  background: #fff7ed;
+}
+
+.slidev-layout.statement h1 { color: #1c1917; font-size: 3.25rem; max-width: 22ch; }
+.slidev-layout.statement h1::before { content: "—"; color: #ea580c; display: block; margin-bottom: .65rem; }
+
+.slidev-layout.cover {
+  padding: 3.2rem 4.5rem;
+  isolation: isolate;
+  background-color: #0b1120;
+}
+
+.slidev-layout.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(5, 10, 20, .88) 0%, rgba(5, 10, 20, .54) 57%, rgba(5, 10, 20, .22) 100%);
+}
+
+.slidev-layout.cover h1 { font-size: 3.55rem; text-wrap: balance; }
+.slidev-layout.cover h2 { color: #e2e8f0; max-width: 34ch; }
+.slidev-layout.cover p { max-width: 45ch; }
+.slidev-layout.cover.text-right::before { background: linear-gradient(270deg, rgba(5, 10, 20, .88) 0%, rgba(5, 10, 20, .48) 58%, rgba(5, 10, 20, .18) 100%); }
+
+.slidev-layout.end {
+  padding: 3.2rem 4.5rem;
+  background: #f97316;
+  color: #1c1917;
+}
+
+.slidev-layout.end h1, .slidev-layout.end h2 { color: #1c1917; }
+.slidev-layout.end h1 { font-size: 4.1rem; }
+.slidev-layout.end h2 { margin-top: 1.5rem; max-width: 30ch; }
+.slidev-layout.end p { margin-top: 2rem; font-weight: 600; }
+
+.mermaid { margin-top: 1.8rem; }
+.mermaid svg { max-width: 100%; }
+</style>

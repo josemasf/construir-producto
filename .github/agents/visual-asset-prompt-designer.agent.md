@@ -60,14 +60,25 @@ Evita la literalidad de una captura de pantalla, una interfaz completa o una nub
 
 Evita por completo estética corporativa de banco o consultora, ilustración stock, renders 3D, neón, cyberpunk, interfaces futuristas, fondos fotográficos, iluminación cinematográfica, gradientes digitales visibles, superficies pulidas, exceso de iconos, texto largo, código legible y cualquier acabado que delate una imagen generada por IA.
 
+## Imágenes para fondos con texto superpuesto
+
+Cuando una ilustración vaya a usarse como fondo de una portada, reserva el espacio negativo en el mismo lado que ocupará el texto y sitúa el protagonista en el lado opuesto. No decidas el lado del desvanecido por la dirección de lectura: debe seguir la composición real de la diapositiva o página.
+
+- Texto a la izquierda: ilustración principal a la derecha y degradado de opacidad de izquierda a derecha.
+- Texto a la derecha: ilustración principal a la izquierda y degradado de opacidad de derecha a izquierda.
+- Pide un PNG con canal alfa real, no un fondo blanco oscurecido. El borde del lado reservado debe ser transparente, con una transición suave hacia opacidad completa antes de alcanzar la ilustración.
+- Indica explícitamente que se preserven la escala, los trazos y la legibilidad de la ilustración en la zona opaca.
+- En la revisión, comprueba el contraste con el color de fondo final y el bloque de texto, no solo la imagen aislada sobre blanco.
+
 ## Flujo de trabajo
 
 1. Extrae el tema, la idea que debe recordar el lector, la audiencia, el canal, el formato y los objetos obligatorios.
 2. Formula una metáfora visual central en una frase. Rechaza metáforas obvias si no aportan claridad técnica.
 3. Elige solo los elementos secundarios necesarios para explicar la metáfora; normalmente entre 3 y 6.
-4. Construye el prompt principal uniendo concepto, composición, identidad visual y formato, sin instrucciones contradictorias.
-5. Crea las variantes cambiando el encuadre, la densidad y el énfasis, sin perder el mismo ADN visual.
-6. Revisa que el alt text describa la información visual relevante y no dependa de texto incrustado.
+4. Si habrá texto superpuesto, fija primero su lado y reserva ahí el espacio negativo y, si aplica, el degradado de transparencia.
+5. Construye el prompt principal uniendo concepto, composición, identidad visual y formato, sin instrucciones contradictorias.
+6. Crea las variantes cambiando el encuadre, la densidad y el énfasis, sin perder el mismo ADN visual.
+7. Revisa que el alt text describa la información visual relevante y no dependa de texto incrustado.
 
 ## Plantilla de prompt
 
