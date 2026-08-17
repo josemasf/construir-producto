@@ -13,7 +13,9 @@ colorSchema: dark
 
 # De escribir código
 
-# a construir producto
+# a construir
+
+# <span class="product-word">PRODUCTO</span>
 
 ## Por qué desarrollar más no siempre es avanzar
 
@@ -48,6 +50,7 @@ Esta frase duele un poco, sobre todo a quienes disfrutamos construyendo. Pero es
 
 ---
 layout: default
+class: compare-slide
 ---
 
 # El problema no es desarrollar.
@@ -105,19 +108,15 @@ layout: section
 layout: default
 ---
 
-# Tres cosas que conviene separar
+# No todo lo que funciona
 
-## Web
+# es un producto
 
-Algo que has construido y funciona técnicamente.
-
-## Servicio
-
-Algo que usan personas, aunque no necesariamente de forma recurrente.
-
-## Producto
-
-Algo que resuelve un problema con suficiente valor como para que alguien vuelva, dependa de ello o esté dispuesto a pagar.
+<div class="grid grid-cols-3 gap-4 mt-8 max-w-3xl">
+  <div class="min-h-40 p-5 border-t-2 border-t-[var(--build)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">01</span><strong class="block text-white text-3xl">Web</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Funciona técnicamente.</p></div>
+  <div class="min-h-40 p-5 border-t-2 border-t-[var(--evidence)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">02</span><strong class="block text-white text-3xl">Servicio</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Lo usan personas.</p></div>
+  <div class="min-h-40 p-5 border-t-2 border-t-[var(--decision)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">03</span><strong class="block text-white text-3xl">Producto</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Genera valor suficiente para volver.</p></div>
+</div>
 
 <!--
 Notas del ponente:
@@ -131,15 +130,16 @@ Un producto no tiene por qué ser de pago desde el primer día, pero sí debe te
 
 ---
 layout: default
+class: compare-slide
 ---
 
-# Una web responde a una pregunta técnica
+# La pregunta cambia
 
-¿Soy capaz de construir esto?
-
-# Un producto responde a otra
-
-¿Tiene esto suficiente valor para alguien?
+<div class="question-compare">
+  <div class="question-compare__web"><small>WEB</small><strong>¿Puedo construirlo?</strong></div>
+  <div class="question-compare__arrow">↓</div>
+  <div class="question-compare__product"><small>PRODUCTO</small><strong>¿Obtiene alguien suficiente valor?</strong></div>
+</div>
 
 <!--
 Notas del ponente:
@@ -152,18 +152,14 @@ El problema es que podemos pasar meses respondiendo muy bien a la pregunta equiv
 
 ---
 layout: default
+class: journey-slide
 ---
 
 # La evolución no es automática
 
-```mermaid
-flowchart LR
-  A[Idea] --> B[Web]
-  B --> C[Servicio]
-  C --> D[Producto]
-  C -. puede quedarse aquí .-> E[Servicio útil pero no sostenible]
-  B -. puede quedarse aquí .-> F[Proyecto técnicamente correcto]
-```
+<JourneyMap phase="product" />
+
+<p class="journey-caption">Puede quedarse en <strong>web correcta</strong>, convertirse en <strong>servicio útil</strong> o llegar a ser producto. La diferencia es la evidencia, no la intención.</p>
 
 <!--
 Notas del ponente:
@@ -186,21 +182,19 @@ layout: section
 
 ---
 layout: default
+class: sequence-slide
 ---
 
 # Cuando algo no despega,
 
 # hacemos lo que sabemos hacer
 
-## Construir más.
-
-- Otra funcionalidad.
-- Otro rediseño.
-- Otra integración.
-- Otro refactor.
-- Otro prompt.
-- Otro agente.
-- Otro dashboard.
+<div class="build-sequence">
+  <span v-click>OTRA FEATURE</span>
+  <span v-click>OTRO REFACTOR</span>
+  <span v-click>OTRO DASHBOARD</span>
+  <strong v-click>¿Pero qué hemos aprendido?</strong>
+</div>
 
 <!--
 Notas del ponente:
@@ -292,22 +286,13 @@ El usuario convierte el juguete técnico en algo que tiene consecuencias. Aunque
 -->
 
 ---
-layout: two-cols-header
+layout: default
+class: evidence-slide
 ---
 
 # El usuario rompe nuestras fantasías
 
-::left::
-
-## Usa el sistema como necesita, no como nosotros imaginamos.
-
-Lo que tú considerabas secundario puede ser crítico.  
-Lo que tú querías enseñar puede no importarle a nadie.  
-Lo que tú pensabas que estaba claro puede ser invisible.
-
-::right::
-
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/usuario-realidad-side-right.png" alt="Una persona sigue un camino distinto del flujo previsto en un mapa de software" />
+<EvidenceFlow belief="Diseñamos el flujo que parecía lógico." reality="Usa el sistema como necesita, no como imaginamos." learning="Lo secundario puede ser crítico; lo obvio puede ser invisible." />
 
 <!--
 Notas del ponente:
@@ -320,24 +305,13 @@ No inventar métricas. Hablar desde experiencia cualitativa.
 -->
 
 ---
-layout: two-cols-header
+layout: default
+class: evidence-slide
 ---
 
 # La analítica no sirve para decorar dashboards
 
-::left::
-
-## Sirve para tomar decisiones incómodas.
-
-- Qué se usa.
-- Qué no se usa.
-- Dónde se abandona.
-- Qué genera recurrencia.
-- Qué solo alimenta nuestro ego técnico.
-
-::right::
-
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/analitica-decisiones-side-right.png" alt="Una lupa destaca señales de uso relevantes frente a un dashboard secundario" />
+<EvidenceFlow belief="Llenamos un dashboard de métricas." reality="El uso real muestra adopción, abandono y recurrencia." learning="Una métrica solo importa si cambia una decisión." />
 
 <!--
 Notas del ponente:
@@ -393,13 +367,12 @@ Como perfiles técnicos solemos defender la calidad construyendo mejor. Pero tam
 
 ---
 layout: default
+class: decision-slide
 ---
 
-# Antes de desarrollar, pregunta
+# Antes de desarrollar
 
-¿Qué incertidumbre reduce esta funcionalidad?
-
-Si no reduce ninguna incertidumbre importante, quizá solo estamos añadiendo superficie de mantenimiento.
+<DecisionTree />
 
 <!--
 Notas del ponente:
@@ -447,15 +420,13 @@ Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerl
 -->
 
 ---
-layout: cover
-background: /images/coste-feature.png
+layout: default
+class: cost-slide
 ---
 
-# El coste oculto de una feature
+# El coste de una feature
 
-No es solo hacerla.
-
-Es mantenerla, probarla, documentarla, migrarla, explicarla, rediseñarla, soportarla y cargarla en la cabeza cada vez que tomas una decisión.
+<CostIceberg />
 
 <!--
 Notas del ponente:
@@ -647,17 +618,12 @@ La IA ayuda en las tres fases, pero no sustituye el criterio.
 
 ---
 layout: default
+class: loop-slide
 ---
 
-# Research → Plan → Implement → Measure
+# Todo desemboca aquí
 
-```mermaid
-flowchart LR
-  A[Research\nEntender problema] --> B[Plan\nDecidir enfoque]
-  B --> C[Implement\nConstruir con calidad]
-  C --> D[Measure\nAprender del uso]
-  D --> A
-```
+<ProductLoop />
 
 <!--
 Notas del ponente:
@@ -888,4 +854,43 @@ Construir software es una habilidad poderosa. Precisamente por eso conviene usar
 
 .mermaid { margin-top: 1.8rem; }
 .mermaid svg { max-width: 100%; }
+
+/* Los colores expresan el tipo de pensamiento, no solo decoran. */
+:root { --build: #5eead4; --evidence: #a78bfa; --decision: #fb923c; }
+.product-word { color: var(--slidev-theme-primary); font-size: 1.16em; letter-spacing: -.075em; }
+
+.slidev-layout.compare-slide::after { background: var(--build); }
+.slidev-layout.journey-slide::after { background: var(--build); }
+.slidev-layout.evidence-slide::after { background: var(--evidence); }
+.slidev-layout.decision-slide::after,
+.slidev-layout.cost-slide::after,
+.slidev-layout.sequence-slide::after { background: var(--decision); }
+.slidev-layout.loop-slide::after { background: var(--evidence); }
+
+.evolution-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; max-width: 52rem; }
+.evolution-cards > div { min-height: 10rem; padding: 1.15rem; border-top: 2px solid #334155; background: rgba(148, 163, 184, .07); }
+.evolution-cards > div:nth-child(1) { border-color: var(--build); }
+.evolution-cards > div:nth-child(2) { border-color: var(--evidence); }
+.evolution-cards > div:nth-child(3) { border-color: var(--decision); }
+.evolution-cards span { display: block; margin-bottom: 1rem; color: #94a3b8; font-size: .65rem; font-weight: 800; letter-spacing: .12em; }
+.evolution-cards strong { display: block; color: #fff; font-family: "Iowan Old Style", Georgia, serif; font-size: 1.75rem; letter-spacing: -.045em; }
+.evolution-cards p { margin: .35rem 0 0; color: var(--muted); font-size: .92rem; line-height: 1.3; }
+
+.question-compare { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; gap: 1.2rem; max-width: 55rem; margin-top: 2rem; }
+.question-compare > div:not(.question-compare__arrow) { display: grid; align-content: center; min-height: 12rem; padding: 1.5rem; border: 1px solid; }
+.question-compare small { display: block; margin-bottom: .8rem; font-size: .64rem; font-weight: 800; letter-spacing: .13em; }
+.question-compare strong { color: #fff; font-family: "Iowan Old Style", Georgia, serif; font-size: 2rem; letter-spacing: -.055em; line-height: 1.03; }
+.question-compare__web { border-color: rgba(94, 234, 212, .6) !important; background: rgba(45, 212, 191, .08); color: var(--build); }
+.question-compare__product { border-color: rgba(249, 115, 22, .6) !important; background: rgba(249, 115, 22, .1); color: var(--decision); }
+.question-compare__arrow { align-self: center; color: #94a3b8; font-size: 2rem; }
+.journey-caption { max-width: 47rem; margin-top: 2.6rem; color: var(--muted); }
+.journey-caption strong { color: #fff; }
+
+.build-sequence { display: grid; justify-items: start; gap: .25rem; margin-top: 1.4rem; }
+.build-sequence span { color: #fdba74; font-size: 1.15rem; font-weight: 800; letter-spacing: .08em; }
+.build-sequence strong { margin-top: .85rem; color: #fff; font-family: "Iowan Old Style", Georgia, serif; font-size: 2.65rem; letter-spacing: -.06em; line-height: 1; }
+
+.slidev-layout.cost-slide { background-image: radial-gradient(circle at 50% 75%, rgba(139, 92, 246, .24), transparent 43%), linear-gradient(135deg, #0b1120, #111827); }
+.slidev-layout.loop-slide { background-image: radial-gradient(circle at 50% 55%, rgba(139, 92, 246, .19), transparent 40%), linear-gradient(135deg, #0b1120, #111827); }
+@media (max-width: 700px) { .evolution-cards { gap: .5rem; }.evolution-cards > div { padding: .7rem; }.evolution-cards strong { font-size: 1.3rem; }.question-compare { gap: .55rem; }.question-compare > div:not(.question-compare__arrow) { min-height: 9rem; padding: .8rem; }.question-compare strong { font-size: 1.4rem; } }
 </style>

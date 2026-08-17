@@ -1,0 +1,63 @@
+/* Estilos globales: Slidev inyecta automáticamente este archivo en la aplicación. */
+:root { --slidev-theme-primary:#f97316; --ink:#f8fafc; --muted:#cbd5e1; --surface:#111827; --build:#5eead4; --evidence:#a78bfa; --decision:#fb923c; }
+
+.slidev-layout { color:var(--ink); background:#0b1120; font-family:"Aptos","Segoe UI",sans-serif; letter-spacing:-.015em; }
+.slidev-layout h1,.slidev-layout h2,.slidev-layout h3 { color:#fff; font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif; font-weight:700; letter-spacing:-.045em; line-height:1.03; }
+.slidev-layout h1 { font-size:2.85rem; max-width:17ch; }
+.slidev-layout h2 { color:var(--muted); font-size:1.24rem; font-weight:500; letter-spacing:-.02em; }
+.slidev-layout p,.slidev-layout li { font-size:1.08rem; line-height:1.55; }
+.slidev-layout strong { color:#fff7ed; }
+.slidev-layout ul { margin-top:1.2rem; }
+.slidev-layout li::marker { color:var(--slidev-theme-primary); }
+
+.slidev-layout.default,.slidev-layout.two-cols-header { padding:3.2rem 4.5rem; background-image:radial-gradient(circle at 92% 8%,rgba(249,115,22,.13),transparent 27%),linear-gradient(135deg,#0b1120,#111827); }
+.slidev-layout.default::after,.slidev-layout.two-cols-header::after { content:""; position:absolute; top:3.55rem; right:4.5rem; width:2.4rem; height:3px; background:var(--slidev-theme-primary); }
+.slidev-layout.section { display:flex; flex-direction:column; justify-content:center; padding:3.2rem 4.5rem; color:#19100a; background:#f97316; }
+.slidev-layout.section h1,.slidev-layout.section h2 { max-width:19ch; color:#19100a; }
+.slidev-layout.section h1 { font-size:3.6rem; }
+.slidev-layout.section h2 { margin-top:1.2rem; font-family:"Aptos","Segoe UI",sans-serif; font-size:1.25rem; }
+.slidev-layout.statement { display:flex; align-items:center; padding:3.2rem 4.5rem; background:#fff7ed; }
+.slidev-layout.statement h1 { max-width:22ch; color:#1c1917; font-size:3.25rem; }
+.slidev-layout.statement h1::before { content:"—"; display:block; margin-bottom:.65rem; color:#ea580c; }
+.slidev-layout.cover { isolation:isolate; padding:3.2rem 4.5rem; background-color:#0b1120; background-position:center; }
+.slidev-layout.cover::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(5,10,20,.88),rgba(5,10,20,.54) 57%,rgba(5,10,20,.22)); }
+.slidev-layout.cover h1 { max-width:14ch; font-size:3.55rem; text-wrap:balance; }
+.slidev-layout.cover h2 { max-width:34ch; color:#e2e8f0; }
+.slidev-layout.cover p { max-width:45ch; }
+.slidev-layout.cover.text-right { background-position:left center; }
+.slidev-layout.cover.text-right > * { margin-left:auto; text-align:right; }
+.slidev-layout.cover.text-right::before { background:linear-gradient(270deg,rgba(5,10,20,.92),rgba(5,10,20,.7) 48%,rgba(5,10,20,.12)); }
+
+.side-asset { display:block; max-width:100%; max-height:48vh; margin:.5rem auto 1.5rem; object-fit:contain; }
+.side-asset-on-paper { border-radius:.8rem; background:#f8fafc; box-shadow:0 1rem 2.5rem rgba(0,0,0,.28); }
+.priority-shift { display:grid; align-content:center; height:100%; gap:.7rem; padding:1rem; }
+.priority-card { padding:1.25rem; border:1px solid rgba(255,255,255,.18); border-radius:.85rem; }
+.priority-card span,.priority-card i { display:block; color:var(--muted); font-size:.8rem; font-style:normal; }
+.priority-card strong { display:block; margin:.3rem 0; font-size:1.55rem; }
+.priority-card-old { background:rgba(100,116,139,.18); }
+.priority-card-new { border-color:rgba(249,115,22,.7); background:rgba(249,115,22,.18); }
+.priority-arrow { color:var(--slidev-theme-primary); font-size:2rem; line-height:1; text-align:center; }
+.slidev-layout.end { padding:3.2rem 4.5rem; color:#1c1917; background:#f97316; }
+.slidev-layout.end h1,.slidev-layout.end h2 { color:#1c1917; }
+.slidev-layout.end h1 { font-size:4.1rem; }
+.slidev-layout.end h2 { max-width:30ch; margin-top:1.5rem; }
+.slidev-layout.end p { margin-top:2rem; font-weight:600; }
+.mermaid { margin-top:1.8rem; }.mermaid svg { max-width:100%; }
+.product-word { color:var(--slidev-theme-primary); font-size:1.16em; letter-spacing:-.075em; }
+.slidev-layout.compare-slide::after,.slidev-layout.journey-slide::after { background:var(--build); }
+.slidev-layout.evidence-slide::after,.slidev-layout.loop-slide::after { background:var(--evidence); }
+.slidev-layout.decision-slide::after,.slidev-layout.cost-slide::after,.slidev-layout.sequence-slide::after { background:var(--decision); }
+.slidev-layout.cost-slide { background-image:radial-gradient(circle at 50% 75%,rgba(139,92,246,.24),transparent 43%),linear-gradient(135deg,#0b1120,#111827); }
+.slidev-layout.loop-slide { background-image:radial-gradient(circle at 50% 55%,rgba(139,92,246,.19),transparent 40%),linear-gradient(135deg,#0b1120,#111827); }
+.question-compare { display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; max-width:55rem; gap:1.2rem; margin-top:2rem; }
+.question-compare > div:not(.question-compare__arrow) { display:grid; align-content:center; min-height:12rem; padding:1.5rem; border:1px solid; }
+.question-compare small { display:block; margin-bottom:.8rem; font-size:.64rem; font-weight:800; letter-spacing:.13em; }
+.question-compare strong { color:#fff; font-family:"Iowan Old Style",Georgia,serif; font-size:2rem; letter-spacing:-.055em; line-height:1.03; }
+.question-compare__web { border-color:rgba(94,234,212,.6)!important; color:var(--build); background:rgba(45,212,191,.08); }
+.question-compare__product { border-color:rgba(249,115,22,.6)!important; color:var(--decision); background:rgba(249,115,22,.1); }
+.question-compare__arrow { align-self:center; color:#94a3b8; font-size:2rem; }
+.journey-caption { max-width:47rem; margin-top:2.6rem; color:var(--muted); }.journey-caption strong { color:#fff; }
+.build-sequence { display:grid; justify-items:start; gap:.25rem; margin-top:1.4rem; }
+.build-sequence span { color:#fdba74; font-size:1.15rem; font-weight:800; letter-spacing:.08em; }
+.build-sequence strong { margin-top:.85rem; color:#fff; font-family:"Iowan Old Style",Georgia,serif; font-size:2.65rem; letter-spacing:-.06em; line-height:1; }
+@media (max-width:700px) { .slidev-layout.default,.slidev-layout.two-cols-header,.slidev-layout.section,.slidev-layout.statement,.slidev-layout.cover,.slidev-layout.end { padding:2rem; } }
