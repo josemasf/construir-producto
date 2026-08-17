@@ -211,10 +211,12 @@ La idea es que construir más nos da sensación de control, porque es el terreno
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # Hay preguntas que no se contestan programando
+
+::left::
 
 - ¿Quién tiene realmente este problema?
 - ¿Con qué frecuencia lo sufre?
@@ -222,6 +224,10 @@ layout: default
 - ¿Qué le costaría cambiar?
 - ¿Qué tendría que ocurrir para que pagara?
 - ¿Qué parte del sistema genera valor y cuál solo decora?
+
+::right::
+
+<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/preguntas-usuarios-side-right.png" alt="Dos personas conversan junto a un mapa de preguntas y una lupa" />
 
 <!--
 Notas del ponente:
@@ -314,10 +320,12 @@ No inventar métricas. Hablar desde experiencia cualitativa.
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # La analítica no sirve para decorar dashboards
+
+::left::
 
 ## Sirve para tomar decisiones incómodas.
 
@@ -326,6 +334,10 @@ layout: default
 - Dónde se abandona.
 - Qué genera recurrencia.
 - Qué solo alimenta nuestro ego técnico.
+
+::right::
+
+<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/analitica-decisiones-side-right.png" alt="Una lupa destaca señales de uso relevantes frente a un dashboard secundario" />
 
 <!--
 Notas del ponente:
@@ -469,15 +481,21 @@ layout: section
 ## No todo aprendizaje tiene que convertirse en producto.
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # Cerrar no siempre es fracasar
+
+::left::
 
 A veces es reconocer que algo ya te ha dado el aprendizaje que podía darte.
 
 Y que seguir invirtiendo no es constancia.  
 Es apego con repositorio.
+
+::right::
+
+<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/cerrar-aprendizaje-side-right.png" alt="Una persona cierra una caja de proyecto y conserva una libreta con aprendizajes" />
 
 <!--
 Notas del ponente:
@@ -587,14 +605,20 @@ Un Tech Lead no debería limitarse a decir “esto está mal hecho”. Debe expl
 -->
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # Cambia tu relación con la IA
 
+::left::
+
 La IA puede acelerar mucho la implementación.
 
 Pero también puede acelerar una mala decisión.
+
+::right::
+
+<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
 
 <!--
 Notas del ponente:
