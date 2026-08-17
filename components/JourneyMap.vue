@@ -29,4 +29,10 @@ const activeByPhase = { idea: 0, web: 1, service: 2, product: 3, stop: 2 }
 .journey__step--stop { color: #fb923c; }
 .journey__line { height: 1px; flex: 1; min-width: 1rem; margin: 0 .8rem; background: #334155; }
 .journey__line--active { background: #5eead4; }
+
+@media (max-width: 700px) {
+  .journey { flex-direction: column; align-items: flex-start; gap: .25rem; margin-top: 1.5rem; }
+  .journey__step { min-width: 0; }
+  .journey__line { width: 1px; height: 1.1rem; flex: none; min-width: 0; margin: 0 0 0 .3rem; }
+}
 </style>

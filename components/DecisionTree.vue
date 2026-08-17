@@ -18,4 +18,10 @@
 .decision-tree__branch span { font-size: .83rem; }
 .decision-tree__branch--yes { border-color: rgba(45, 212, 191, .7); background: rgba(45, 212, 191, .1); color: #99f6e4; }
 .decision-tree__branch--no { border-color: rgba(249, 115, 22, .7); background: rgba(249, 115, 22, .1); color: #fdba74; }
+
+@media (max-width: 700px) {
+  .decision-tree { gap: 1.3rem; }
+  .decision-tree__question { font-size: 1.8rem; }
+  .decision-tree__branches { grid-template-columns: 1fr; }
+}
 </style>

@@ -112,7 +112,7 @@ layout: default
 
 # es un producto
 
-<div class="grid grid-cols-3 gap-4 mt-8 max-w-3xl">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-8 max-w-3xl">
   <div class="min-h-40 p-5 border-t-2 border-t-[var(--build)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">01</span><strong class="block text-white text-3xl">Web</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Funciona técnicamente.</p></div>
   <div class="min-h-40 p-5 border-t-2 border-t-[var(--evidence)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">02</span><strong class="block text-white text-3xl">Servicio</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Lo usan personas.</p></div>
   <div class="min-h-40 p-5 border-t-2 border-t-[var(--decision)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">03</span><strong class="block text-white text-3xl">Producto</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Genera valor suficiente para volver.</p></div>
@@ -723,6 +723,7 @@ Posible frase final:
 Construir software es una habilidad poderosa. Precisamente por eso conviene usarla con criterio.
 -->
 
+<!-- Los estilos globales viven en style.css. Este bloque se conserva temporalmente como referencia histórica.
 <style>
 /* Dirección visual: editorial sobria, con el naranja como señal de decisión. */
 :root {
@@ -894,3 +895,4 @@ Construir software es una habilidad poderosa. Precisamente por eso conviene usar
 .slidev-layout.loop-slide { background-image: radial-gradient(circle at 50% 55%, rgba(139, 92, 246, .19), transparent 40%), linear-gradient(135deg, #0b1120, #111827); }
 @media (max-width: 700px) { .evolution-cards { gap: .5rem; }.evolution-cards > div { padding: .7rem; }.evolution-cards strong { font-size: 1.3rem; }.question-compare { gap: .55rem; }.question-compare > div:not(.question-compare__arrow) { min-height: 9rem; padding: .8rem; }.question-compare strong { font-size: 1.4rem; } }
 </style>
+-->
