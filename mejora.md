@@ -1,423 +1,280 @@
-Sí. Después de revisar `slides.md`, mi impresión es que **la UI está un escalón por debajo del contenido**. No diría que sea fea: la base es bastante limpia —fondo oscuro, naranja como acento, slides de sección y slides de statement—, pero es demasiado uniforme.
+# Prompt para implementar la mejora de la slide “Todo desemboca aquí”
 
-El problema principal es este: durante buena parte de la charla alternas **texto → lista → dos columnas con ilustración → section naranja → texto**. Las imágenes cambian, pero la composición prácticamente no.   Eso hace que una charla con ideas bastante buenas pueda sentirse visualmente plana.
+Actúa como un **especialista senior en diseño de presentaciones, diseño de información y SVG para web/Slidev**.
 
-Y hay otro problema más importante: **el público sabe qué slide está viendo, pero no siempre sabe dónde está dentro del argumento**.
+Quiero que **rediseñes e implementes visualmente** la slide titulada:
 
-## Yo no cambiaría el tema. Cambiaría la gramática visual
+**“Todo desemboca aquí”**
 
-La charla tiene un hilo bastante bueno:
+La slide representa un ciclo compuesto por cuatro fases:
 
-**Construir → usuarios → aprender → decidir → parar → pensar como producto.**
+* Research
+* Plan
+* Implement
+* Measure
 
-Eso debería convertirse también en el sistema visual de la presentación.
+y una idea central:
 
-### 1. Añadiría una navegación persistente muy discreta
+**CRITERIO DE PRODUCTO**
 
-No un menú, ni un breadcrumb de aplicación web.
+## Objetivo de la slide
 
-Una pequeña línea inferior con 6 etapas:
+La slide debe transmitir con claridad que:
 
-**CONSTRUIR — USUARIOS — EVIDENCIA — DECIDIR — PARAR — PRODUCTO**
+* el trabajo no es lineal;
+* Research, Plan, Implement y Measure forman un ciclo continuo;
+* todo ese ciclo está guiado y conectado por el **criterio de producto**;
+* “criterio de producto” no es una fase más, sino el núcleo que da sentido a todas las decisiones.
 
-Y en cada slide únicamente destacas dónde estás.
-
-Por ejemplo:
-
-`● Construir ─ ○ Usuarios ─ ○ Evidencia ─ ○ Decidir ─ ○ Parar ─ ○ Producto`
-
-Después:
-
-`● Construir ─ ● Usuarios ─ ○ Evidencia ─ ...`
-
-Esto haría muchísimo por la orientación del público sin robar atención.
-
-Además, tus slides de sección pasarían de ser simplemente:
-
-> 3 · Cuando aparecen usuarios, cambia el juego
-
-a enseñar visualmente:
-
-**03 / USUARIOS**
-
-y debajo la línea narrativa completa.
-
-Tus actuales slides de sección ya crean pausas claras, así que no hay que inventar otro sistema: hay que hacerlas trabajar también como mapa.
+La idea debe entenderse de forma casi inmediata, en menos de 3 segundos.
 
 ---
 
-# Plan de mejora que aplicaría
+## Problemas del diseño actual que debes corregir
 
-## Fase 1 — Crear un sistema visual, no decorar slides
+Corrige específicamente estos problemas:
 
-Mantendría el fondo azul oscuro y el naranja. Funcionan. Pero introduciría **tres colores semánticos**, no decorativos:
-
-* **Cian/azul:** construir, tecnología, implementación.
-* **Violeta:** aprendizaje, evidencia, usuarios.
-* **Naranja:** decisión, riesgo, parar.
-
-Así una persona empieza a reconocer inconscientemente qué tipo de concepto está viendo.
-
-El naranja actual aparece como señal prácticamente universal.  Si todo lo importante es naranja, el naranja deja de significar nada.
-
----
-
-## Fase 2 — Crear 5 o 6 layouts reconocibles
-
-Aquí está probablemente la mejora con mayor retorno.
-
-Ahora tienes principalmente `default`, `two-cols-header`, `cover`, `statement` y `section`.
-
-Crearía componentes Slidev propios:
-
-### `ConceptSlide`
-
-Una única idea enorme.
-
-Ejemplo:
-
-> **Más código ≠ más progreso**
-
-Casi nada más.
+* El gráfico parece un óvalo decorativo con textos alrededor, no un ciclo de trabajo claro.
+* La dirección del flujo no se entiende con suficiente fuerza.
+* La pequeña flecha inferior resulta débil y parece un icono suelto.
+* “Criterio de producto” no tiene suficiente protagonismo visual.
+* Los labels de las fases parecen colocados alrededor del gráfico, pero no integrados en él.
+* El diagrama central tiene menos peso del que debería.
+* El título de la slide compite demasiado con el contenido principal.
+* Hay demasiado espacio vacío entre el título y el gráfico.
+* La navegación inferior tiene bastante presencia y compite visualmente con el diagrama.
 
 ---
 
-### `CompareSlide`
+## Nueva propuesta visual
 
-Para contrastes.
+Mantén el estilo general de la presentación:
 
-Por ejemplo:
+* fondo azul noche muy oscuro;
+* estética editorial y tecnológica;
+* tipografía con personalidad;
+* contraste alto;
+* línea gráfica sobria;
+* acentos de color puntuales;
+* sin aspecto de dashboard;
+* sin estética SaaS genérica.
 
-**WEB**
+### Composición general
 
-¿Puedo construirlo?
-
-↓
-
-**PRODUCTO**
-
-¿Alguien obtiene suficiente valor?
-
-Tu slide actual sobre web/producto pide este tratamiento visual.
-
----
-
-### `JourneySlide`
-
-Una representación persistente de:
-
-**Idea → Web → Servicio → Producto**
-
-Esta debería convertirse en **uno de los elementos visuales protagonistas de la charla**.
-
-Ahora aparece una vez como Mermaid.
-
-Yo la reutilizaría 3 o 4 veces.
-
-Primero:
-
-`Idea → Web`
-
-Después:
-
-`Idea → Web → Servicio`
-
-Más tarde:
-
-`Idea → Web → Servicio → Producto`
-
-Y cuando hablas de cerrar:
-
-`Idea → Web → Servicio → ✕`
-
-Ese simple recurso convertiría varias ideas abstractas en una historia visual.
+* Mantén el título a la izquierda:
+  **“Todo desemboca aquí”**
+* Reduce ligeramente su peso visual para que no eclipse el diagrama.
+* Amplía el diagrama principal y colócalo más arriba para ocupar mejor el centro de la slide.
+* El diagrama debe ser claramente el protagonista visual.
 
 ---
 
-### `DecisionSlide`
+## Rediseño del diagrama
 
-Para frases como:
+Convierte el óvalo actual en un **ciclo visual mucho más claro y direccional**.
 
-> ¿Qué incertidumbre reduce esta funcionalidad?
+### Forma del ciclo
 
-Una pregunta enorme en pantalla y debajo únicamente dos posibles caminos:
+* Mantén una geometría ovalada o elíptica, no completamente circular.
+* El ciclo debe sentirse adaptado al formato panorámico de una slide 16:9.
+* Usa una línea o conjunto de trazos que hagan evidente el recorrido.
+* La dirección debe leerse claramente como:
 
-**Reduce incertidumbre → construir**
+**Research → Plan → Implement → Measure → Research**
 
-**No reduce incertidumbre → cuestionar**
+### Recorrido visual
 
-Tu slide actual tiene una de las ideas más importantes de toda la charla y visualmente recibe casi el mismo tratamiento que cualquier otra.
+* El flujo debe ser explícito.
+* No dependas de una única flecha pequeña aislada.
+* Integra la sensación de recorrido en el propio trazado.
+* Puedes usar:
 
-Yo la convertiría en uno de los momentos centrales.
+  * segmentos conectados,
+  * pequeñas puntas de flecha discretas,
+  * cambios sutiles de intensidad,
+  * o un tratamiento del trazo que sugiera movimiento continuo.
 
----
-
-### `EvidenceSlide`
-
-Para usuarios, analítica, feedback y experimentos.
-
-En lugar de ilustración derecha + bullets, usaría una composición tipo:
-
-```text
-      LO QUE CREÍAMOS
-            ↓
-        USUARIO REAL
-            ↓
-       LO QUE PASÓ
-```
-
-La ilustración puede acompañarlo, pero ya no sería decoración: **formaría parte de la explicación**.
+La clave es que se entienda visualmente que hay un **bucle de trabajo continuo**.
 
 ---
 
-### `StatementSlide`
+## Fases del ciclo
 
-Ya lo tienes y funciona.
+Mantén exactamente estos textos:
 
-Lo utilizaría menos pero con más intención.
+* 01 Research
+* 02 Plan
+* 03 Implement
+* 04 Measure
 
-Por ejemplo:
+### Requisitos
 
-> La feature más peligrosa
-> es la que construimos para evitar
-> una conversación incómoda.
+* Cada fase debe estar asociada visualmente a un tramo del ciclo.
+* No deben parecer etiquetas flotando sin relación con la geometría.
+* Los números pequeños deben mantenerse como detalle editorial.
+* Los nombres deben tener mejor alineación, jerarquía y equilibrio espacial.
+* Deben leerse con claridad a distancia.
 
-Ese tipo de slide necesita aire, pausa y casi nada más.
+### Distribución recomendada
 
----
+* **01 Research** en la parte superior izquierda del ciclo
+* **02 Plan** en la parte superior derecha
+* **03 Implement** en la parte inferior derecha
+* **04 Measure** en la parte inferior izquierda
 
-# 3. Quitaría texto de pantalla
-
-Aquí veo una mejora bastante clara.
-
-Tienes bastantes slides con seis o siete bullets y el CSS deja el cuerpo en `1.08rem`.
-
-En un portátil está bien.
-
-**En una sala, es pequeño.**
-
-Subiría el texto normal considerablemente y aplicaría una regla:
-
-> **Si la audiencia puede leer la slide mientras tú estás explicando otra cosa, hay demasiado texto.**
-
-Por ejemplo, esta slide:
-
-> Otra funcionalidad.
-> Otro rediseño.
-> Otra integración.
-> Otro refactor.
-> Otro prompt.
-> Otro agente.
-> Otro dashboard.
-
-No necesita una lista convencional.
-
-La convertiría en una secuencia con `v-click`:
-
-**OTRA FEATURE**
-
-→ **OTRO REFACTOR**
-
-→ **OTRO DASHBOARD**
-
-→ **OTRO AGENTE**
-
-Y finalmente aparece:
-
-# ¿Pero qué hemos aprendido?
-
-Eso tiene bastante más ritmo.
+Pero haz que cada una quede claramente integrada con su tramo correspondiente del recorrido.
 
 ---
 
-# 4. Reduciría el patrón «texto izquierda + dibujo derecha»
+## Centro del diagrama
 
-No eliminaría las ilustraciones. Hay bastantes assets preparados específicamente para esas slides.
+Haz que **CRITERIO DE PRODUCTO** se convierta en el verdadero núcleo visual del gráfico.
 
-Pero ahora muchas hacen exactamente el mismo trabajo.
+### Requisitos del centro
 
-Las alternaría:
+* Debe ocupar el centro exacto del ciclo.
+* Debe sentirse como el punto de gravedad conceptual.
+* No lo conviertas en una card tipo UI.
+* Tampoco debe parecer texto suelto.
 
-**full bleed → detalle recortado → diagrama → ilustración lateral → texto gigante → cards → fotografía/ilustración completa.**
+### Tratamiento visual sugerido
 
-No necesitas más imágenes.
+Puedes usar un recurso muy sobrio, por ejemplo:
 
-Necesitas que **las que tienes tengan papeles diferentes**.
+* un halo suave;
+* una elipse interior de baja opacidad;
+* una ligera mancha de luz;
+* un contenedor casi invisible;
+* o una combinación de tipografía y aire negativo muy bien resuelta.
 
----
+El resultado debe comunicar:
 
-# 5. Convertiría algunas slides concretas en los «momentos visuales» de la charla
-
-No todas las slides tienen que impresionar.
-
-Yo elegiría unas 7.
-
-### 01 — Portada
-
-Mantendría la imagen, pero haría mucho más protagonista:
-
-# DE ESCRIBIR CÓDIGO
-
-# A CONSTRUIR
-
-# **PRODUCTO**
-
-Con `PRODUCTO` como elemento gráfico.
+> “Todo el ciclo está gobernado por el criterio de producto.”
 
 ---
 
-### 02 — La tesis
+## Jerarquía visual
 
-> Un producto técnicamente impecable que nadie necesita…
+La lectura ideal debe ser esta:
 
-Perfecta para una slide extremadamente minimalista.
+1. Todo desemboca aquí
+2. El ciclo general
+3. Research / Plan / Implement / Measure
+4. CRITERIO DE PRODUCTO
+5. La idea de que todo está conectado y vuelve a empezar
 
----
-
-### 03 — Web → Servicio → Producto
-
-Probablemente **el visual principal de toda la charla**.
-
-Lo diseñaría como una especie de mapa de evolución y lo reutilizaría después.
+Si consideras que el centro debe subir al punto 3 para ganar claridad conceptual, puedes hacerlo, pero sin romper el equilibrio de la slide.
 
 ---
 
-### 04 — La feature más peligrosa
+## Estilo SVG
 
-Full bleed.
+Implementa el gráfico como un **SVG limpio, bien estructurado y mantenible**.
 
-Nada de bullets.
+### Requisitos técnicos
 
----
+Usa una estructura clara y fácil de animar después en Slidev.
 
-### 05 — Usuario vs imaginación
+Prioriza:
 
-Visual dividido:
+* `<svg>`
+* `viewBox`
+* `<path>`
+* `<g>`
+* `<text>`
+* `<defs>` solo si son realmente necesarios
 
-**LO QUE DISEÑAMOS**
+Evita:
 
-vs.
+* filtros complejos;
+* sombras pesadas;
+* exceso de nodos;
+* degradados agresivos;
+* efectos decorativos innecesarios;
+* formas difíciles de mantener.
 
-**LO QUE HIZO EL USUARIO**
+### Estructura deseada
 
-Mucho más memorable que una ilustración acompañando texto.
+Organiza el SVG por grupos semánticos, por ejemplo:
 
----
+* grupo del recorrido completo;
+* grupo research;
+* grupo plan;
+* grupo implement;
+* grupo measure;
+* grupo del núcleo central.
 
-### 06 — El coste de una feature
+Debe quedar preparado para poder aplicar luego animaciones o `v-click` de Slidev con facilidad.
 
-Aquí haría algo parecido a un iceberg:
+Por ejemplo, la estructura debe permitir revelar de forma independiente:
 
-**CONSTRUIR**
-
-visible arriba.
-
-Debajo:
-
-mantener
-testear
-documentar
-migrar
-soportar
-explicar
-refactorizar
-
-Tu texto ya describe exactamente esa idea.
-
----
-
-### 07 — Research → Plan → Implement → Measure
-
-Este debería ser **el payoff visual**.
-
-Actualmente aparece como otro Mermaid.
-
-Yo eliminaría Mermaid aquí y haría un componente propio con una circunferencia o circuito:
-
-**RESEARCH → PLAN → IMPLEMENT → MEASURE ↺**
-
-De hecho, al llegar aquí el público debería pensar:
-
-> «Ah, todo lo anterior desembocaba en esto.»
-
-Eso da sensación de cierre narrativo.
+* el contorno o recorrido;
+* cada fase;
+* el centro “criterio de producto”.
 
 ---
 
-# 6. Hay una pequeña reestructuración que haría
+## Animación pensada para Slidev
 
-Actualmente tienes siete capítulos.
+No hace falta que implementes una animación compleja, pero sí que dejes el markup preparado para ello.
 
-Yo visualmente presentaría **cuatro actos**, aunque internamente mantuviera tus secciones.
+La secuencia ideal sería:
 
-### ACTO I
+1. Aparece el título.
+2. Aparece el trazado del ciclo.
+3. Aparece Research.
+4. Aparece Plan.
+5. Aparece Implement.
+6. Aparece Measure.
+7. Aparece o se enfatiza “CRITERIO DE PRODUCTO”.
+8. Se refuerza visualmente que el ciclo se cierra.
 
-## Construir no es avanzar
-
-Web / servicio / producto
-Progreso visible
-Construir más
-
-### ACTO II
-
-## La realidad entra por la puerta
-
-Usuarios
-Comportamiento
-Analítica
-
-### ACTO III
-
-## El trabajo difícil es decidir
-
-No construir
-Experimentos
-Coste
-Cerrar
-
-### ACTO IV
-
-## Ingeniería con criterio de producto
-
-Prioridad
-Decisiones técnicas
-IA
-Research → Plan → Implement → Measure
-
-Y cierre.
-
-Mucho más fácil de recordar que siete bloques independientes.
+El diseño debe quedar preparado para eso, aunque no se implementen todas las transiciones en este momento.
 
 ---
 
-# Una cosa que no haría
+## Legibilidad y proyección
 
-**No intentaría arreglarla metiendo más dibujos, más gradientes, emojis, iconos, mockups y animaciones.**
+La slide debe funcionar bien proyectada en una sala.
 
-Sería precisamente caer en la tesis de tu propia charla:
+Por tanto:
 
-> «Esto no funciona del todo. Construyamos más cosas.»
+* aumenta la claridad del trazado;
+* evita líneas demasiado finas;
+* evita textos pequeños;
+* usa suficiente separación entre elementos;
+* asegúrate de que los labels se distinguen bien;
+* revisa contraste y equilibrio general.
 
-El problema no es falta de decoración.
+No sacrifiques claridad por estética.
 
-Es falta de **jerarquía, variedad de composición y navegación visual**.
+---
 
-## Cómo me gustaría que se sintiera
+## Restricciones
 
-No como una presentación corporativa.
+* No cambies el texto del título.
+* No cambies los nombres de las fases.
+* No añadas nuevas fases.
+* No conviertas la slide en una infografía recargada.
+* No añadas iconos innecesarios.
+* No hagas que el gráfico parezca una UI de producto.
+* No uses cajas tipo botón para cada fase.
+* No elimines la navegación inferior de la presentación.
+* No rompas la coherencia estética del resto de la charla.
 
-Tampoco como una web metida dentro de Slidev.
+---
 
-Más bien como una **charla editorial tecnológica**: mucho espacio, tipografía grande, una idea por pantalla, diagramas extremadamente simples y algunos momentos visuales que rompan el ritmo.
+## Resultado esperado
 
-Con las 34 slides que tienes aproximadamente, yo buscaría esta proporción:
+Implementa directamente la mejora visual de esta slide.
 
-**60 % slides muy simples**
-**25 % visualizaciones/diagramas**
-**15 % slides potentes de impacto**
+Antes de dar el trabajo por terminado:
 
-Ahora mismo la proporción está demasiado inclinada hacia «contenido correctamente maquetado».
+* comprueba que el ciclo se entiende claramente;
+* verifica que la dirección del flujo sea evidente;
+* revisa que “CRITERIO DE PRODUCTO” tenga el protagonismo adecuado;
+* valida que el título y el diagrama estén equilibrados;
+* comprueba que el SVG sea limpio y mantenible;
+* asegúrate de que todo funciona bien dentro de una presentación Slidev.
 
-Y ahí está exactamente esa sensación de *“está bien, pero es un poco sosa”* que estás percibiendo.
-
-Mi prioridad sería: **primero navegación visual → después tipografía y layouts → después rediseñar 7-8 slides clave → por último animaciones**. El contenido prácticamente no lo tocaría.
+El resultado final debe sentirse como una **slide de conferencia tecnológica bien diseñada**, sobria, elegante y con un diagrama mucho más claro, más intencional y más potente que el actual.

@@ -1,19 +1,22 @@
 <template>
-  <div class="product-loop" role="img" aria-label="Ciclo: Research, Plan, Implement, Measure, y vuelta a Research">
-    <div class="product-loop__center">CRITERIO<br>DE PRODUCTO</div>
-    <div v-for="(step, index) in ['Research', 'Plan', 'Implement', 'Measure']" :key="step" class="product-loop__step" :class="`product-loop__step--${index + 1}`">
-      <span>0{{ index + 1 }}</span><strong>{{ step }}</strong>
-    </div>
-    <div class="product-loop__return" aria-hidden="true">↺</div>
-  </div>
+  <figure class="product-loop">
+    <img
+      class="product-loop__image"
+      src="/images/product-loop-criterion.png"
+      alt="Ciclo de producto continuo: conocer a las personas, planificar, implementar y medir se conectan en un bucle guiado por un compás central que representa el criterio de producto."
+    >
+    <span class="product-loop__phase product-loop__phase--research">Research</span>
+    <span class="product-loop__phase product-loop__phase--plan">Plan</span>
+    <span class="product-loop__phase product-loop__phase--implement">Implement</span>
+    <span class="product-loop__phase product-loop__phase--measure">Measure</span>
+  </figure>
 </template>
 
 <style scoped>
-.product-loop { position: relative; width: min(30rem, 76vw); aspect-ratio: 1.55; margin: 1.6rem auto 0; border: 1px solid rgba(167, 139, 250, .45); border-radius: 50%; }
-.product-loop__center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #f8fafc; font-family: "Iowan Old Style", Georgia, serif; font-size: 1.3rem; font-weight: 700; letter-spacing: -.04em; line-height: 1; text-align: center; }
-.product-loop__step { position: absolute; display: grid; gap: .1rem; color: #ddd6fe; }
-.product-loop__step span { font-size: .56rem; font-weight: 800; letter-spacing: .12em; }
-.product-loop__step strong { font-family: "Iowan Old Style", Georgia, serif; font-size: 1.45rem; letter-spacing: -.04em; }
-.product-loop__step--1 { top: -1.1rem; left: 15%; }.product-loop__step--2 { top: .45rem; right: 3%; }.product-loop__step--3 { right: 15%; bottom: -1.1rem; }.product-loop__step--4 { bottom: .45rem; left: 2%; }
-.product-loop__return { position: absolute; right: 50%; bottom: -1.1rem; color: #f97316; font-size: 1.45rem; }
+.product-loop { position:relative; width:min(48rem,78vw); margin:-.65rem auto 0; }
+.product-loop__image { display:block; width:100%; height:auto; max-height:calc(100vh - 15rem); object-fit:contain; }
+.product-loop__phase { position:absolute; z-index:1; display:inline-flex; align-items:center; padding:.42em .62em .46em; border-bottom:2px solid #facc15; background:rgba(11,17,32,.88); color:#fff; font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif; font-size:clamp(.85rem,1.55vw,1.25rem); font-weight:700; letter-spacing:-.035em; line-height:1; box-shadow:0 5px 15px rgba(2,6,23,.28); }
+.product-loop__phase::before { content:""; display:inline-block; width:.42em; height:.42em; margin:0 .42em .08em 0; border-radius:50%; background:#facc15; box-shadow:0 0 0 3px rgba(250,204,21,.14); }
+.product-loop__phase--research { top:11%; left:22%; }.product-loop__phase--plan { top:11%; left:68%; }.product-loop__phase--implement { top:75%; left:68%; }.product-loop__phase--measure { top:75%; left:22%; }
+@media (max-width:700px) { .product-loop { width:min(42rem,94vw); margin-top:-.25rem; }.product-loop__image { max-height:calc(100vh - 12rem); }.product-loop__phase { font-size:clamp(.72rem,3vw,1rem); } }
 </style>

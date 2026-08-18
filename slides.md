@@ -663,15 +663,19 @@ layout: section
 
 ---
 layout: statement
+class: closing-question
 ---
 
-# La pregunta no es
+<div class="closing-question__content">
+  <p class="closing-question__eyebrow">La pregunta no es</p>
+  <p class="closing-question__discarded">«¿qué más podemos desarrollar?»</p>
 
-# “¿qué más podemos desarrollar?”
+  <div class="closing-question__rule" aria-hidden="true"></div>
 
-# La pregunta es
+  <p class="closing-question__eyebrow">La pregunta es</p>
+  <h1 class="closing-question__answer">«¿qué decisión<br>estamos evitando?»</h1>
+</div>
 
-# “¿qué decisión estamos evitando?”
 
 <!--
 Notas del ponente:
