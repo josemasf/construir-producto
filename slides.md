@@ -63,6 +63,8 @@ class: compare-slide
 - Más automatización ≠ más foco.
 - Más IA ≠ mejor criterio.
 
+<img class="compare-side-asset" src="/images/desarrollo-avance-side-right.png" alt="Un desarrollador contempla una torre de funcionalidades mientras busca dirección" />
+
 <!--
 Notas del ponente:
 Aquí no ataques el desarrollo. Tú eres técnico y esta charla debe sonar desde dentro, no como discurso de producto contra ingeniería.
