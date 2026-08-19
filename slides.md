@@ -266,6 +266,7 @@ layout: section
 
 ---
 layout: default
+class: responsibility-slide
 ---
 
 # Tener usuarios no lo convierte en producto
@@ -279,6 +280,8 @@ layout: default
 - Mides comportamiento real.
 - Priorizas con restricciones.
 - Decides qué no merece la pena tocar.
+
+<img class="responsibility-side-asset" src="/images/usuarios-responsabilidad-side-right-v2.png" alt="Una persona mantiene un servicio mientras atiende señales y necesidades de usuarios" />
 
 <!--
 Notas del ponente:

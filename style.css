@@ -101,6 +101,8 @@
 .slidev-layout.compare-slide::after,.slidev-layout.journey-slide::after { background:var(--build); }
 .slidev-layout.compare-slide { overflow:hidden; }
 .compare-side-asset { position:absolute; right:3.6rem; bottom:2.15rem; width:min(31vw,27rem); max-height:58vh; object-fit:contain; object-position:right bottom; filter:drop-shadow(0 .9rem 1.2rem rgba(0,0,0,.24)); }
+.slidev-layout.responsibility-slide { overflow:hidden; }
+.responsibility-side-asset { position:absolute; right:3.3rem; bottom:1.65rem; width:min(31vw,27rem); max-height:62vh; object-fit:contain; object-position:right bottom; filter:drop-shadow(0 .9rem 1.2rem rgba(0,0,0,.24)); }
 .slidev-layout.evidence-slide::after,.slidev-layout.loop-slide::after { background:var(--evidence); }
 .slidev-layout.evidence-slide { padding-bottom:5.25rem; }
 .slidev-layout.decision-slide::after,.slidev-layout.cost-slide::after,.slidev-layout.sequence-slide::after { background:var(--decision); }
@@ -123,6 +125,7 @@
   .slidev-layout.cover.progreso-visible { padding:2rem 2rem 4.7rem 52%; }
   .slidev-layout.cover.portada { padding:1.75rem 2rem; }
   .compare-side-asset { right:1.25rem; bottom:3.75rem; width:36vw; }
+  .responsibility-side-asset { right:1.1rem; bottom:3.65rem; width:36vw; }
   .slidev-layout.evidence-slide { padding-bottom:4.7rem; }
   .closing-question__discarded { font-size:1.65rem; }
   .slidev-layout.statement .closing-question__answer { font-size:3rem; }
