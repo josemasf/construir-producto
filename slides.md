@@ -5,7 +5,7 @@ background: /images/cover-producto.png
 title: "De escribir código a construir producto"
 info: |
   Guion detallado para ponencia técnica en Slidev.
-class: text-left
+class: text-left portada
 transition: slide-left
 mdc: true
 colorSchema: dark
@@ -32,6 +32,7 @@ No vengo a decir que el código no importe. Vengo a decir que el código importa
 
 ---
 layout: statement
+class: statement-thesis
 ---
 
 # Un producto técnicamente impecable
@@ -534,20 +535,31 @@ layout: two-cols-header
 
 ::left::
 
-Antes:
-
-> ¿Qué podemos construir?
-
-Después:
-
-> ¿Qué necesitamos aprender o mejorar ahora?
+<div class="priority-questions" aria-label="Preguntas que orientan la priorización">
+  <section class="priority-question priority-question--before">
+    <p>Antes</p>
+    <strong>¿Qué podemos construir?</strong>
+  </section>
+  <section class="priority-question priority-question--after">
+    <p>Después</p>
+    <strong>¿Qué necesitamos aprender o mejorar ahora?</strong>
+  </section>
+</div>
 
 ::right::
 
-<div style="display:grid; gap:1rem; padding:1.5rem 1rem" aria-label="La prioridad cambia de construir funcionalidades a aprender o mejorar">
-  <div style="padding:1.25rem; border:1px solid rgba(255,255,255,.2); border-radius:.85rem; background:rgba(100,116,139,.18)"><small style="display:block; color:#cbd5e1">ANTES</small><strong style="display:block; margin:.35rem 0; font-size:1.55rem">Más cosas</strong><small style="color:#cbd5e1">features · backlog · entrega</small></div>
-  <div style="color:#f97316; font-size:2rem; text-align:center">↓</div>
-  <div style="padding:1.25rem; border:1px solid rgba(249,115,22,.8); border-radius:.85rem; background:rgba(249,115,22,.18)"><small style="display:block; color:#fed7aa">DESPUÉS</small><strong style="display:block; margin:.35rem 0; font-size:1.55rem">Más criterio</strong><small style="color:#fed7aa">aprendizaje · impacto · riesgo</small></div>
+<div class="priority-shift priority-shift--horizontal" aria-label="La prioridad cambia de construir funcionalidades a aprender o mejorar">
+  <div class="priority-card priority-card-old">
+    <span>ANTES</span>
+    <strong>Más cosas</strong>
+    <i>features · backlog · entrega</i>
+  </div>
+  <div class="priority-arrow priority-arrow--right" aria-hidden="true">→</div>
+  <div class="priority-card priority-card-new">
+    <span>DESPUÉS</span>
+    <strong>Más criterio</strong>
+    <i>aprendizaje · impacto · riesgo</i>
+  </div>
 </div>
 
 <!--

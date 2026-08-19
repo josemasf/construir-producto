@@ -19,7 +19,7 @@ const activeStage = computed(() =>
 </script>
 
 <template>
-  <nav class="story-nav" aria-label="Progreso de la charla">
+  <nav v-if="currentPage > 1" class="story-nav" aria-label="Progreso de la charla">
     <template v-for="(stage, index) in stages" :key="stage.label">
       <span class="story-nav__stage" :class="{ 'story-nav__stage--active': index <= activeStage }">
         <i aria-hidden="true" />{{ stage.label }}
@@ -32,6 +32,7 @@ const activeStage = computed(() =>
 <style scoped>
 .story-nav {
   position: fixed;
+  isolation: isolate;
   z-index: 20;
   right: 4.5rem;
   bottom: 1.35rem;
@@ -45,6 +46,18 @@ const activeStage = computed(() =>
   letter-spacing: .12em;
   line-height: 1;
   text-transform: uppercase;
+}
+
+.story-nav::before {
+  position: absolute;
+  z-index: -1;
+  right: -4.5rem;
+  bottom: -1.35rem;
+  left: -4.5rem;
+  height: 4.4rem;
+  content: "";
+  background: linear-gradient(to top, rgba(8, 15, 28, .78) 0%, rgba(8, 15, 28, .48) 45%, transparent 100%);
+  pointer-events: none;
 }
 
 .story-nav__stage { display: inline-flex; align-items: center; gap: .32rem; white-space: nowrap; }
