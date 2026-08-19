@@ -74,7 +74,7 @@ Construir es necesario. Pero construir sin aprender puede convertirse en una for
 ---
 layout: cover
 background: /images/progreso-visible.png
-class: text-right
+class: progreso-visible
 ---
 
 # La trampa del progreso visible

@@ -51,6 +51,13 @@
 .slidev-layout.cover.text-right { background-position:left center; }
 .slidev-layout.cover.text-right > * { margin-left:auto; text-align:right; }
 .slidev-layout.cover.text-right::before { background:linear-gradient(270deg,rgba(5,10,20,.92),rgba(5,10,20,.7) 48%,rgba(5,10,20,.12)); }
+.slidev-layout.cover.progreso-visible {
+  padding:3.2rem 4.5rem 4.7rem 55%;
+  background-position:left center;
+}
+.slidev-layout.cover.progreso-visible::before {
+  background:linear-gradient(270deg,rgba(5,10,20,.92),rgba(5,10,20,.7) 48%,rgba(5,10,20,.12));
+}
 .slidev-layout.cover.portada { padding:2.75rem 4.5rem 2.4rem; background-position:center; }
 .slidev-layout.cover.portada h1 { font-size:3.35rem; }
 .slidev-layout.cover.portada h2 { margin-top:.9rem; }
@@ -111,6 +118,7 @@
 .build-sequence strong { margin-top:.85rem; color:#fff; font-family:"Iowan Old Style",Georgia,serif; font-size:2.65rem; letter-spacing:-.06em; line-height:1; }
 @media (max-width:700px) {
   .slidev-layout.default,.slidev-layout.two-cols-header,.slidev-layout.section,.slidev-layout.statement,.slidev-layout.cover,.slidev-layout.end { padding:2rem; }
+  .slidev-layout.cover.progreso-visible { padding:2rem 2rem 4.7rem 52%; }
   .slidev-layout.cover.portada { padding:1.75rem 2rem; }
   .slidev-layout.evidence-slide { padding-bottom:4.7rem; }
   .closing-question__discarded { font-size:1.65rem; }
