@@ -507,6 +507,7 @@ No hay una métrica universal para cerrar un proyecto. Pero sí hay momentos en 
 
 ---
 layout: default
+class: technical-decision-slide
 ---
 
 # Decidir no seguir también es una decisión técnica
@@ -518,6 +519,8 @@ Porque protege:
 - Tu energía.
 - La calidad de lo que sí merece inversión.
 - Tu capacidad de aprender en el siguiente intento.
+
+<img class="technical-decision-side-asset" src="/images/decision-tecnica-side-right-v2.png" alt="Una persona archiva un proyecto terminado, conserva el aprendizaje y protege recursos para el siguiente intento" />
 
 <!--
 Notas del ponente:
