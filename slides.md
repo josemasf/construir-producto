@@ -484,6 +484,7 @@ Un proyecto puede pasar de web a servicio. Puede tener usuarios. Puede ser útil
 
 ---
 layout: default
+class: stop-signals-slide
 ---
 
 # Señales de que quizá toca parar
@@ -493,6 +494,8 @@ layout: default
 - El valor percibido no justifica el coste de mantenimiento.
 - Estás construyendo para mantener viva la idea, no para validar el producto.
 - El coste de oportunidad empieza a ser evidente.
+
+<img class="stop-signals-side-asset" src="/images/senales-parar-side-right-v2.png" alt="Una persona detiene con calma un pequeño servicio y abre espacio para otro camino" />
 
 <!--
 Notas del ponente:
