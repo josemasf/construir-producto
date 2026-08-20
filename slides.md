@@ -709,6 +709,7 @@ No correr. Que quede clara.
 
 ---
 layout: default
+class: takeaway-slide
 ---
 
 # Ideas para llevarse
@@ -719,6 +720,8 @@ layout: default
 - La buena ingeniería también elimina, simplifica y frena.
 - Cerrar puede ser una decisión madura.
 - La IA acelera; el criterio sigue siendo humano.
+
+<img class="takeaway-side-asset" src="/images/ideas-llevarse-side-right-v2.png" alt="Una persona conecta las ideas clave de producto en un panel de aprendizaje" />
 
 <!--
 Notas del ponente:
