@@ -115,6 +115,8 @@
 .slidev-layout.cost-slide { background-image:radial-gradient(circle at 50% 75%,rgba(139,92,246,.24),transparent 43%),linear-gradient(135deg,#0b1120,#111827); }
 .slidev-layout.loop-slide { background-image:radial-gradient(ellipse at 52% 47%,rgba(139,92,246,.22),transparent 42%),linear-gradient(135deg,#0b1120,#111827); }
 .slidev-layout.loop-slide h1 { position:relative; z-index:1; margin-bottom:0; font-size:2.45rem; }
+.product-criterion-intro { max-width:45rem; margin:1rem 0 -.15rem; color:#cbd5e1; font-size:1rem!important; line-height:1.35!important; }
+.product-criterion-intro span { display:inline-block; margin-right:.45rem; color:#facc15; font-size:.66rem; font-weight:800; letter-spacing:.13em; vertical-align:.08em; }
 .question-compare { display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; max-width:55rem; gap:1.2rem; margin-top:2rem; }
 .question-compare > div:not(.question-compare__arrow) { display:grid; align-content:center; min-height:12rem; padding:1.5rem; border:1px solid; }
 .question-compare small { display:block; margin-bottom:.8rem; font-size:.64rem; font-weight:800; letter-spacing:.13em; }

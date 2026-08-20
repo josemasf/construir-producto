@@ -317,7 +317,7 @@ class: evidence-slide
 
 # La analítica no sirve para decorar dashboards
 
-<EvidenceFlow belief="Llenamos un dashboard de métricas." reality="El uso real muestra adopción, abandono y recurrencia." learning="Una métrica solo importa si cambia una decisión." />
+<MetricsToDecision />
 
 <!--
 Notas del ponente:
@@ -338,38 +338,7 @@ layout: section
 
 # 4 · Aprender a no construir
 
-## La decisión más madura no siempre añade código.
-
----
-layout: two-cols-header
----
-
-# La madurez técnica también consiste en frenar
-
-::left::
-
-No todo problema necesita código nuevo.
-
-A veces necesitas:
-
-- Hablar con usuarios.
-- Reducir alcance.
-- Borrar funcionalidad.
-- Hacer una prueba manual.
-- Medir antes de escalar.
-- Decidir que no compensa.
-
-::right::
-
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/madurez-frenar-side-right.png" alt="Una persona frena una carretilla cargada de bloques de software" />
-
-<!--
-Notas del ponente:
-Este bloque debe sonar muy de Tech Lead.
-
-Decir:
-Como perfiles técnicos solemos defender la calidad construyendo mejor. Pero también defendemos la calidad evitando construir complejidad innecesaria.
--->
+## La decisión más madura reduce incertidumbre antes de añadir complejidad.
 
 ---
 layout: default
@@ -377,6 +346,8 @@ class: decision-slide
 ---
 
 # Antes de desarrollar
+
+<p class="product-criterion-intro"><span>CRITERIO DE PRODUCTO</span> La brújula para decidir qué merece la pena construir.</p>
 
 <DecisionTree />
 
@@ -391,6 +362,9 @@ Ejemplos:
 
 Matiz:
 Hay deuda técnica real que sí hay que abordar. Pero incluso ahí deberíamos explicar qué riesgo reduce.
+
+Conectar explícitamente con el hilo de la charla:
+No es una fase más ni una checklist. El criterio de producto es lo que nos ayuda a decidir antes, durante y después de escribir código.
 -->
 
 ---
@@ -423,30 +397,6 @@ Frase posible:
 No todo MVP tiene que dar vergüenza, pero sí debería impedirte gastar seis meses en validar una suposición que podías validar en una semana.
 
 Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerlo conceptual.
--->
-
----
-layout: default
-class: cost-slide
----
-
-# El coste de una feature
-
-<CostIceberg />
-
-<!--
-Notas del ponente:
-Aquí puedes conectar con testing y arquitectura.
-
-Cada feature aumenta:
-- Superficie de bugs.
-- Casos de test.
-- Complejidad de UX.
-- Coste de refactor.
-- Riesgo de regresión.
-
-Remate:
-La funcionalidad que nadie usa no es gratis. Es un okupa en tu base de código.
 -->
 
 ---
@@ -503,31 +453,6 @@ No presentarlo como lista cerrada. Presentarlo como señales.
 
 Puedes decir:
 No hay una métrica universal para cerrar un proyecto. Pero sí hay momentos en los que, si eres honesto, sabes que estás empujando más por orgullo que por evidencia.
--->
-
----
-layout: default
-class: technical-decision-slide
----
-
-# Decidir no seguir también es una decisión técnica
-
-Porque protege:
-
-- Tu tiempo.
-- Tu foco.
-- Tu energía.
-- La calidad de lo que sí merece inversión.
-- Tu capacidad de aprender en el siguiente intento.
-
-<img class="technical-decision-side-asset" src="/images/decision-tecnica-side-right-v2.png" alt="Una persona archiva un proyecto terminado, conserva el aprendizaje y protege recursos para el siguiente intento" />
-
-<!--
-Notas del ponente:
-Aquí darle dignidad al cierre.
-
-Frase posible:
-No todo proyecto tiene que acabar en producto. Algunos proyectos cumplen su función enseñándote qué no merece la pena construir.
 -->
 
 ---
