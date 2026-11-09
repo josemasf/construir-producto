@@ -1,3 +1,5 @@
+> **Estado (9 de noviembre de 2026): implementado en `components/ProductLoop.vue`.** Este documento se conserva como contexto histórico de diseño. El nuevo ciclo es un SVG con cuatro direcciones explícitas y «Criterio de producto» central; las fases son Research, Plan, Implement y Measure. Los ejemplos y cambios de narrativa están en `slides.md`.
+
 # Prompt para implementar la mejora de la slide “Todo desemboca aquí”
 
 Actúa como un **especialista senior en diseño de presentaciones, diseño de información y SVG para web/Slidev**.
