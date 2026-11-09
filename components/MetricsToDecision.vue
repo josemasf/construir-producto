@@ -18,12 +18,12 @@
 .metrics-decision__steps { position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:0; padding:0; list-style:none; }
 .metrics-decision__step { position:relative; padding:2.65rem .65rem .7rem; color:#cbd5e1; text-align:center; }
 .metrics-decision__step::before { content:""; position:absolute; top:1.36rem; left:50%; width:.82rem; height:.82rem; border:3px solid #0b1120; border-radius:50%; background:#64748b; transform:translateX(-50%); box-shadow:0 0 0 1px currentColor; }
-.metrics-decision__step span { display:block; margin-bottom:.45rem; color:#94a3b8; font-size:.58rem; font-weight:800; letter-spacing:.14em; }
+.metrics-decision__step span { display:block; margin-bottom:.45rem; color:#94a3b8; font-size:.82rem; font-weight:800; letter-spacing:.14em; }
 .metrics-decision__step strong { display:block; color:#fff; font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif; font-size:1.65rem; letter-spacing:-.045em; line-height:1; }
-.metrics-decision__step p { margin:.38rem auto 0; max-width:14ch; color:#cbd5e1; font-size:.82rem; line-height:1.3; }
+.metrics-decision__step p { margin:.38rem auto 0; max-width:14ch; color:#cbd5e1; font-size:1.01rem; line-height:1.32; }
 .metrics-decision__step--signal { color:#a78bfa; }.metrics-decision__step--signal::before { background:#a78bfa; }
 .metrics-decision__step--meaning { color:#facc15; }.metrics-decision__step--meaning::before { background:#facc15; }
 .metrics-decision__step--decision { color:#fb923c; }.metrics-decision__step--decision::before { background:#fb923c; }
-.metrics-decision__caption { margin-top:1.25rem; color:#fdba74; font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif; font-size:1.25rem; font-weight:700; letter-spacing:-.03em; text-align:center; }
+.metrics-decision__caption { margin-top:1.25rem; color:#fdba74; font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif; font-size:1.42rem; font-weight:700; letter-spacing:-.03em; text-align:center; }
 @media (max-width:700px) { .metrics-decision { margin-top:1rem; padding-top:0; }.metrics-decision__track { top:9%; bottom:16%; left:1rem; width:1px; height:auto; background:linear-gradient(#64748b 0%,#a78bfa 32%,#facc15 66%,#fb923c 100%); }.metrics-decision__track::after { top:auto; right:-.22rem; bottom:0; transform:rotate(135deg); }.metrics-decision__steps { grid-template-columns:1fr; gap:0; }.metrics-decision__step { padding:0 0 .9rem 2.25rem; text-align:left; }.metrics-decision__step::before { top:.12rem; left:1rem; }.metrics-decision__step p { max-width:none; margin-top:.25rem; }.metrics-decision__caption { margin:.55rem 0 0 2.25rem; text-align:left; } }
 </style>
