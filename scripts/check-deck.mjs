@@ -40,16 +40,17 @@ if (!slides.includes('<ProductLoop />') || !slides.includes('Tú decides · 90 s
   throw new Error('Faltan elementos esenciales de la charla')
 }
 
-// Las ilustraciones laterales absolutas deben dimensionarse respecto al lienzo,
-// nunca con unidades vw, que se vuelven diminutas en un viewport móvil vertical.
+// Las ilustraciones laterales absolutas usan el lienzo de Slidev como
+// referencia: los vw dependen del viewport y empequeñecen las imágenes
+// cuando se consulta una diapositiva desde un móvil vertical.
+const illustrationRules = style.split('/* Proporciones consistentes para todas las ilustraciones laterales. */')[1]
+  ?.split('/* Jerarquía editorial para conceptos:')[0] ?? ''
 for (const selector of ['.responsibility-side-asset', '.stop-signals-side-asset']) {
-  const rule = style.match(new RegExp(`\\.?${selector.slice(1)}\\s*,?[\\s\\S]*?\\{([^}]*)\\}`))
-  if (!rule) throw new Error(`No aparece el estilo de ${selector}`)
+  if (!illustrationRules.includes(selector)) {
+    throw new Error('Falta el selector de ilustración ' + selector)
+  }
 }
-if (/width:\\s*(?:min\\()?[^;]*vw/.test(
-  style.split('/* Proporciones consistentes para todas las ilustraciones laterales. */')[1]
-    ?.split('/* Jerarquía editorial para conceptos:')[0] ?? '',
-)) {
+if (/\bwidth\s*:[^;]*\b\d+(?:\.\d+)?vw\b/.test(illustrationRules)) {
   throw new Error('No usar vw para dimensionar ilustraciones respecto al lienzo')
 }
 
