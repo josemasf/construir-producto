@@ -51,30 +51,6 @@ Esta frase duele un poco, sobre todo a quienes disfrutamos construyendo. Pero es
 -->
 
 ---
-layout: default
-class: compare-slide
----
-
-# El problema no es desarrollar.
-
-## El problema es confundir desarrollo con avance.
-
-- Más funcionalidades ≠ más valor.
-- Más arquitectura ≠ más futuro.
-- Más automatización ≠ más foco.
-- Más IA ≠ mejor criterio.
-
-<img class="compare-side-asset" src="/images/desarrollo-avance-side-right.png" alt="Un desarrollador contempla una torre de funcionalidades mientras busca dirección" />
-
-<!--
-Notas del ponente:
-Aquí no ataques el desarrollo. Tú eres técnico y esta charla debe sonar desde dentro, no como discurso de producto contra ingeniería.
-
-Idea:
-Construir es necesario. Pero construir sin aprender puede convertirse en una forma muy cara de evitar tomar decisiones.
--->
-
----
 layout: cover
 background: /images/progreso-visible.png
 class: progreso-visible
@@ -118,37 +94,19 @@ class: concept-slide
 ## No son peldaños de una escalera.
 
 <div class="concept-grid">
-  <section class="concept-panel"><small>CANAL</small><strong>Web</strong><p>Una interfaz o punto de acceso. Puede ser parte de un producto.</p></section>
-  <section class="concept-panel"><small>EXPERIENCIA</small><strong>Servicio</strong><p>Resuelve una necesidad. Puede ser, a la vez, un producto.</p></section>
-  <section class="concept-panel"><small>PROPUESTA DE VALOR</small><strong>Producto</strong><p>Una apuesta por aportar valor a unas personas de forma viable.</p></section>
+  <section class="concept-panel"><small>CANAL</small><strong>Web</strong><p>Una interfaz o punto de acceso. Puede formar parte de un producto.</p></section>
+  <section class="concept-panel"><small>EXPERIENCIA</small><strong>Servicio</strong><p>Resuelve una necesidad. También puede ser un producto.</p></section>
+  <section class="concept-panel"><small>PROPUESTA DE VALOR</small><strong>Producto</strong><p>Resuelve un problema de forma valiosa y viable.</p></section>
 </div>
 
-<p class="concept-note">Un producto también puede ser interno, gratuito, un servicio o una web. Importa qué valor crea y cómo se sostiene.</p>
+<p class="concept-note">No importa la etiqueta: ¿tenemos evidencias del <strong>problema, uso, valor y viabilidad</strong>?</p>
 
 <!--
 Notas del ponente:
-No plantear web, servicio y producto como etapas universales ni categorías excluyentes. Un producto interno no necesita venderse a sus usuarios. El valor se concreta en resultados y en viabilidad, no en tener una pantalla de login.
--->
-
----
-layout: default
-class: evidence-criteria-slide
----
-
-# La pregunta no es cómo llamarlo
-
-## Es qué evidencia tenemos para seguir invirtiendo.
-
-<div class="evidence-criteria">
-  <div><span>01</span><strong>Problema</strong><p>¿A quién le duele y en qué contexto?</p></div>
-  <div><span>02</span><strong>Uso</strong><p>¿Qué consigue hacer realmente?</p></div>
-  <div><span>03</span><strong>Valor</strong><p>¿Qué mejora respecto a su alternativa?</p></div>
-  <div><span>04</span><strong>Viabilidad</strong><p>¿Compensa sostenerlo y evolucionarlo?</p></div>
-</div>
-
-<!--
-Notas del ponente:
-Ninguna métrica aislada demuestra que tenemos un producto. No exigir recurrencia a una solución para un problema puntual. En proyectos internos, el valor puede ser menos tiempo perdido, menos errores o mejor servicio.
+La web, el servicio y el producto no son niveles universales de madurez ni categorías excluyentes.
+Una web puede ser un producto y un producto puede ser interno o gratuito.
+No exigir recurrencia a cualquier problema: algunos productos resuelven necesidades puntuales.
+La pregunta importante no es cómo llamamos lo que hacemos, sino qué evidencias tenemos para justificar su valor y la inversión: ¿quién tiene el problema?, ¿lo resuelve?, ¿qué alternativa supera? y ¿cuánto cuesta sostenerlo?
 -->
 
 ---
@@ -257,38 +215,26 @@ A veces una feature no es una solución. Es una forma elegante de aplazar una de
 -->
 
 ---
-layout: section
----
-
-# 3 · La realidad de los usuarios
-
-## El juguete técnico empieza a tener consecuencias.
-
----
 layout: default
 class: responsibility-slide
 ---
 
-# Tener usuarios cambia el juego
+# 3 · Con usuarios cambia la responsabilidad
 
-## La experiencia deja de depender solo de tu código.
+## Ya no solo construimos: alguien depende de que funcione.
 
-- Ya no solo construyes.
-- Ahora mantienes.
-- Das soporte.
-- Corriges expectativas.
-- Mides comportamiento real.
-- Priorizas con restricciones.
-- Decides qué no merece la pena tocar.
+- Mantenemos y damos soporte.
+- Respondemos a expectativas y errores reales.
+- Observamos el uso, no solo las entregas.
+- Priorizamos también fiabilidad y continuidad.
 
-<img class="responsibility-side-asset" src="/images/usuarios-responsabilidad-side-right-v2.png" alt="Una persona mantiene un servicio mientras atiende señales y necesidades de usuarios" />
+<img class="responsibility-side-asset" src="/images/usuarios-responsabilidad-side-right-v2.png" alt="Una persona mantiene un servicio mientras atiende necesidades reales de usuarios" />
 
 <!--
 Notas del ponente:
-Este bloque conecta con tu experiencia: proyectos propios que llegaron a ser pequeños servicios.
-
-Idea:
-El usuario convierte el juguete técnico en algo que tiene consecuencias. Aunque sean pocas personas, ya hay alguien esperando que funcione.
+Esta diapositiva sustituye la separadora del bloque y la lista de responsabilidades.
+Tener usuarios no convierte por sí solo algo en un producto viable, pero sí introduce obligaciones. Una decisión de arquitectura o un refactor puede afectar a gente real.
+Pasa del ejemplo de funcionalidades al coste de mantener un servicio. Recuperar Qué Veo Ahora para preguntar qué cambia cuando alguien espera poder elegir qué ver.
 -->
 
 ---
@@ -312,45 +258,20 @@ layout: default
 class: evidence-slide
 ---
 
-# La analítica no sirve para decorar dashboards
+# Medir para decidir · Qué Veo Ahora
 
 <MetricsToDecision />
 
-<!--
-Notas del ponente:
-Aquí puedes mencionar que medir no es poner GA4, PostHog o cualquier herramienta y ya está.
-
-La analítica útil empieza antes:
-¿Qué necesito aprender?
-¿Qué evento demostraría valor?
-¿Qué señal me diría que debo parar?
-
-Remate:
-Un dashboard que no cambia decisiones es un salvapantallas caro.
--->
-
----
-layout: default
-class: case-slide
----
-
-# Caso conductor · Medir para decidir
-
-## «¿Ayudamos a encontrar algo?» es mejor pregunta que «¿Cuántas visitas hay?»
-
-<div class="case-metrics">
-  <div><span>01</span><strong>Abre una recomendación</strong></div>
-  <div><span>02</span><strong>Consulta una ficha</strong></div>
-  <div><span>03</span><strong>Va al proveedor</strong></div>
-  <div><span>04</span><strong>Vuelve a buscar o abandona</strong></div>
-</div>
-
-<p class="case-insight">Eventos que podríamos instrumentar, no cifras observadas. Un clic al proveedor es una señal indirecta: no demuestra que haya visto la película.</p>
+<p class="metrics-case-note"><strong>Ejemplo hipotético:</strong> recomendación → ficha → enlace al proveedor. Ese recorrido puede orientar decisiones, pero un clic no demuestra satisfacción.</p>
 
 <!--
 Notas del ponente:
-Reutilizar el caso Qué Veo Ahora: hipótesis de que reducir la fricción facilitaría pasar de una recomendación a elegir proveedor.
-No afirmar que los eventos ya están implementados o medidos. Combinar la telemetría con conversaciones para interpretar el porqué.
+Fusionamos la explicación de analítica y los eventos propuestos para Qué Veo Ahora.
+Antes de instrumentar, formular la pregunta: ¿ayudamos al usuario a encontrar algo?
+Señales que podríamos instrumentar, sin asegurar que ya existan: abre recomendación, consulta ficha, pulsa enlace del proveedor, vuelve a buscar o abandona.
+Luego interpretar con cautela y complementar con conversaciones: pulsar un enlace no significa ver la película ni estar satisfecho.
+Elegir una intervención con la evidencia obtenida. Un dashboard que nunca cambia decisiones no sirve como producto de análisis.
+NO presentar métricas, conversiones o comportamientos hipotéticos como resultados reales.
 -->
 
 ---
@@ -436,51 +357,27 @@ Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerl
 -->
 
 ---
-layout: two-cols-header
----
-
-# Cerrar no siempre es fracasar
-
-::left::
-
-A veces es reconocer que algo ya te ha dado el aprendizaje que podía darte.
-
-Y que seguir invirtiendo no es constancia.  
-Es apego con repositorio.
-
-::right::
-
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/cerrar-aprendizaje-side-right.png" alt="Una persona cierra una caja de proyecto y conserva una libreta con aprendizajes" />
-
-<!--
-Notas del ponente:
-Este es el cierre más personal. Puedes hablar de QueVeoAhora o de otro proyecto propio sin entrar en detalles privados si no quieres.
-
-Idea:
-Un proyecto puede pasar de web a servicio. Puede tener usuarios. Puede ser útil. Y aun así no tener suficiente recorrido como producto.
--->
-
----
 layout: default
 class: stop-signals-slide
 ---
 
-# Señales de que quizá toca parar
+# Cerrar no siempre es fracasar
 
-- Cada mejora exige más energía de la que devuelve.
-- La necesidad no se repite o no genera el valor esperado.
-- El valor que aporta no justifica su coste de mantenimiento.
-- Estás construyendo para mantener viva la idea, no para validar el producto.
-- El coste de oportunidad empieza a ser evidente.
+## A veces, la mejor decisión es dejar de invertir.
 
-<img class="stop-signals-side-asset" src="/images/senales-parar-side-right-v2.png" alt="Una persona detiene con calma un pequeño servicio y abre espacio para otro camino" />
+- El valor para quien lo usa no justifica el coste de mantenerlo.
+- Seguimos añadiendo funciones, pero no aprendemos nada nuevo.
+- El coste de oportunidad supera lo que esperamos conseguir.
+
+<img class="stop-signals-side-asset" src="/images/senales-parar-side-right-v2.png" alt="Una persona detiene con calma un pequeño servicio y abre espacio para otra decisión" />
 
 <!--
 Notas del ponente:
-No presentarlo como lista cerrada. Presentarlo como señales.
-
-Puedes decir:
-No hay una métrica universal para cerrar un proyecto. Pero sí hay momentos en los que, si eres honesto, sabes que estás empujando más por orgullo que por evidencia.
+Fusiona «Cerrar no siempre es fracasar» con las señales para parar.
+El humor se conserva para decir en voz alta: seguir invirtiendo no siempre es constancia, a veces es apego con repositorio.
+No existe una métrica universal que obligue a cerrar. Importan el valor, las personas afectadas, el mantenimiento y el coste de oportunidad.
+Cerrar responsablemente implica avisar, preservar datos si corresponde, retirar el servicio ordenadamente y documentar aprendizajes.
+Conectar con la siguiente diapositiva: no todo exige cerrar; mantener pequeño o experimentar también son decisiones maduras.
 -->
 
 ---
@@ -512,70 +409,27 @@ layout: section
 ## No sustituye a la calidad técnica: conecta decisiones de ingeniería con resultados y riesgos.
 
 ---
-layout: two-cols-header
----
-
-# Cambia la forma de priorizar
-
-::left::
-
-<div class="priority-questions" aria-label="Preguntas que orientan la priorización">
-  <section class="priority-question priority-question--before">
-    <p>Antes</p>
-    <strong>¿Qué podemos construir?</strong>
-  </section>
-  <section class="priority-question priority-question--after">
-    <p>Después</p>
-    <strong>¿Qué necesitamos aprender o mejorar ahora?</strong>
-  </section>
-</div>
-
-::right::
-
-<div class="priority-shift priority-shift--horizontal" aria-label="La prioridad cambia de construir funcionalidades a aprender o mejorar">
-  <div class="priority-card priority-card-old">
-    <span>ANTES</span>
-    <strong>Más cosas</strong>
-    <i>features · backlog · entrega</i>
-  </div>
-  <div class="priority-arrow priority-arrow--right" aria-hidden="true">→</div>
-  <div class="priority-card priority-card-new">
-    <span>DESPUÉS</span>
-    <strong>Más criterio</strong>
-    <i>aprendizaje · impacto · riesgo</i>
-  </div>
-</div>
-
-<!--
-Notas del ponente:
-Este bloque sirve para aterrizar la charla en práctica profesional, no solo en side projects.
-
-En empresa también pasa:
-- Roadmaps llenos de funcionalidades.
-- Migraciones sin criterios de adopción.
-- Refactors sin explicación de riesgo.
-- Automatizaciones sin impacto medible.
-
-La mentalidad de producto no es solo para startups.
--->
-
----
 layout: default
 class: technical-decision-slide
 ---
 
 # Cambia la conversación técnica
 
+## De «¿qué podemos construir?» a «¿qué riesgo o problema reducimos?».
+
 <div class="technical-decision">
-  <div class="technical-decision__old"><small>EN LUGAR DE</small><strong>«Hay que rehacer este módulo porque está mal diseñado».</strong></div>
-  <div class="technical-decision__new"><small>PROBAMOS A DECIR</small><strong>«Esta complejidad provoca fallos y retrasos; propongo simplificar esta parte y comprobar el efecto».</strong></div>
+  <div class="technical-decision__old"><small>ANTES</small><strong>«Hay que rehacer este módulo porque está mal diseñado».</strong></div>
+  <div class="technical-decision__new"><small>CON CRITERIO DE PRODUCTO</small><strong>«Esta complejidad provoca fallos y retrasos; simplifiquemos y comprobemos el efecto».</strong></div>
 </div>
 
-<p class="technical-decision__bottom">El criterio no elimina los refactors: obliga a explicar qué riesgo reducen y cómo comprobaremos su efecto.</p>
+<p class="technical-decision__bottom">La buena ingeniería no deja de priorizar refactors: explica su impacto en el equipo, en el usuario o en el riesgo.</p>
 
 <!--
 Notas del ponente:
-Conectar con liderazgo técnico y refactors. No reducir todas las decisiones al retorno financiero. Preguntar: ¿cuándo fue la última vez que defendimos un cambio explicando el riesgo que evitaba?
+Fusiona la priorización y la conversación técnica.
+Antes: más features, backlog o una preferencia arquitectónica. Después: aprendizaje, impacto, riesgo o capacidad de entrega.
+No hay que justificar toda mejora con ingresos. Fiabilidad, accesibilidad, seguridad y mantenibilidad pueden ser razones suficientes.
+Una decisión técnica gana fuerza si podemos explicar qué riesgo reduce, cómo sabremos que mejora y qué coste asumimos.
 -->
 
 ---
@@ -668,47 +522,22 @@ Esta es la diapositiva para fotografiar y usar al día siguiente. No convertirla
 -->
 
 ---
-layout: statement
-class: closing-question
----
-
-<div class="closing-question__content">
-  <p class="closing-question__eyebrow">La pregunta no es</p>
-  <p class="closing-question__discarded">«¿qué más podemos desarrollar?»</p>
-
-  <div class="closing-question__rule" aria-hidden="true"></div>
-
-  <p class="closing-question__eyebrow">La pregunta es</p>
-  <h1 class="closing-question__answer">«¿qué decisión<br>estamos evitando?»</h1>
-</div>
-
-
-<!--
-Notas del ponente:
-Esta es una de las frases finales fuertes.
-
-No correr. Que quede clara.
--->
-
----
 layout: end
 ---
 
 # Gracias
 
-## ¿Qué estás construyendo ahora mismo?
+## ¿Qué decisión estamos evitando?
 
-Y, sobre todo:
-
-## ¿qué necesitas aprender antes de seguir construyendo?
+¿Y qué necesitaríamos aprender antes de volver a construir?
 
 José María Santos  
 josemariasantos.com
 
 <!--
 Notas del ponente:
-Cerrar con pregunta, no con moraleja excesiva.
-
-Posible frase final:
-Construir software es una habilidad poderosa. Precisamente por eso conviene usarla con criterio.
+La diapositiva anterior presenta cuatro preguntas aplicables al día siguiente.
+Cerrar con una pregunta, no recitar de nuevo los aprendizajes.
+Mensaje final: el código importa más cuando sabemos para qué lo estamos escribiendo.
+Dejar silencio para la reflexión y abrir preguntas del público si hay tiempo.
 -->
