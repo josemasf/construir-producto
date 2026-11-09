@@ -5,7 +5,10 @@ on:
     paths:
       - "slides.md"
       - "style.css"
+      - "global-bottom.vue"
       - "components/**"
+      - "scripts/**"
+      - "public/images/**"
       - "package.json"
       - "pnpm-lock.yaml"
       - ".github/workflows/slides.yml"
@@ -15,7 +18,10 @@ on:
     paths:
       - "slides.md"
       - "style.css"
+      - "global-bottom.vue"
       - "components/**"
+      - "scripts/**"
+      - "public/images/**"
       - "package.json"
       - "pnpm-lock.yaml"
       - ".github/workflows/slides.yml"
@@ -37,4 +43,5 @@ jobs:
           node-version: "22"
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: node scripts/check-deck.mjs
       - run: pnpm build

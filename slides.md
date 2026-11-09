@@ -36,11 +36,7 @@ layout: statement
 class: statement-thesis
 ---
 
-# Un producto técnicamente impecable
-
-# que nadie necesita sigue siendo
-
-# algo que nadie necesita.
+# Un producto técnicamente impecable que nadie necesita sigue siendo algo que nadie necesita.
 
 <!--
 Notas del ponente:
@@ -118,10 +114,16 @@ class: case-slide
 
 ## El usuario no busca filtros: quiere encontrar algo que ver.
 
-<div class="case-panels">
-  <section><small>LO QUE EXISTE</small><strong>Recomendaciones</strong><p>Estado de ánimo, duración, géneros y plataformas.</p></section>
-  <section><small>LA HIPÓTESIS DE VALOR</small><strong>Decidir con menos fricción</strong><p>Encontrar algo adecuado sin dar vueltas por varios catálogos.</p></section>
-  <section><small>LA INCERTIDUMBRE</small><strong>¿Qué ayuda a decidir?</strong><p>¿Más opciones, una propuesta mejor o un recorrido más corto?</p></section>
+<div class="case-story">
+  <div class="case-story__question" aria-hidden="true">
+    <span>LA PREGUNTA</span>
+    <strong>¿Qué ayuda de verdad a decidir?</strong>
+  </div>
+  <div class="case-story__details">
+    <div><small>01 / LO QUE EXISTE</small><strong>Recomendaciones</strong><p>Estado de ánimo, duración, géneros y plataformas.</p></div>
+    <div><small>02 / HIPÓTESIS DE VALOR</small><strong>Menos fricción</strong><p>Encontrar algo adecuado sin recorrer varios catálogos.</p></div>
+    <div><small>03 / INCERTIDUMBRE</small><strong>Qué facilita elegir</strong><p>¿Más opciones, mejores propuestas o un recorrido más corto?</p></div>
+  </div>
 </div>
 
 <p class="hypothesis-note">Producto real; hipótesis y decisiones del ejemplo planteadas con fines didácticos, sin atribuirle métricas.</p>
@@ -182,7 +184,7 @@ layout: two-cols-header
 
 ::right::
 
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/preguntas-usuarios-side-right.png" alt="Dos personas conversan junto a un mapa de preguntas y una lupa" />
+<img class="side-asset" src="/images/preguntas-usuarios-side-right.png" alt="Dos personas conversan junto a un mapa de preguntas y una lupa" />
 
 <!--
 Notas del ponente:
@@ -344,7 +346,7 @@ Antes de construir la versión grande, prueba la intervención que reduce mejor 
 
 ::right::
 
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/experimentos-baratos-side-right.png" alt="Un experimento manual ligero frente a una plataforma compleja aún en construcción" />
+<img class="side-asset" src="/images/experimentos-baratos-side-right.png" alt="Un experimento manual ligero frente a una plataforma compleja aún en construcción" />
 
 <!--
 Notas del ponente:
@@ -446,7 +448,7 @@ Pero también puede implementar muy rápido una respuesta a la pregunta equivoca
 
 ::right::
 
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
+<img class="side-asset" src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
 
 <!--
 Notas del ponente:

@@ -4,66 +4,74 @@ import { useNav } from '@slidev/client'
 
 const { currentPage } = useNav()
 
-const stages = [
-  { label: 'Construir', end: 12 },
-  { label: 'Usuarios', end: 14 },
-  { label: 'Evidencia', end: 16 },
-  { label: 'Decidir', end: 21 },
-  { label: 'Parar', end: 25 },
-  { label: 'Producto', end: Number.POSITIVE_INFINITY },
-]
+/**
+ * Los capítulos coinciden con las 25 diapositivas del guion.
+ * La navegación se oculta en ilustraciones de impacto y separadores.
+ */
+const chapters = [
+  { label: 'Del código al problema', start: 1, end: 6 },
+  { label: 'Seguir construyendo', start: 7, end: 10 },
+  { label: 'La realidad del usuario', start: 11, end: 13 },
+  { label: 'Aprender a decidir', start: 14, end: 19 },
+  { label: 'Ingeniería con criterio', start: 20, end: 25 },
+] as const
 
-const activeStage = computed(() =>
-  stages.findIndex((stage) => currentPage.value <= stage.end),
-)
+const fullBleedSlides = new Set([1, 2, 3, 4, 7, 10, 14, 20, 25])
+const totalSlides = 25
+
+const visible = computed(() => !fullBleedSlides.has(currentPage.value))
+const activeChapter = computed(() => {
+  const index = chapters.findIndex((chapter) => currentPage.value >= chapter.start && currentPage.value <= chapter.end)
+  return index >= 0 ? index : 0
+})
+const pageLabel = computed(() => String(currentPage.value).padStart(2, '0'))
+const chapterLabel = computed(() => String(activeChapter.value + 1).padStart(2, '0'))
 </script>
 
 <template>
-  <nav v-if="currentPage > 1" class="story-nav" aria-label="Progreso de la charla">
-    <template v-for="(stage, index) in stages" :key="stage.label">
-      <span class="story-nav__stage" :class="{ 'story-nav__stage--active': index <= activeStage }">
-        <i aria-hidden="true" />{{ stage.label }}
-      </span>
-      <span v-if="index < stages.length - 1" class="story-nav__line" :class="{ 'story-nav__line--active': index < activeStage }" aria-hidden="true" />
-    </template>
-  </nav>
+  <footer v-if="visible" class="deck-footer" aria-label="Ubicación en la charla">
+    <div class="deck-footer__chapter">
+      <span class="deck-footer__chapter-number">{{ chapterLabel }}</span>
+      <span>{{ chapters[activeChapter].label }}</span>
+    </div>
+    <div class="deck-footer__progress" aria-hidden="true">
+      <span
+        v-for="(chapter, index) in chapters"
+        :key="chapter.label"
+        :class="{ 'deck-footer__progress-step--active': index <= activeChapter }"
+      />
+    </div>
+    <span class="deck-footer__counter">{{ pageLabel }} / {{ totalSlides }}</span>
+  </footer>
 </template>
 
 <style scoped>
-.story-nav {
+.deck-footer {
   position: fixed;
-  isolation: isolate;
   z-index: 20;
   right: 4.5rem;
-  bottom: 1.35rem;
+  bottom: 1.25rem;
   left: 4.5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 7.2rem auto;
   align-items: center;
-  color: rgba(203, 213, 225, .46);
-  font-family: "Aptos", "Segoe UI", sans-serif;
-  font-size: .57rem;
+  gap: 1.4rem;
+  min-height: 1.4rem;
+  color: var(--deck-soft, #a8b5c7);
+  font-family: var(--deck-font-body, "Inter", sans-serif);
+  font-size: .75rem;
   font-weight: 700;
-  letter-spacing: .12em;
-  line-height: 1;
-  text-transform: uppercase;
+  letter-spacing: .035em;
+  line-height: 1.2;
 }
-
-.story-nav::before {
-  position: absolute;
-  z-index: -1;
-  right: -4.5rem;
-  bottom: -1.35rem;
-  left: -4.5rem;
-  height: 4.4rem;
-  content: "";
-  background: linear-gradient(to top, rgba(8, 15, 28, .78) 0%, rgba(8, 15, 28, .48) 45%, transparent 100%);
-  pointer-events: none;
+.deck-footer__chapter { display: flex; align-items: center; gap: .85rem; min-width: 0; }
+.deck-footer__chapter-number { color: var(--deck-accent-light, #fdba74); font-weight: 800; }
+.deck-footer__progress { display: flex; gap: .3rem; }
+.deck-footer__progress span { height: 3px; flex: 1; background: rgba(148,163,184,.32); }
+.deck-footer__progress .deck-footer__progress-step--active { background: var(--deck-accent, #f97316); }
+.deck-footer__counter { color: var(--deck-ink, #f8fafc); font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 700px) {
+  .deck-footer { left: 2rem; right: 2rem; gap: .6rem; font-size: .64rem; grid-template-columns: minmax(0,1fr) 4rem auto; }
+  .deck-footer__chapter { gap: .4rem; }
 }
-
-.story-nav__stage { display: inline-flex; align-items: center; gap: .32rem; white-space: nowrap; }
-.story-nav__stage i { width: .39rem; height: .39rem; border: 1px solid currentColor; border-radius: 999px; }
-.story-nav__stage--active { color: #f8fafc; }
-.story-nav__stage--active i { border-color: #f97316; background: #f97316; box-shadow: 0 0 0 3px rgba(249, 115, 22, .13); }
-.story-nav__line { height: 1px; flex: 1; min-width: .75rem; margin: 0 .55rem; background: rgba(203, 213, 225, .18); }
-.story-nav__line--active { background: rgba(249, 115, 22, .8); }
 </style>

@@ -45,15 +45,22 @@ La presentación y las notas del ponente se editan en [`slides.md`](./slides.md)
 
 - [`slides.md`](./slides.md): narrativa, diapositivas y notas.
 - [`style.css`](./style.css): sistema visual de la charla.
+- [`global-bottom.vue`](./global-bottom.vue): navegación de los cinco capítulos y contador.
 - [`components/ProductLoop.vue`](./components/ProductLoop.vue): ciclo SVG accesible y escalable.
 - [`components/DecisionTree.vue`](./components/DecisionTree.vue): marco para cuestionar una petición.
 - [`components/MetricsToDecision.vue`](./components/MetricsToDecision.vue): vínculo entre preguntas, señales y decisiones.
 - [`public/images/`](./public/images/): ilustraciones y fondos.
 - [`docs/guion-ponencia.md`](./docs/guion-ponencia.md): tiempos y dinámica recomendada de la sesión.
 
+## Identidad visual
+
+Se respetan **todas las ilustraciones originales del autor**, que forman parte de la identidad del blog. La composición utiliza Montserrat Alternates e Inter, un fondo azul oscuro, naranja de acento y diagramas con los mismos tokens de color y tipografía.
+
+La guía para mantener el estilo sin introducir composiciones genéricas está en [`docs/design-system.md`](./docs/design-system.md).
+
 ## Comprobaciones antes de presentar
 
-- Ejecutar `pnpm build` y revisar la consola.
+- Ejecutar `node scripts/check-deck.mjs` y `pnpm build`, y revisar la consola.
 - Proyectar en formato 16:9 y comprobar contraste, textos y elementos que aparecen tras `v-click`.
 - Verificar que ninguna anécdota o métrica hipotética se presenta como hallazgo real.
 - Ensayar la duración de las cinco partes y el tiempo de interacción.
