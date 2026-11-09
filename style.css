@@ -198,3 +198,7 @@
   .audience-choices div { gap:.65rem; }
   .technical-decision strong,.takeaway-questions strong { font-size:1.13rem; }
 }
+
+/* Ejemplo breve y verificable debajo del flujo de métricas en la charla condensada. */
+.metrics-case-note { max-width: 55rem; margin: .75rem auto 0; color: #e2e8f0; font-size: 1.05rem; line-height: 1.35; }
+.metrics-case-note strong { color: #fdba74; }
