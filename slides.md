@@ -9,6 +9,7 @@ class: text-left portada
 transition: slide-left
 mdc: true
 colorSchema: dark
+duration: 45min
 ---
 
 # De escribir código
@@ -50,30 +51,6 @@ Esta frase duele un poco, sobre todo a quienes disfrutamos construyendo. Pero es
 -->
 
 ---
-layout: default
-class: compare-slide
----
-
-# El problema no es desarrollar.
-
-## El problema es confundir desarrollo con avance.
-
-- Más funcionalidades ≠ más valor.
-- Más arquitectura ≠ más futuro.
-- Más automatización ≠ más foco.
-- Más IA ≠ mejor criterio.
-
-<img class="compare-side-asset" src="/images/desarrollo-avance-side-right.png" alt="Un desarrollador contempla una torre de funcionalidades mientras busca dirección" />
-
-<!--
-Notas del ponente:
-Aquí no ataques el desarrollo. Tú eres técnico y esta charla debe sonar desde dentro, no como discurso de producto contra ingeniería.
-
-Idea:
-Construir es necesario. Pero construir sin aprender puede convertirse en una forma muy cara de evitar tomar decisiones.
--->
-
----
 layout: cover
 background: /images/progreso-visible.png
 class: progreso-visible
@@ -103,76 +80,57 @@ Y luego lanzar la pregunta:
 layout: section
 ---
 
-# 1 · Una web no es un producto
+# 1 · Del código al problema
 
-## Construir algo no demuestra todavía que alguien lo necesite.
+## Antes de preguntarnos si podemos construirlo, necesitamos saber para quién y para qué.
 
 ---
 layout: default
+class: concept-slide
 ---
 
-# No todo lo que funciona
+# Web, servicio y producto
 
-# es un producto
+## No son peldaños de una escalera.
 
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-8 max-w-3xl">
-  <div class="min-h-40 p-5 border-t-2 border-t-[var(--build)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">01</span><strong class="block text-white text-3xl">Web</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Funciona técnicamente.</p></div>
-  <div class="min-h-40 p-5 border-t-2 border-t-[var(--evidence)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">02</span><strong class="block text-white text-3xl">Servicio</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Lo usan personas.</p></div>
-  <div class="min-h-40 p-5 border-t-2 border-t-[var(--decision)] bg-slate-400/7"><span class="block mb-4 text-slate-400 text-xs font-800 tracking-widest">03</span><strong class="block text-white text-3xl">Producto</strong><p class="mt-1 text-base text-[var(--muted)] leading-snug">Genera valor suficiente para volver.</p></div>
+<div class="concept-grid">
+  <section class="concept-panel"><small>CANAL</small><strong>Web</strong><p>Una interfaz o punto de acceso. Puede formar parte de un producto.</p></section>
+  <section class="concept-panel"><small>EXPERIENCIA</small><strong>Servicio</strong><p>Resuelve una necesidad. También puede ser un producto.</p></section>
+  <section class="concept-panel"><small>PROPUESTA DE VALOR</small><strong>Producto</strong><p>Resuelve un problema de forma valiosa y viable.</p></section>
 </div>
+
+<p class="concept-note">No importa la etiqueta: ¿tenemos evidencias del <strong>problema, uso, valor y viabilidad</strong>?</p>
 
 <!--
 Notas del ponente:
-Este es uno de los bloques más importantes. Ir despacio.
-
-Explicar que muchas veces llamamos producto a cualquier cosa con dominio, login y cuatro pantallas. Pero eso solo demuestra que sabemos construir software.
-
-Matiz importante:
-Un producto no tiene por qué ser de pago desde el primer día, pero sí debe tener una hipótesis clara de valor.
+La web, el servicio y el producto no son niveles universales de madurez ni categorías excluyentes.
+Una web puede ser un producto y un producto puede ser interno o gratuito.
+No exigir recurrencia a cualquier problema: algunos productos resuelven necesidades puntuales.
+La pregunta importante no es cómo llamamos lo que hacemos, sino qué evidencias tenemos para justificar su valor y la inversión: ¿quién tiene el problema?, ¿lo resuelve?, ¿qué alternativa supera? y ¿cuánto cuesta sostenerlo?
 -->
 
 ---
 layout: default
-class: compare-slide
+class: case-slide
 ---
 
-# La pregunta cambia
+# Caso conductor · Qué Veo Ahora
 
-<div class="question-compare">
-  <div class="question-compare__web"><small>WEB</small><strong>¿Puedo construirlo?</strong></div>
-  <div class="question-compare__arrow">↓</div>
-  <div class="question-compare__product"><small>PRODUCTO</small><strong>¿Obtiene alguien suficiente valor?</strong></div>
+## El usuario no busca filtros: quiere encontrar algo que ver.
+
+<div class="case-panels">
+  <section><small>LO QUE EXISTE</small><strong>Recomendaciones</strong><p>Estado de ánimo, duración, géneros y plataformas.</p></section>
+  <section><small>LA HIPÓTESIS DE VALOR</small><strong>Decidir con menos fricción</strong><p>Encontrar algo adecuado sin dar vueltas por varios catálogos.</p></section>
+  <section><small>LA INCERTIDUMBRE</small><strong>¿Qué ayuda a decidir?</strong><p>¿Más opciones, una propuesta mejor o un recorrido más corto?</p></section>
 </div>
 
-<!--
-Notas del ponente:
-Aquí puedes decir algo como:
-La primera pregunta suele ser cómoda para perfiles técnicos. La segunda es más incómoda, porque el compilador no nos puede ayudar.
-
-Remate:
-El problema es que podemos pasar meses respondiendo muy bien a la pregunta equivocada.
--->
-
----
-layout: default
-class: journey-slide
----
-
-# La evolución no es automática
-
-<JourneyMap phase="product" />
-
-<p class="journey-caption">Puede quedarse en <strong>web correcta</strong>, convertirse en <strong>servicio útil</strong> o llegar a ser producto. La diferencia es la evidencia, no la intención.</p>
+<p class="hypothesis-note">Producto real; hipótesis y decisiones del ejemplo planteadas con fines didácticos, sin atribuirle métricas.</p>
 
 <!--
 Notas del ponente:
-La flecha de web a servicio y de servicio a producto no es automática.
-
-Una web puede estar muy bien hecha y no tener usuarios.
-Un servicio puede ser útil para algunas personas, pero no justificar más inversión.
-Un producto necesita recurrencia, valor, adopción o disposición de pago.
-
-No dramatizar: quedarse en servicio no es un fracaso. El problema es no verlo.
+Qué Veo Ahora es un proyecto real con recomendaciones por estado de ánimo y preferencias, filtros y datos de plataformas. Fuente: README de josemasf/que-veo-hoy.
+Las hipótesis siguientes NO son resultados demostrados del proyecto. Evitar cualquier afirmación sobre uso o conversión sin datos.
+Volveremos a este caso después para tomar decisiones distintas.
 -->
 
 ---
@@ -257,38 +215,26 @@ A veces una feature no es una solución. Es una forma elegante de aplazar una de
 -->
 
 ---
-layout: section
----
-
-# 3 · Cuando aparecen usuarios, cambia el juego
-
-## El juguete técnico empieza a tener consecuencias.
-
----
 layout: default
 class: responsibility-slide
 ---
 
-# Tener usuarios no lo convierte en producto
+# 3 · Con usuarios cambia la responsabilidad
 
-## Pero sí cambia tus responsabilidades.
+## Ya no solo construimos: alguien depende de que funcione.
 
-- Ya no solo construyes.
-- Ahora mantienes.
-- Das soporte.
-- Corriges expectativas.
-- Mides comportamiento real.
-- Priorizas con restricciones.
-- Decides qué no merece la pena tocar.
+- Mantenemos y damos soporte.
+- Respondemos a expectativas y errores reales.
+- Observamos el uso, no solo las entregas.
+- Priorizamos también fiabilidad y continuidad.
 
-<img class="responsibility-side-asset" src="/images/usuarios-responsabilidad-side-right-v2.png" alt="Una persona mantiene un servicio mientras atiende señales y necesidades de usuarios" />
+<img class="responsibility-side-asset" src="/images/usuarios-responsabilidad-side-right-v2.png" alt="Una persona mantiene un servicio mientras atiende necesidades reales de usuarios" />
 
 <!--
 Notas del ponente:
-Este bloque conecta con tu experiencia: proyectos propios que llegaron a ser pequeños servicios.
-
-Idea:
-El usuario convierte el juguete técnico en algo que tiene consecuencias. Aunque sean pocas personas, ya hay alguien esperando que funcione.
+Esta diapositiva sustituye la separadora del bloque y la lista de responsabilidades.
+Tener usuarios no convierte por sí solo algo en un producto viable, pero sí introduce obligaciones. Una decisión de arquitectura o un refactor puede afectar a gente real.
+Pasa del ejemplo de funcionalidades al coste de mantener un servicio. Recuperar Qué Veo Ahora para preguntar qué cambia cuando alguien espera poder elegir qué ver.
 -->
 
 ---
@@ -298,16 +244,13 @@ class: evidence-slide
 
 # El usuario rompe nuestras fantasías
 
-<EvidenceFlow belief="Diseñamos el flujo que parecía lógico." reality="Usa el sistema como necesita, no como imaginamos." learning="Lo secundario puede ser crítico; lo obvio puede ser invisible." />
+<EvidenceFlow belief="Pensamos que más filtros facilitarán elegir." reality="Puede explorar, abandonar o no entender una opción." learning="Antes de ampliar filtros, hay que descubrir qué dificulta decidir." />
+
+<p class="hypothesis-note">Ejemplo hipotético: una hipótesis de comportamiento, no un resultado medido.</p>
 
 <!--
 Notas del ponente:
-Buen momento para una historia concreta.
-
-Puedes contar un caso genérico de proyecto propio:
-Construyes una funcionalidad pensando que es el centro del producto, pero al observar el uso descubres que la gente entra por otra cosa, usa otra ruta o directamente no entiende tu propuesta.
-
-No inventar métricas. Hablar desde experiencia cualitativa.
+No inventar datos ni afirmar que este comportamiento ha ocurrido en Qué Veo Ahora. Si existen observaciones contrastadas, mostrar las evidencias. Un usuario no siempre utiliza lo que construimos como imaginábamos.
 -->
 
 ---
@@ -315,21 +258,20 @@ layout: default
 class: evidence-slide
 ---
 
-# La analítica no sirve para decorar dashboards
+# Medir para decidir · Qué Veo Ahora
 
 <MetricsToDecision />
 
+<p class="metrics-case-note"><strong>Ejemplo hipotético:</strong> recomendación → ficha → enlace al proveedor. Ese recorrido puede orientar decisiones, pero un clic no demuestra satisfacción.</p>
+
 <!--
 Notas del ponente:
-Aquí puedes mencionar que medir no es poner GA4, PostHog o cualquier herramienta y ya está.
-
-La analítica útil empieza antes:
-¿Qué necesito aprender?
-¿Qué evento demostraría valor?
-¿Qué señal me diría que debo parar?
-
-Remate:
-Un dashboard que no cambia decisiones es un salvapantallas caro.
+Fusionamos la explicación de analítica y los eventos propuestos para Qué Veo Ahora.
+Antes de instrumentar, formular la pregunta: ¿ayudamos al usuario a encontrar algo?
+Señales que podríamos instrumentar, sin asegurar que ya existan: abre recomendación, consulta ficha, pulsa enlace del proveedor, vuelve a buscar o abandona.
+Luego interpretar con cautela y complementar con conversaciones: pulsar un enlace no significa ver la película ni estar satisfecho.
+Elegir una intervención con la evidencia obtenida. Un dashboard que nunca cambia decisiones no sirve como producto de análisis.
+NO presentar métricas, conversiones o comportamientos hipotéticos como resultados reales.
 -->
 
 ---
@@ -347,24 +289,39 @@ class: decision-slide
 
 # Antes de desarrollar
 
-<p class="product-criterion-intro"><span>CRITERIO DE PRODUCTO</span> La brújula para decidir qué merece la pena construir.</p>
+<p class="product-criterion-intro"><span>CRITERIO DE PRODUCTO</span> Elegir qué merece la pena hacer, no solo qué sabemos implementar.</p>
 
 <DecisionTree />
 
 <!--
 Notas del ponente:
-Esta puede ser una de las ideas para repetir durante la charla.
+No todo problema se resuelve con código; tampoco toda decisión técnica requiere investigar usuarios.
+Seguridad, accesibilidad, fiabilidad y mantenimiento pueden reducir riesgos significativos. La pregunta es qué justifica actuar y qué intervención lo resuelve con menos coste.
+-->
 
-Ejemplos:
-- Si no sabemos si hay demanda, un panel avanzado no reduce incertidumbre.
-- Si no sabemos si entienden el flujo, una integración externa no reduce incertidumbre.
-- Si no sabemos si volverán, una arquitectura más compleja no reduce incertidumbre.
+---
+layout: default
+class: audience-slide
+---
 
-Matiz:
-Hay deuda técnica real que sí hay que abordar. Pero incluso ahí deberíamos explicar qué riesgo reduce.
+# Tú decides · 90 segundos
 
-Conectar explícitamente con el hilo de la charla:
-No es una fase más ni una checklist. El criterio de producto es lo que nos ayuda a decidir antes, durante y después de escribir código.
+## Entran en la web, pero no sabemos si consiguen elegir. ¿Qué harías primero?
+
+<div class="audience-choices">
+  <div><span>A</span><strong>Construir un recomendador más avanzado con IA.</strong></div>
+  <div><span>B</span><strong>Hablar con personas para entender cómo eligen.</strong></div>
+  <div><span>C</span><strong>Instrumentar el recorrido hasta el proveedor.</strong></div>
+  <div><span>D</span><strong>Simplificar directamente el flujo existente.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">No hay respuesta universal: B y C pueden aportar evidencia para decidir si D tiene sentido. A sigue siendo una apuesta sin justificar.</p>
+
+<!--
+Notas del ponente:
+Pedir levantar la mano y razonar la opción elegida; revelar la respuesta después.
+El resultado depende de la evidencia disponible y del coste de cada intervención. Evitar ridiculizar cualquiera de las opciones.
+Caso hipotético, no diagnóstico de un problema real. Reservar tres minutos incluyendo el debate.
 -->
 
 ---
@@ -377,13 +334,13 @@ layout: two-cols-header
 
 ::left::
 
-Antes de construir la versión “buena”, prueba la versión que aprende más rápido.
+Antes de construir la versión grande, prueba la intervención que reduce mejor la incertidumbre.
 
-- Landing antes que plataforma completa.
-- Proceso manual antes que automatización.
-- Prototipo antes que arquitectura definitiva.
-- Beta cerrada antes que lanzamiento público.
-- Métrica concreta antes que dashboard universal.
+- Conversación antes que soluciones para usuarios imaginados.
+- Proceso manual antes de automatizar lo incierto.
+- Prototipo para validar comprensión.
+- Prueba controlada antes de ampliar el alcance.
+- Señal accionable antes que dashboard universal.
 
 ::right::
 
@@ -400,137 +357,79 @@ Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerl
 -->
 
 ---
-layout: section
----
-
-# 5 · Saber cerrar también es ingeniería
-
-## No todo aprendizaje tiene que convertirse en producto.
-
----
-layout: two-cols-header
----
-
-# Cerrar no siempre es fracasar
-
-::left::
-
-A veces es reconocer que algo ya te ha dado el aprendizaje que podía darte.
-
-Y que seguir invirtiendo no es constancia.  
-Es apego con repositorio.
-
-::right::
-
-<img class="side-asset" style="width: 24rem; height: 48vh; object-fit: contain" src="/images/cerrar-aprendizaje-side-right.png" alt="Una persona cierra una caja de proyecto y conserva una libreta con aprendizajes" />
-
-<!--
-Notas del ponente:
-Este es el cierre más personal. Puedes hablar de QueVeoAhora o de otro proyecto propio sin entrar en detalles privados si no quieres.
-
-Idea:
-Un proyecto puede pasar de web a servicio. Puede tener usuarios. Puede ser útil. Y aun así no tener suficiente recorrido como producto.
--->
-
----
 layout: default
 class: stop-signals-slide
 ---
 
-# Señales de que quizá toca parar
+# Cerrar no siempre es fracasar
 
-- Cada mejora exige más energía de la que devuelve.
-- Los usuarios existen, pero no hay recurrencia suficiente.
-- El valor percibido no justifica el coste de mantenimiento.
-- Estás construyendo para mantener viva la idea, no para validar el producto.
-- El coste de oportunidad empieza a ser evidente.
+## A veces, la mejor decisión es dejar de invertir.
 
-<img class="stop-signals-side-asset" src="/images/senales-parar-side-right-v2.png" alt="Una persona detiene con calma un pequeño servicio y abre espacio para otro camino" />
+- El valor para quien lo usa no justifica el coste de mantenerlo.
+- Seguimos añadiendo funciones, pero no aprendemos nada nuevo.
+- El coste de oportunidad supera lo que esperamos conseguir.
+
+<img class="stop-signals-side-asset" src="/images/senales-parar-side-right-v2.png" alt="Una persona detiene con calma un pequeño servicio y abre espacio para otra decisión" />
 
 <!--
 Notas del ponente:
-No presentarlo como lista cerrada. Presentarlo como señales.
+Fusiona «Cerrar no siempre es fracasar» con las señales para parar.
+El humor se conserva para decir en voz alta: seguir invirtiendo no siempre es constancia, a veces es apego con repositorio.
+No existe una métrica universal que obligue a cerrar. Importan el valor, las personas afectadas, el mantenimiento y el coste de oportunidad.
+Cerrar responsablemente implica avisar, preservar datos si corresponde, retirar el servicio ordenadamente y documentar aprendizajes.
+Conectar con la siguiente diapositiva: no todo exige cerrar; mantener pequeño o experimentar también son decisiones maduras.
+-->
 
-Puedes decir:
-No hay una métrica universal para cerrar un proyecto. Pero sí hay momentos en los que, si eres honesto, sabes que estás empujando más por orgullo que por evidencia.
+---
+layout: default
+class: options-slide
+---
+
+# No todo acaba en «hacerlo» o «cerrarlo»
+
+<div class="options-grid">
+  <section><span>01</span><strong>Invertir</strong><p>Hay señales de valor y una mejora concreta que merece la pena.</p></section>
+  <section><span>02</span><strong>Experimentar</strong><p>La incertidumbre aún pesa más que la implementación.</p></section>
+  <section><span>03</span><strong>Mantener</strong><p>Ya resuelve una necesidad y no hace falta hacerlo más grande.</p></section>
+  <section><span>04</span><strong>Retirar</strong><p>El valor o aprendizaje no justifican seguir asumiendo el coste.</p></section>
+</div>
+
+<!--
+Notas del ponente:
+Evitar el falso dilema entre escalar y fracasar. Muchos productos y servicios deben mantenerse estables.
+Cerrar exige responsabilidad: comunicarlo, preservar datos, desactivar con orden y documentar aprendizajes.
 -->
 
 ---
 layout: section
 ---
 
-# 6 · Qué cambia cuando piensas como producto
+# 5 · Criterio de producto en ingeniería
 
-## El criterio de producto no reemplaza a la ingeniería: le da dirección.
-
----
-layout: two-cols-header
----
-
-# Cambia la forma de priorizar
-
-::left::
-
-<div class="priority-questions" aria-label="Preguntas que orientan la priorización">
-  <section class="priority-question priority-question--before">
-    <p>Antes</p>
-    <strong>¿Qué podemos construir?</strong>
-  </section>
-  <section class="priority-question priority-question--after">
-    <p>Después</p>
-    <strong>¿Qué necesitamos aprender o mejorar ahora?</strong>
-  </section>
-</div>
-
-::right::
-
-<div class="priority-shift priority-shift--horizontal" aria-label="La prioridad cambia de construir funcionalidades a aprender o mejorar">
-  <div class="priority-card priority-card-old">
-    <span>ANTES</span>
-    <strong>Más cosas</strong>
-    <i>features · backlog · entrega</i>
-  </div>
-  <div class="priority-arrow priority-arrow--right" aria-hidden="true">→</div>
-  <div class="priority-card priority-card-new">
-    <span>DESPUÉS</span>
-    <strong>Más criterio</strong>
-    <i>aprendizaje · impacto · riesgo</i>
-  </div>
-</div>
-
-<!--
-Notas del ponente:
-Este bloque sirve para aterrizar la charla en práctica profesional, no solo en side projects.
-
-En empresa también pasa:
-- Roadmaps llenos de funcionalidades.
-- Migraciones sin criterios de adopción.
-- Refactors sin explicación de riesgo.
-- Automatizaciones sin impacto medible.
-
-La mentalidad de producto no es solo para startups.
--->
+## No sustituye a la calidad técnica: conecta decisiones de ingeniería con resultados y riesgos.
 
 ---
 layout: default
+class: technical-decision-slide
 ---
 
 # Cambia la conversación técnica
 
-Ya no defiendes una solución solo porque sea limpia.
+## De «¿qué podemos construir?» a «¿qué riesgo o problema reducimos?».
 
-La defiendes porque reduce riesgo, mejora adopción, facilita mantenimiento o aumenta la capacidad del equipo para entregar valor.
+<div class="technical-decision">
+  <div class="technical-decision__old"><small>ANTES</small><strong>«Hay que rehacer este módulo porque está mal diseñado».</strong></div>
+  <div class="technical-decision__new"><small>CON CRITERIO DE PRODUCTO</small><strong>«Esta complejidad provoca fallos y retrasos; simplifiquemos y comprobemos el efecto».</strong></div>
+</div>
+
+<p class="technical-decision__bottom">La buena ingeniería no deja de priorizar refactors: explica su impacto en el equipo, en el usuario o en el riesgo.</p>
 
 <!--
 Notas del ponente:
-Aquí conecta con liderazgo técnico.
-
-Un Tech Lead no debería limitarse a decir “esto está mal hecho”. Debe explicar el impacto:
-- Esto nos ralentiza.
-- Esto nos impide medir.
-- Esto nos bloquea al escalar.
-- Esto va a multiplicar bugs.
-- Esto no merece el coste ahora.
+Fusiona la priorización y la conversación técnica.
+Antes: más features, backlog o una preferencia arquitectónica. Después: aprendizaje, impacto, riesgo o capacidad de entrega.
+No hay que justificar toda mejora con ingresos. Fiabilidad, accesibilidad, seguridad y mantenibilidad pueden ser razones suficientes.
+Una decisión técnica gana fuerza si podemos explicar qué riesgo reduce, cómo sabremos que mejora y qué coste asumimos.
 -->
 
 ---
@@ -541,9 +440,9 @@ layout: two-cols-header
 
 ::left::
 
-La IA puede acelerar mucho la implementación.
+La IA puede ayudarnos a investigar, contrastar hipótesis, explorar alternativas y desarrollar.
 
-Pero también puede acelerar una mala decisión.
+Pero también puede implementar muy rápido una respuesta a la pregunta equivocada.
 
 ::right::
 
@@ -575,7 +474,7 @@ class: loop-slide
 
 <!--
 Notas del ponente:
-Esta slide aterriza el ciclo.
+Esta slide reúne las decisiones de la charla. El ciclo no es una cascada obligatoria y el criterio no es una fase aislada.
 
 Research:
 - Usuarios.
@@ -602,57 +501,24 @@ Measure:
 -->
 
 ---
-layout: section
----
-
-# 7 · Cierre
-
-## Construir bien también es saber qué no construir.
-
----
-layout: statement
-class: closing-question
----
-
-<div class="closing-question__content">
-  <p class="closing-question__eyebrow">La pregunta no es</p>
-  <p class="closing-question__discarded">«¿qué más podemos desarrollar?»</p>
-
-  <div class="closing-question__rule" aria-hidden="true"></div>
-
-  <p class="closing-question__eyebrow">La pregunta es</p>
-  <h1 class="closing-question__answer">«¿qué decisión<br>estamos evitando?»</h1>
-</div>
-
-
-<!--
-Notas del ponente:
-Esta es una de las frases finales fuertes.
-
-No correr. Que quede clara.
--->
-
----
 layout: default
 class: takeaway-slide
 ---
 
-# Ideas para llevarse
+# Antes de abrir una issue
 
-- Una web que funciona no es necesariamente un producto.
-- Tener usuarios cambia tus responsabilidades; no garantiza sostenibilidad.
-- Desarrollar más puede aplazar una decisión.
-- La buena ingeniería también elimina, simplifica y frena.
-- Cerrar puede ser una decisión madura.
-- La IA acelera; el criterio sigue siendo humano.
+## Cuatro preguntas que merece la pena contestar
 
-<img class="takeaway-side-asset" src="/images/ideas-llevarse-side-right-v2.png" alt="Una persona conecta las ideas clave de producto en un panel de aprendizaje" />
+<div class="takeaway-questions">
+  <div><span>01</span><strong>¿Qué problema real estamos resolviendo?</strong></div>
+  <div><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
+  <div><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
+  <div><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
+</div>
 
 <!--
 Notas del ponente:
-Resumen sin extenderse demasiado.
-
-No leer la lista tal cual. Usarla como repaso.
+Esta es la diapositiva para fotografiar y usar al día siguiente. No convertirla en burocracia: una corrección pequeña no requiere un documento. Sirve para pensar mejor tickets, refactors, funcionalidades y encargos a agentes de IA.
 -->
 
 ---
@@ -661,193 +527,17 @@ layout: end
 
 # Gracias
 
-## ¿Qué estás construyendo ahora mismo?
+## ¿Qué decisión estamos evitando?
 
-Y, sobre todo:
-
-## ¿qué necesitas aprender antes de seguir construyendo?
+¿Y qué necesitaríamos aprender antes de volver a construir?
 
 José María Santos  
 josemariasantos.com
 
 <!--
 Notas del ponente:
-Cerrar con pregunta, no con moraleja excesiva.
-
-Posible frase final:
-Construir software es una habilidad poderosa. Precisamente por eso conviene usarla con criterio.
--->
-
-<!-- Los estilos globales viven en style.css. Este bloque se conserva temporalmente como referencia histórica.
-<style>
-/* Dirección visual: editorial sobria, con el naranja como señal de decisión. */
-:root {
-  --slidev-theme-primary: #f97316;
-  --ink: #f8fafc;
-  --muted: #cbd5e1;
-  --surface: #111827;
-}
-
-.slidev-layout {
-  color: var(--ink);
-  background: #0b1120;
-  font-family: "Aptos", "Segoe UI", sans-serif;
-  letter-spacing: -0.015em;
-}
-
-.slidev-layout h1,
-.slidev-layout h2,
-.slidev-layout h3 {
-  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 1.03;
-}
-
-.slidev-layout h1 { font-size: 2.85rem; max-width: 17ch; }
-.slidev-layout h2 { color: var(--muted); font-size: 1.24rem; font-weight: 500; letter-spacing: -0.02em; }
-.slidev-layout p, .slidev-layout li { font-size: 1.08rem; line-height: 1.55; }
-.slidev-layout strong { color: #fff7ed; }
-.slidev-layout ul { margin-top: 1.2rem; }
-.slidev-layout li::marker { color: var(--slidev-theme-primary); }
-
-.slidev-layout.default,
-.slidev-layout.two-cols-header {
-  padding: 3.2rem 4.5rem;
-  background-image: radial-gradient(circle at 92% 8%, rgba(249, 115, 22, .13), transparent 27%), linear-gradient(135deg, #0b1120, #111827);
-}
-
-.slidev-layout.default::after,
-.slidev-layout.two-cols-header::after {
-  content: "";
-  position: absolute;
-  right: 4.5rem;
-  top: 3.55rem;
-  width: 2.4rem;
-  height: 3px;
-  background: var(--slidev-theme-primary);
-}
-
-.slidev-layout.section {
-  padding: 3.2rem 4.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #f97316;
-  color: #19100a;
-}
-
-.slidev-layout.section h1,
-.slidev-layout.section h2 { color: #19100a; max-width: 19ch; }
-.slidev-layout.section h1 { font-size: 3.6rem; }
-.slidev-layout.section h2 { margin-top: 1.2rem; font-family: "Aptos", "Segoe UI", sans-serif; font-size: 1.25rem; }
-
-.slidev-layout.statement {
-  padding: 3.2rem 4.5rem;
-  display: flex;
-  align-items: center;
-  background: #fff7ed;
-}
-
-.slidev-layout.statement h1 { color: #1c1917; font-size: 3.25rem; max-width: 22ch; }
-.slidev-layout.statement h1::before { content: "—"; color: #ea580c; display: block; margin-bottom: .65rem; }
-
-.slidev-layout.cover {
-  padding: 3.2rem 4.5rem;
-  isolation: isolate;
-  background-color: #0b1120;
-  background-position: center;
-}
-
-.slidev-layout.cover::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(90deg, rgba(5, 10, 20, .88) 0%, rgba(5, 10, 20, .54) 57%, rgba(5, 10, 20, .22) 100%);
-}
-
-.slidev-layout.cover h1 { font-size: 3.55rem; max-width: 14ch; text-wrap: balance; }
-.slidev-layout.cover h2 { color: #e2e8f0; max-width: 34ch; }
-.slidev-layout.cover p { max-width: 45ch; }
-.slidev-layout.cover.text-right { background-position: left center; }
-.slidev-layout.cover.text-right > * { margin-left: auto; text-align: right; }
-.slidev-layout.cover.text-right::before { background: linear-gradient(270deg, rgba(5, 10, 20, .92) 0%, rgba(5, 10, 20, .7) 48%, rgba(5, 10, 20, .12) 100%); }
-
-.side-asset {
-  display: block;
-  max-width: 100%;
-  max-height: 48vh;
-  margin: .5rem auto 1.5rem;
-  object-fit: contain;
-}
-
-.side-asset-on-paper {
-  background: #f8fafc;
-  border-radius: .8rem;
-  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .28);
-}
-
-.priority-shift { display: grid; gap: .7rem; align-content: center; height: 100%; padding: 1rem; }
-.priority-card { padding: 1.25rem; border-radius: .85rem; border: 1px solid rgba(255, 255, 255, .18); }
-.priority-card span, .priority-card i { display: block; color: var(--muted); font-size: .8rem; font-style: normal; }
-.priority-card strong { display: block; margin: .3rem 0; font-size: 1.55rem; }
-.priority-card-old { background: rgba(100, 116, 139, .18); }
-.priority-card-new { background: rgba(249, 115, 22, .18); border-color: rgba(249, 115, 22, .7); }
-.priority-arrow { color: var(--slidev-theme-primary); font-size: 2rem; line-height: 1; text-align: center; }
-
-.slidev-layout.end {
-  padding: 3.2rem 4.5rem;
-  background: #f97316;
-  color: #1c1917;
-}
-
-.slidev-layout.end h1, .slidev-layout.end h2 { color: #1c1917; }
-.slidev-layout.end h1 { font-size: 4.1rem; }
-.slidev-layout.end h2 { margin-top: 1.5rem; max-width: 30ch; }
-.slidev-layout.end p { margin-top: 2rem; font-weight: 600; }
-
-.mermaid { margin-top: 1.8rem; }
-.mermaid svg { max-width: 100%; }
-
-/* Los colores expresan el tipo de pensamiento, no solo decoran. */
-:root { --build: #5eead4; --evidence: #a78bfa; --decision: #fb923c; }
-.product-word { color: var(--slidev-theme-primary); font-size: 1.16em; letter-spacing: -.075em; }
-
-.slidev-layout.compare-slide::after { background: var(--build); }
-.slidev-layout.journey-slide::after { background: var(--build); }
-.slidev-layout.evidence-slide::after { background: var(--evidence); }
-.slidev-layout.decision-slide::after,
-.slidev-layout.cost-slide::after,
-.slidev-layout.sequence-slide::after { background: var(--decision); }
-.slidev-layout.loop-slide::after { background: var(--evidence); }
-
-.evolution-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; max-width: 52rem; }
-.evolution-cards > div { min-height: 10rem; padding: 1.15rem; border-top: 2px solid #334155; background: rgba(148, 163, 184, .07); }
-.evolution-cards > div:nth-child(1) { border-color: var(--build); }
-.evolution-cards > div:nth-child(2) { border-color: var(--evidence); }
-.evolution-cards > div:nth-child(3) { border-color: var(--decision); }
-.evolution-cards span { display: block; margin-bottom: 1rem; color: #94a3b8; font-size: .65rem; font-weight: 800; letter-spacing: .12em; }
-.evolution-cards strong { display: block; color: #fff; font-family: "Iowan Old Style", Georgia, serif; font-size: 1.75rem; letter-spacing: -.045em; }
-.evolution-cards p { margin: .35rem 0 0; color: var(--muted); font-size: .92rem; line-height: 1.3; }
-
-.question-compare { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; gap: 1.2rem; max-width: 55rem; margin-top: 2rem; }
-.question-compare > div:not(.question-compare__arrow) { display: grid; align-content: center; min-height: 12rem; padding: 1.5rem; border: 1px solid; }
-.question-compare small { display: block; margin-bottom: .8rem; font-size: .64rem; font-weight: 800; letter-spacing: .13em; }
-.question-compare strong { color: #fff; font-family: "Iowan Old Style", Georgia, serif; font-size: 2rem; letter-spacing: -.055em; line-height: 1.03; }
-.question-compare__web { border-color: rgba(94, 234, 212, .6) !important; background: rgba(45, 212, 191, .08); color: var(--build); }
-.question-compare__product { border-color: rgba(249, 115, 22, .6) !important; background: rgba(249, 115, 22, .1); color: var(--decision); }
-.question-compare__arrow { align-self: center; color: #94a3b8; font-size: 2rem; }
-.journey-caption { max-width: 47rem; margin-top: 2.6rem; color: var(--muted); }
-.journey-caption strong { color: #fff; }
-
-.build-sequence { display: grid; justify-items: start; gap: .25rem; margin-top: 1.4rem; }
-.build-sequence span { color: #fdba74; font-size: 1.15rem; font-weight: 800; letter-spacing: .08em; }
-.build-sequence strong { margin-top: .85rem; color: #fff; font-family: "Iowan Old Style", Georgia, serif; font-size: 2.65rem; letter-spacing: -.06em; line-height: 1; }
-
-.slidev-layout.cost-slide { background-image: radial-gradient(circle at 50% 75%, rgba(139, 92, 246, .24), transparent 43%), linear-gradient(135deg, #0b1120, #111827); }
-.slidev-layout.loop-slide { background-image: radial-gradient(circle at 50% 55%, rgba(139, 92, 246, .19), transparent 40%), linear-gradient(135deg, #0b1120, #111827); }
-@media (max-width: 700px) { .evolution-cards { gap: .5rem; }.evolution-cards > div { padding: .7rem; }.evolution-cards strong { font-size: 1.3rem; }.question-compare { gap: .55rem; }.question-compare > div:not(.question-compare__arrow) { min-height: 9rem; padding: .8rem; }.question-compare strong { font-size: 1.4rem; } }
-</style>
+La diapositiva anterior presenta cuatro preguntas aplicables al día siguiente.
+Cerrar con una pregunta, no recitar de nuevo los aprendizajes.
+Mensaje final: el código importa más cuando sabemos para qué lo estamos escribiendo.
+Dejar silencio para la reflexión y abrir preguntas del público si hay tiempo.
 -->
