@@ -1,29 +1,86 @@
 <template>
-  <figure class="metrics-decision" role="img" aria-label="La analítica útil parte de una pregunta, observa una señal, interpreta el comportamiento y conduce a una decisión">
-    <div class="metrics-decision__track" aria-hidden="true"></div>
+  <figure class="metrics-decision" aria-label="La analítica parte de una pregunta y conduce a una decisión">
     <ol class="metrics-decision__steps">
-      <li class="metrics-decision__step metrics-decision__step--question"><span>01</span><strong>Pregunta</strong><p>¿Qué necesito aprender?</p></li>
-      <li class="metrics-decision__step metrics-decision__step--signal"><span>02</span><strong>Señal</strong><p>Uso, abandono o recurrencia.</p></li>
-      <li class="metrics-decision__step metrics-decision__step--meaning"><span>03</span><strong>Lectura</strong><p>¿Qué está ocurriendo de verdad?</p></li>
-      <li class="metrics-decision__step metrics-decision__step--decision"><span>04</span><strong>Decisión</strong><p>Seguir, cambiar o parar.</p></li>
+      <li class="metrics-decision__step">
+        <span>01</span>
+        <strong>Pregunta</strong>
+        <p>¿Qué necesito aprender?</p>
+      </li>
+      <li class="metrics-decision__step">
+        <span>02</span>
+        <strong>Señal</strong>
+        <p>Uso, abandono o recurrencia.</p>
+      </li>
+      <li class="metrics-decision__step">
+        <span>03</span>
+        <strong>Lectura</strong>
+        <p>¿Qué está ocurriendo de verdad?</p>
+      </li>
+      <li class="metrics-decision__step">
+        <span>04</span>
+        <strong>Decisión</strong>
+        <p>Seguir, cambiar o parar.</p>
+      </li>
     </ol>
-    <figcaption class="metrics-decision__caption">Una métrica solo merece existir si puede cambiar una decisión.</figcaption>
+    <figcaption>Una métrica importa cuando puede cambiar una decisión.</figcaption>
   </figure>
 </template>
 
 <style scoped>
-.metrics-decision { position:relative; max-width:61rem; margin:2.2rem auto 0; padding:1.7rem 0 .35rem; }
-.metrics-decision__track { position:absolute; top:3.25rem; right:9%; left:9%; height:1px; background:linear-gradient(90deg,#64748b 0%,#a78bfa 32%,#facc15 66%,#fb923c 100%); }
-.metrics-decision__track::after { content:""; position:absolute; top:-.22rem; right:-.05rem; width:.52rem; height:.52rem; border-top:1px solid #fb923c; border-right:1px solid #fb923c; transform:rotate(45deg); }
-.metrics-decision__steps { position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:0; padding:0; list-style:none; }
-.metrics-decision__step { position:relative; padding:2.65rem .65rem .7rem; color:#cbd5e1; text-align:center; }
-.metrics-decision__step::before { content:""; position:absolute; top:1.36rem; left:50%; width:.82rem; height:.82rem; border:3px solid #0b1120; border-radius:50%; background:#64748b; transform:translateX(-50%); box-shadow:0 0 0 1px currentColor; }
-.metrics-decision__step span { display:block; margin-bottom:.45rem; color:#94a3b8; font-size:.82rem; font-weight:800; letter-spacing:.14em; }
-.metrics-decision__step strong { display:block; color:#fff; font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif; font-size:1.65rem; letter-spacing:-.045em; line-height:1; }
-.metrics-decision__step p { margin:.38rem auto 0; max-width:14ch; color:#cbd5e1; font-size:1.01rem; line-height:1.32; }
-.metrics-decision__step--signal { color:#a78bfa; }.metrics-decision__step--signal::before { background:#a78bfa; }
-.metrics-decision__step--meaning { color:#facc15; }.metrics-decision__step--meaning::before { background:#facc15; }
-.metrics-decision__step--decision { color:#fb923c; }.metrics-decision__step--decision::before { background:#fb923c; }
-.metrics-decision__caption { margin-top:1.25rem; color:#fdba74; font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif; font-size:1.42rem; font-weight:700; letter-spacing:-.03em; text-align:center; }
-@media (max-width:700px) { .metrics-decision { margin-top:1rem; padding-top:0; }.metrics-decision__track { top:9%; bottom:16%; left:1rem; width:1px; height:auto; background:linear-gradient(#64748b 0%,#a78bfa 32%,#facc15 66%,#fb923c 100%); }.metrics-decision__track::after { top:auto; right:-.22rem; bottom:0; transform:rotate(135deg); }.metrics-decision__steps { grid-template-columns:1fr; gap:0; }.metrics-decision__step { padding:0 0 .9rem 2.25rem; text-align:left; }.metrics-decision__step::before { top:.12rem; left:1rem; }.metrics-decision__step p { max-width:none; margin-top:.25rem; }.metrics-decision__caption { margin:.55rem 0 0 2.25rem; text-align:left; } }
+.metrics-decision { position: relative; max-width: 60rem; margin: 2.4rem auto 0; }
+.metrics-decision__steps {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.metrics-decision__step {
+  position: relative;
+  min-height: 11rem;
+  padding: 1.2rem .3rem .6rem 0;
+  border-top: 2px solid var(--deck-rule, #64748b);
+}
+.metrics-decision__step:first-child { border-top-color: var(--deck-accent, #f97316); }
+.metrics-decision__step:last-child { border-top-color: var(--deck-evidence, #67e8f9); }
+.metrics-decision__step span {
+  display: block;
+  margin-bottom: .85rem;
+  color: var(--deck-accent-light, #fdba74);
+  font-family: var(--deck-font-body, sans-serif);
+  font-size: .83rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.metrics-decision__step strong {
+  display: block;
+  color: var(--deck-ink, #f8fafc);
+  font-family: var(--deck-font-display, sans-serif);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.16;
+}
+.metrics-decision__step p {
+  max-width: 17ch;
+  margin: .65rem 0 0;
+  color: var(--deck-muted, #cbd5e1);
+  font-family: var(--deck-font-body, sans-serif);
+  font-size: 1.04rem;
+  line-height: 1.38;
+}
+.metrics-decision figcaption {
+  margin-top: .85rem;
+  color: var(--deck-accent-light, #fdba74);
+  font-family: var(--deck-font-display, sans-serif);
+  font-size: 1.16rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+@media (max-width:700px) {
+  .metrics-decision { margin-top: .8rem; }
+  .metrics-decision__steps { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .5rem; }
+  .metrics-decision__step { min-height: 0; }
+}
 </style>
