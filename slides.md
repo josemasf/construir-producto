@@ -132,28 +132,6 @@ No plantear web, servicio y producto como etapas universales ni categorías excl
 
 ---
 layout: default
-class: compare-slide
----
-
-# La pregunta cambia
-
-<div class="question-compare">
-  <div class="question-compare__web"><small>WEB</small><strong>¿Puedo construirlo?</strong></div>
-  <div class="question-compare__arrow">↓</div>
-  <div class="question-compare__product"><small>PRODUCTO</small><strong>¿Obtiene alguien suficiente valor?</strong></div>
-</div>
-
-<!--
-Notas del ponente:
-Aquí puedes decir algo como:
-La primera pregunta suele ser cómoda para perfiles técnicos. La segunda es más incómoda, porque el compilador no nos puede ayudar.
-
-Remate:
-El problema es que podemos pasar meses respondiendo muy bien a la pregunta equivocada.
--->
-
----
-layout: default
 class: evidence-criteria-slide
 ---
 
@@ -171,6 +149,30 @@ class: evidence-criteria-slide
 <!--
 Notas del ponente:
 Ninguna métrica aislada demuestra que tenemos un producto. No exigir recurrencia a una solución para un problema puntual. En proyectos internos, el valor puede ser menos tiempo perdido, menos errores o mejor servicio.
+-->
+
+---
+layout: default
+class: case-slide
+---
+
+# Caso conductor · Qué Veo Ahora
+
+## El usuario no busca filtros: quiere encontrar algo que ver.
+
+<div class="case-panels">
+  <section><small>LO QUE EXISTE</small><strong>Recomendaciones</strong><p>Estado de ánimo, duración, géneros y plataformas.</p></section>
+  <section><small>LA HIPÓTESIS DE VALOR</small><strong>Decidir con menos fricción</strong><p>Encontrar algo adecuado sin dar vueltas por varios catálogos.</p></section>
+  <section><small>LA INCERTIDUMBRE</small><strong>¿Qué ayuda a decidir?</strong><p>¿Más opciones, una propuesta mejor o un recorrido más corto?</p></section>
+</div>
+
+<p class="hypothesis-note">Producto real; hipótesis y decisiones del ejemplo planteadas con fines didácticos, sin atribuirle métricas.</p>
+
+<!--
+Notas del ponente:
+Qué Veo Ahora es un proyecto real con recomendaciones por estado de ánimo y preferencias, filtros y datos de plataformas. Fuente: README de josemasf/que-veo-hoy.
+Las hipótesis siguientes NO son resultados demostrados del proyecto. Evitar cualquier afirmación sobre uso o conversión sin datos.
+Volveremos a este caso después para tomar decisiones distintas.
 -->
 
 ---
@@ -328,6 +330,30 @@ Un dashboard que no cambia decisiones es un salvapantallas caro.
 -->
 
 ---
+layout: default
+class: case-slide
+---
+
+# Caso conductor · Medir para decidir
+
+## «¿Ayudamos a encontrar algo?» es mejor pregunta que «¿Cuántas visitas hay?»
+
+<div class="case-metrics">
+  <div><span>01</span><strong>Abre una recomendación</strong></div>
+  <div><span>02</span><strong>Consulta una ficha</strong></div>
+  <div><span>03</span><strong>Va al proveedor</strong></div>
+  <div><span>04</span><strong>Vuelve a buscar o abandona</strong></div>
+</div>
+
+<p class="case-insight">Eventos que podríamos instrumentar, no cifras observadas. Un clic al proveedor es una señal indirecta: no demuestra que haya visto la película.</p>
+
+<!--
+Notas del ponente:
+Reutilizar el caso Qué Veo Ahora: hipótesis de que reducir la fricción facilitaría pasar de una recomendación a elegir proveedor.
+No afirmar que los eventos ya están implementados o medidos. Combinar la telemetría con conversaciones para interpretar el porqué.
+-->
+
+---
 layout: section
 ---
 
@@ -350,6 +376,31 @@ class: decision-slide
 Notas del ponente:
 No todo problema se resuelve con código; tampoco toda decisión técnica requiere investigar usuarios.
 Seguridad, accesibilidad, fiabilidad y mantenimiento pueden reducir riesgos significativos. La pregunta es qué justifica actuar y qué intervención lo resuelve con menos coste.
+-->
+
+---
+layout: default
+class: audience-slide
+---
+
+# Tú decides · 90 segundos
+
+## Entran en la web, pero no sabemos si consiguen elegir. ¿Qué harías primero?
+
+<div class="audience-choices">
+  <div><span>A</span><strong>Construir un recomendador más avanzado con IA.</strong></div>
+  <div><span>B</span><strong>Hablar con personas para entender cómo eligen.</strong></div>
+  <div><span>C</span><strong>Instrumentar el recorrido hasta el proveedor.</strong></div>
+  <div><span>D</span><strong>Simplificar directamente el flujo existente.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">No hay respuesta universal: B y C pueden aportar evidencia para decidir si D tiene sentido. A sigue siendo una apuesta sin justificar.</p>
+
+<!--
+Notas del ponente:
+Pedir levantar la mano y razonar la opción elegida; revelar la respuesta después.
+El resultado depende de la evidencia disponible y del coste de cada intervención. Evitar ridiculizar cualquiera de las opciones.
+Caso hipotético, no diagnóstico de un problema real. Reservar tres minutos incluyendo el debate.
 -->
 
 ---
@@ -383,14 +434,6 @@ No todo MVP tiene que dar vergüenza, pero sí debería impedirte gastar seis me
 
 Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerlo conceptual.
 -->
-
----
-layout: section
----
-
-# 5 · Saber cerrar también es ingeniería
-
-## No todo aprendizaje tiene que convertirse en producto.
 
 ---
 layout: two-cols-header
@@ -438,6 +481,26 @@ No presentarlo como lista cerrada. Presentarlo como señales.
 
 Puedes decir:
 No hay una métrica universal para cerrar un proyecto. Pero sí hay momentos en los que, si eres honesto, sabes que estás empujando más por orgullo que por evidencia.
+-->
+
+---
+layout: default
+class: options-slide
+---
+
+# No todo acaba en «hacerlo» o «cerrarlo»
+
+<div class="options-grid">
+  <section><span>01</span><strong>Invertir</strong><p>Hay señales de valor y una mejora concreta que merece la pena.</p></section>
+  <section><span>02</span><strong>Experimentar</strong><p>La incertidumbre aún pesa más que la implementación.</p></section>
+  <section><span>03</span><strong>Mantener</strong><p>Ya resuelve una necesidad y no hace falta hacerlo más grande.</p></section>
+  <section><span>04</span><strong>Retirar</strong><p>El valor o aprendizaje no justifican seguir asumiendo el coste.</p></section>
+</div>
+
+<!--
+Notas del ponente:
+Evitar el falso dilema entre escalar y fracasar. Muchos productos y servicios deben mantenerse estables.
+Cerrar exige responsabilidad: comunicarlo, preservar datos, desactivar con orden y documentar aprendizajes.
 -->
 
 ---
@@ -584,12 +647,25 @@ Measure:
 -->
 
 ---
-layout: section
+layout: default
+class: takeaway-slide
 ---
 
-# 7 · Cierre
+# Antes de abrir una issue
 
-## Construir bien también es saber qué no construir.
+## Cuatro preguntas que merece la pena contestar
+
+<div class="takeaway-questions">
+  <div><span>01</span><strong>¿Qué problema real estamos resolviendo?</strong></div>
+  <div><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
+  <div><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
+  <div><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
+</div>
+
+<!--
+Notas del ponente:
+Esta es la diapositiva para fotografiar y usar al día siguiente. No convertirla en burocracia: una corrección pequeña no requiere un documento. Sirve para pensar mejor tickets, refactors, funcionalidades y encargos a agentes de IA.
+-->
 
 ---
 layout: statement
@@ -612,27 +688,6 @@ Notas del ponente:
 Esta es una de las frases finales fuertes.
 
 No correr. Que quede clara.
--->
-
----
-layout: default
-class: takeaway-slide
----
-
-# Antes de abrir una issue
-
-## Cuatro preguntas que merece la pena contestar
-
-<div class="takeaway-questions">
-  <div><span>01</span><strong>¿Qué problema real estamos resolviendo?</strong></div>
-  <div><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
-  <div><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
-  <div><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
-</div>
-
-<!--
-Notas del ponente:
-Esta es la diapositiva para fotografiar y usar al día siguiente. No convertirla en burocracia: una corrección pequeña no requiere un documento. Sirve para pensar mejor tickets, refactors, funcionalidades y encargos a agentes de IA.
 -->
 
 ---
