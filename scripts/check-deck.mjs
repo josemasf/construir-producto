@@ -40,4 +40,17 @@ if (!slides.includes('<ProductLoop />') || !slides.includes('Tú decides · 90 s
   throw new Error('Faltan elementos esenciales de la charla')
 }
 
+// Las ilustraciones laterales absolutas deben dimensionarse respecto al lienzo,
+// nunca con unidades vw, que se vuelven diminutas en un viewport móvil vertical.
+for (const selector of ['.responsibility-side-asset', '.stop-signals-side-asset']) {
+  const rule = style.match(new RegExp(`\\.?${selector.slice(1)}\\s*,?[\\s\\S]*?\\{([^}]*)\\}`))
+  if (!rule) throw new Error(`No aparece el estilo de ${selector}`)
+}
+if (/width:\\s*(?:min\\()?[^;]*vw/.test(
+  style.split('/* Proporciones consistentes para todas las ilustraciones laterales. */')[1]
+    ?.split('/* Jerarquía editorial para conceptos:')[0] ?? '',
+)) {
+  throw new Error('No usar vw para dimensionar ilustraciones respecto al lienzo')
+}
+
 console.log(`OK: ${pages.length} diapositivas, 5 capítulos, ${imagePaths.length} referencias a imágenes, tokens y navegación coherentes.`)
