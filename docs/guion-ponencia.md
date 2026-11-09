@@ -1,61 +1,65 @@
 # Guion para presentar «De escribir código a construir producto»
 
-Duración objetivo: **45 minutos**. Audiencia: desarrolladores, Tech Leads y perfiles de ingeniería. El propósito no es impartir una clase de Product Management, sino mostrar cómo cambiar una decisión técnica cuando entendemos qué problema buscamos resolver.
+Duración objetivo: **45 minutos**. Audiencia: desarrolladores, Tech Leads y perfiles de ingeniería. La versión condensada contiene **25 diapositivas**: la idea es ganar tiempo para casos y decisiones, no correr entre slides.
 
 ## Ritmo de la sesión
 
 | Minutos | Diapositivas | Hilo narrativo | Tiempo |
 | --- | --- | --- | ---: |
-| 0–9 | 1–8 | Tesis, distinciones, evidencia y presentación de Qué Veo Ahora | 9 min |
-| 9–16 | 9–12 | La trampa de seguir construyendo | 7 min |
-| 16–25 | 13–17 | Usuarios, responsabilidades, métricas y el caso conductor | 9 min |
-| 25–36 | 18–24 | Árbol de decisión, votación, experimentos y opciones de continuidad | 11 min |
-| 36–45 | 25–32 | Priorizar, defender decisiones, IA, ciclo y cuatro preguntas finales | 9 min |
+| 0–7 | 1–6 | Tesis, trampa del progreso, qué entendemos por producto y presentación de Qué Veo Ahora | 7 min |
+| 7–14 | 7–10 | El espejismo de seguir construyendo y las preguntas que no se resuelven programando | 7 min |
+| 14–24 | 11–13 | Responsabilidades con usuarios, hipótesis y analítica para decidir | 10 min |
+| 24–36 | 14–19 | Árbol de decisión, votación, experimentos y opciones para invertir, mantener o retirar | 12 min |
+| 36–45 | 20–25 | Priorización y deuda técnica, IA, ciclo de producto, cuatro preguntas y cierre | 9 min |
 
-Hay notas del ponente en los comentarios HTML de `slides.md`. Esta tabla es una guía, no un temporizador rígido.
+La transición entre secciones no necesita una separadora adicional en cada bloque. Las notas del ponente, dentro de `slides.md`, explican los cambios de ritmo.
 
-## Tres momentos de la historia
+## Tres momentos del caso conductor
 
-### 1. El problema: diapositiva 8
+### 1. La hipótesis: diapositiva 6
 
-Presenta Qué Veo Ahora como proyecto existente para descubrir películas y series. Explica funciones comprobables (filtros, estado de ánimo, proveedores) y plantea una **hipótesis**: el problema real podría ser la dificultad para elegir, no la ausencia de funciones.
+Presenta [Qué Veo Ahora](https://github.com/josemasf/que-veo-hoy) como proyecto real de descubrimiento de películas y series, con filtros de preferencias y proveedores. Plantea **como hipótesis didáctica**, no como hallazgo, que el problema de fondo podría ser la dificultad para decidir qué ver.
 
-No atribuir a la aplicación métricas, entrevistas o descubrimientos que no estén contrastados. La página de referencia es el [README de Qué Veo Ahora](https://github.com/josemasf/que-veo-hoy).
+No atribuir a la aplicación métricas, entrevistas ni comportamientos que no estén contrastados.
 
-### 2. El aprendizaje: diapositivas 15–17
+### 2. La observación: diapositivas 12–13
 
-Contrasta lo que creemos que hace el usuario con lo que deberíamos comprobar. Explica la diferencia entre eventos instrumentables y resultados observados. Un clic hacia la plataforma de streaming no demuestra que se haya visto el contenido ni que el usuario haya quedado satisfecho.
+Contrasta creencias y realidad. Pregunta qué señales podrían indicar que el usuario encuentra algo útil. Ejemplos de eventos **que se podrían instrumentar**: abrir recomendación, consultar ficha, visitar enlace de proveedor y volver a buscar.
 
-Pregunta a la audiencia: «¿Qué dato podría hacerte cambiar de opinión sobre la siguiente funcionalidad?».
+Un clic hacia la plataforma de streaming **no prueba** que haya visto una película ni que esté satisfecho. Combina señales cuantitativas con conversaciones para decidir qué cambiar.
 
-### 3. La decisión: diapositivas 19–24
+Pregunta al público: «¿Qué dato te haría cambiar de opinión sobre la siguiente funcionalidad?».
 
-El árbol de decisión ya no ordena construir cualquier cosa que reduzca incertidumbre: exige justificar el problema, el riesgo o el aprendizaje y elegir una intervención proporcional. La respuesta puede ser conversar, medir, simplificar, mantener o retirar.
+### 3. La decisión: diapositivas 15–19
 
-## Dinámica participativa: diapositiva 20
+El árbol ya no ordena construir cualquier cosa que reduzca incertidumbre. Pide justificar el problema, el riesgo o el aprendizaje y elegir la intervención proporcional. La respuesta puede ser conversar, medir, simplificar, mantener, invertir o retirar.
 
-Duración recomendada: **3 minutos**, aunque el título reserve 90 segundos para pensar y elegir.
+## Dinámica participativa: diapositiva 16
+
+Duración: **3 minutos**, de los que 90 segundos se reservan a elegir y razonar.
 
 1. Lee el problema y las cuatro alternativas.
-2. Da unos segundos para decidir y pide votar levantando la mano.
-3. Escucha los motivos de dos alternativas diferentes.
-4. Pulsa avanzar para revelar la reflexión y conecta con el bloque de experimentos.
+2. Pide votar levantando la mano.
+3. Escucha los motivos de dos opciones diferentes.
+4. Avanza para revelar la reflexión con `v-click`.
 
-La opción A (IA) no es automáticamente errónea; está **sin justificar** si no tenemos evidencia suficiente del problema. B y C son buenas maneras de aprender; D tiene sentido cuando ya conocemos dónde está la fricción. Evitar presentar una votación como una pregunta de examen con solución única.
+La alternativa con IA no es automáticamente equivocada, pero está sin justificar si desconocemos el problema. Hablar con usuarios e instrumentar el flujo son formas de obtener evidencia; simplificar puede ser lo adecuado después de entender dónde está la fricción. No presentar la votación como examen con respuesta universal.
 
-## Qué matices no conviene perder
+## Lo que importa conservar
 
-- Una web puede ser un producto; un servicio también. No son una escalera universal.
-- No todas las necesidades son recurrentes, y un producto no necesita cobrar a cada usuario.
-- La deuda técnica, la accesibilidad, la seguridad y el rendimiento pueden justificar cambios por reducción de riesgo, no solo por nuevas funcionalidades.
-- Un producto puede mantenerse pequeño sin fracasar. Pausar y retirar también son opciones diferentes.
-- La IA puede ayudar a investigar y planificar, no solo a implementar, pero no sustituye las decisiones responsables.
-- El diagrama Research → Plan → Implement → Measure es un bucle de aprendizaje, no una metodología lineal obligatoria.
+- Una web puede ser un producto; un servicio también. No son escalones excluyentes.
+- Un producto puede ser interno, gratuito, pequeño o resolver una necesidad no recurrente.
+- Seguridad, accesibilidad, fiabilidad, rendimiento y deuda técnica pueden justificar decisiones por reducción de riesgo.
+- Mantener algo estable también es una elección válida; retirar no equivale automáticamente a fracasar.
+- La IA puede ayudar a investigar, planificar y desarrollar, pero no reemplaza el criterio.
+- Research → Plan → Implement → Measure funciona como bucle de aprendizaje, no como cascada.
+- Las **cuatro preguntas antes de abrir una issue** (24) deben quedar como herramienta práctica, no como burocracia.
+- La **última diapositiva (25)** deja una sola pregunta memorable: «¿Qué decisión estamos evitando?».
 
 ## Ensayo final
 
-- Presentar a 16:9 sin tener que leer texto pequeño de las diapositivas.
-- Comprobar el ciclo SVG, la secuencia de revelado y la diapositiva de votación.
-- Mantener el caso real diferenciado de los ejemplos hipotéticos.
-- No leer las preguntas finales como checklist burocrática; convertirlas en una herramienta sencilla.
-- Si la sesión se alarga, reducir ejemplos secundarios antes de cortar el debate o el cierre.
+- Comprobar el formato 16:9, el contraste y el tamaño de los textos.
+- Verificar el ciclo SVG, los componentes Vue y el revelado progresivo de la votación.
+- Separar explícitamente los datos comprobados de las hipótesis didácticas.
+- Ensayar las transiciones entre los cinco bloques; no leer las diapositivas.
+- Si faltan minutos, recortar anécdotas secundarias antes que eliminar el debate o el cierre.
