@@ -1,70 +1,66 @@
 # De escribir código a construir producto
 
-Presentación técnica creada con [Slidev](https://sli.dev/) sobre cómo pasar de medir el avance por funcionalidades entregadas a construir producto con intención.
+Charla técnica de **45 minutos** creada con [Slidev](https://sli.dev/) sobre cómo tomar mejores decisiones de ingeniería desde el criterio de producto. La idea central no es escribir menos código, sino entender qué problemas y riesgos merece la pena abordar.
 
-La charla cuestiona la idea de que desarrollar más siempre equivale a avanzar: propone validar problemas, aprender con experimentos pequeños, medir el uso real y saber detener una iniciativa cuando no aporta suficiente valor.
+[Ver presentación publicada](https://construir-producto.vercel.app/1).
 
-## Contenido
+## Estructura actual (32 diapositivas)
 
-- Una web, un servicio y un producto no son lo mismo.
-- El riesgo de seguir construyendo para evitar decisiones incómodas.
-- Qué cambia cuando aparecen usuarios reales.
-- Cómo experimentar y aprender antes de invertir en una funcionalidad.
-- Cuándo cerrar una iniciativa también es una buena decisión de ingeniería.
-- Cómo incorporar criterio de producto al trabajo técnico y al uso de IA.
+1. **Del código al problema.** Web, servicio y producto no son escalones excluyentes. Lo importante es el valor y la evidencia.
+2. **El espejismo de seguir construyendo.** Por qué añadir funcionalidades puede retrasar las conversaciones importantes.
+3. **La realidad de los usuarios.** Uso real, responsabilidades y analítica para decidir.
+4. **Aprender a no construir.** Experimentos pequeños, votación con la audiencia y decisiones para invertir, experimentar, mantener o retirar.
+5. **Criterio de producto en ingeniería.** Priorización, deuda técnica, agentes de IA y ciclo Research → Plan → Implement → Measure.
 
-## Requisitos
+### Caso conductor: Qué Veo Ahora
 
-- Node.js 20.19 o superior.
-- [pnpm](https://pnpm.io/).
+El proyecto [Qué Veo Ahora](https://github.com/josemasf/que-veo-hoy) se utiliza como ejemplo de una web de descubrimiento de películas y series. Sus funcionalidades (recomendaciones por preferencias, filtros y plataformas) proceden del repositorio del proyecto.
+
+**Importante:** las hipótesis sobre el comportamiento de los usuarios, los embudos propuestos y las opciones de decisión **son escenarios didácticos, no métricas ni resultados observados**. Antes de contar la charla como experiencia real de uso, hay que sustituir las hipótesis por datos o conversaciones verificables.
+
+### Participación del público
+
+La diapositiva **«Tú decides · 90 segundos»** presenta cuatro opciones para un mismo problema y revela una reflexión con `v-click`. Reservar tres minutos para las respuestas y el debate. No existe una opción universal sin entender la evidencia.
+
+La diapositiva **«Antes de abrir una issue»** resume cuatro preguntas aplicables a funcionalidades, refactors, deuda técnica y trabajo con agentes de IA.
 
 ## Desarrollo
 
-Instala las dependencias y abre la presentación en modo desarrollo:
+Requisitos: **Node.js 20.19 o superior** y [pnpm](https://pnpm.io/).
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Slidev abrirá la presentación en el navegador. El contenido principal se edita en [`slides.md`](./slides.md); los cambios se recargan automáticamente.
-
-## Comandos disponibles
+La presentación y las notas del ponente se editan en [`slides.md`](./slides.md). Las notas van en comentarios HTML y aparecen en el modo presentador de Slidev.
 
 | Comando | Descripción |
 | --- | --- |
-| `pnpm dev` | Inicia Slidev en modo desarrollo. |
+| `pnpm dev` | Abre el editor y previsualización de Slidev. |
 | `pnpm build` | Genera la versión estática en `dist/`. |
-| `pnpm export` | Exporta la presentación a PDF. |
+| `pnpm export` | Exporta a PDF (puede requerir navegador instalado). |
 
-## Estructura
+## Archivos principales
 
-```text
-slides.md                 Guion y diapositivas de la presentación
-components/               Componentes Vue reutilizables de Slidev
-public/images/            Imágenes y fondos utilizados en las diapositivas
-snippets/                 Fragmentos de código auxiliares
-pages/                    Diapositivas importables
-netlify.toml              Configuración de despliegue en Netlify
-vercel.json               Configuración de despliegue en Vercel
-```
+- [`slides.md`](./slides.md): narrativa, diapositivas y notas.
+- [`style.css`](./style.css): sistema visual de la charla.
+- [`components/ProductLoop.vue`](./components/ProductLoop.vue): ciclo SVG accesible y escalable.
+- [`components/DecisionTree.vue`](./components/DecisionTree.vue): marco para cuestionar una petición.
+- [`components/MetricsToDecision.vue`](./components/MetricsToDecision.vue): vínculo entre preguntas, señales y decisiones.
+- [`public/images/`](./public/images/): ilustraciones y fondos.
+- [`docs/guion-ponencia.md`](./docs/guion-ponencia.md): tiempos y dinámica recomendada de la sesión.
 
-Las notas del ponente están incluidas como comentarios HTML dentro de `slides.md`, por lo que no se muestran durante la presentación.
+## Comprobaciones antes de presentar
 
-## Despliegue
+- Ejecutar `pnpm build` y revisar la consola.
+- Proyectar en formato 16:9 y comprobar contraste, textos y elementos que aparecen tras `v-click`.
+- Verificar que ninguna anécdota o métrica hipotética se presenta como hallazgo real.
+- Ensayar la duración de las cinco partes y el tiempo de interacción.
+- Si hay imágenes demasiado pesadas, optimizarlas manteniendo legibilidad y calidad.
 
-El proyecto ya incluye configuración para Netlify y Vercel. En ambos casos el proceso de compilación es:
-
-```bash
-npm run build
-```
-
-El directorio publicado es `dist/`. Para comprobarlo localmente antes de desplegar:
-
-```bash
-pnpm build
-```
+El repositorio incluye configuración de despliegue para Netlify y Vercel. El directorio publicado es `dist/`.
 
 ## Créditos
 
-Presentación de José María Santos.
+José María Santos.
