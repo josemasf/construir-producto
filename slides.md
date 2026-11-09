@@ -260,7 +260,7 @@ A veces una feature no es una solución. Es una forma elegante de aplazar una de
 layout: section
 ---
 
-# 3 · Cuando aparecen usuarios, cambia el juego
+# 3 · La realidad de los usuarios
 
 ## El juguete técnico empieza a tener consecuencias.
 
