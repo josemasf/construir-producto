@@ -4,7 +4,7 @@ Charla técnica de **45 minutos** creada con [Slidev](https://sli.dev/) sobre c�
 
 [Ver presentación publicada](https://construir-producto.vercel.app/1).
 
-## Estructura actual (32 diapositivas)
+## Estructura actual (25 diapositivas)
 
 1. **Del código al problema.** Web, servicio y producto no son escalones excluyentes. Lo importante es el valor y la evidencia.
 2. **El espejismo de seguir construyendo.** Por qué añadir funcionalidades puede retrasar las conversaciones importantes.
@@ -20,9 +20,9 @@ El proyecto [Qué Veo Ahora](https://github.com/josemasf/que-veo-hoy) se utiliza
 
 ### Participación del público
 
-La diapositiva **«Tú decides · 90 segundos»** presenta cuatro opciones para un mismo problema y revela una reflexión con `v-click`. Reservar tres minutos para las respuestas y el debate. No existe una opción universal sin entender la evidencia.
+La diapositiva **«Tú decides · 90 segundos»** presenta cuatro opciones para un mismo problema y revela una reflexión con `v-click`. Reservar tres minutos para las respuestas y el debate (diapositiva 16). No existe una opción universal sin entender la evidencia.
 
-La diapositiva **«Antes de abrir una issue»** resume cuatro preguntas aplicables a funcionalidades, refactors, deuda técnica y trabajo con agentes de IA.
+La diapositiva **«Antes de abrir una issue»** (24) resume cuatro preguntas aplicables a funcionalidades, refactors, deuda técnica y trabajo con agentes de IA. La 25 cierra con una pregunta para la audiencia.
 
 ## Desarrollo
 
