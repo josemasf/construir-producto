@@ -198,6 +198,25 @@
 .slidev-layout.two-cols-header li { font-size: 1.07rem; line-height: 1.37; }
 .slidev-layout.two-cols-header p { max-width: 31rem; }
 
+/*
+ * Ilustración original de IA: el PNG conserva su papel blanco como fuente.
+ * Invertir el valor y restituir los tonos azules permite usar Screen para
+ * integrar el papel claro con el azul noche sin alterar el archivo original.
+ * Scope limitado a la slide 22: otras ilustraciones no se modifican.
+ */
+.slidev-layout.ai-illustration-slide { isolation: isolate; }
+.slidev-layout.ai-illustration-slide .side-asset {
+  max-width: 27rem;
+  max-height: 23rem;
+  transform: scale(1.08);
+  transform-origin: center;
+  filter: invert(1) hue-rotate(180deg) saturate(.95) contrast(1.06);
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(ellipse 75% 78% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 78% at 50% 50%, #000 62%, transparent 100%);
+}
+
+
 .slidev-layout.responsibility-slide,
 .slidev-layout.stop-signals-slide { overflow: hidden; }
 .slidev-layout.responsibility-slide h1,
