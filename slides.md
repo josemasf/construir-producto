@@ -436,6 +436,7 @@ Una decisión técnica gana fuerza si podemos explicar qué riesgo reduce, cómo
 
 ---
 layout: two-cols-header
+class: ai-illustration-slide
 ---
 
 # Cambia tu relación con la IA
