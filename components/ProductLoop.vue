@@ -15,7 +15,7 @@
         <path d="M 229 375 C 158 310, 158 227, 229 161"/>
       </g>
       <ellipse cx="480" cy="270" rx="205" ry="104" fill="var(--deck-surface, #111b2c)" stroke="#526278" stroke-opacity=".6" stroke-width="1.5"/>
-      <g class="product-loop__criterion">
+      <g v-click class="product-loop__criterion">
         <text x="480" y="250" class="product-loop__eyebrow" text-anchor="middle">LA BRÚJULA DE CADA DECISIÓN</text>
         <text x="480" y="288" class="product-loop__center" text-anchor="middle">CRITERIO DE</text>
         <text x="480" y="325" class="product-loop__center" text-anchor="middle">PRODUCTO</text>
@@ -25,23 +25,23 @@
         <text x="238" y="217" class="product-loop__name">Research</text>
         <text x="238" y="238" class="product-loop__hint">Comprender</text>
       </g>
-      <g class="product-loop__phase">
+      <g v-click class="product-loop__phase">
         <text x="724" y="187" class="product-loop__number" text-anchor="end">02</text>
         <text x="724" y="217" class="product-loop__name" text-anchor="end">Plan</text>
         <text x="724" y="238" class="product-loop__hint" text-anchor="end">Elegir</text>
       </g>
-      <g class="product-loop__phase">
+      <g v-click class="product-loop__phase">
         <text x="724" y="332" class="product-loop__number" text-anchor="end">03</text>
         <text x="724" y="362" class="product-loop__name" text-anchor="end">Implement</text>
         <text x="724" y="383" class="product-loop__hint" text-anchor="end">Entregar</text>
       </g>
-      <g class="product-loop__phase">
+      <g v-click class="product-loop__phase">
         <text x="238" y="332" class="product-loop__number">04</text>
         <text x="238" y="362" class="product-loop__name">Measure</text>
         <text x="238" y="383" class="product-loop__hint">Aprender</text>
       </g>
     </svg>
-    <figcaption>Medir no termina el trabajo: informa la siguiente decisión.</figcaption>
+    <figcaption v-click>Medir no termina el trabajo: informa la siguiente decisión.</figcaption>
   </figure>
 </template>
 

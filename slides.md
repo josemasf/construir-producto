@@ -89,13 +89,7 @@ class: concept-slide
 
 ## No son peldaños de una escalera.
 
-<div class="concept-grid">
-  <section class="concept-panel"><small>CANAL</small><strong>Web</strong><p>Una interfaz o punto de acceso. Puede formar parte de un producto.</p></section>
-  <section class="concept-panel"><small>EXPERIENCIA</small><strong>Servicio</strong><p>Resuelve una necesidad. También puede ser un producto.</p></section>
-  <section class="concept-panel"><small>PROPUESTA DE VALOR</small><strong>Producto</strong><p>Resuelve un problema de forma valiosa y viable.</p></section>
-</div>
-
-<p class="concept-note">No importa la etiqueta: ¿tenemos evidencias del <strong>problema, uso, valor y viabilidad</strong>?</p>
+<ConceptLayers />
 
 <!--
 Notas del ponente:
@@ -114,17 +108,7 @@ class: case-slide
 
 ## El usuario no busca filtros: quiere encontrar algo que ver.
 
-<div class="case-story">
-  <div class="case-story__question" aria-hidden="true">
-    <span>LA PREGUNTA</span>
-    <strong>¿Qué ayuda de verdad a decidir?</strong>
-  </div>
-  <div class="case-story__details">
-    <div><small>01 / LO QUE EXISTE</small><strong>Recomendaciones</strong><p>Estado de ánimo, duración, géneros y plataformas.</p></div>
-    <div><small>02 / HIPÓTESIS DE VALOR</small><strong>Menos fricción</strong><p>Encontrar algo adecuado sin recorrer varios catálogos.</p></div>
-    <div><small>03 / INCERTIDUMBRE</small><strong>Qué facilita elegir</strong><p>¿Más opciones, mejores propuestas o un recorrido más corto?</p></div>
-  </div>
-</div>
+<CaseDecisionFlow />
 
 <p class="hypothesis-note">Producto real; hipótesis y decisiones del ejemplo planteadas con fines didácticos, sin atribuirle métricas.</p>
 
@@ -168,23 +152,13 @@ La idea es que construir más nos da sensación de control, porque es el terreno
 -->
 
 ---
-layout: two-cols-header
+layout: default
+class: question-families-slide
 ---
 
 # Hay preguntas que no se contestan programando
 
-::left::
-
-- ¿Quién tiene realmente este problema?
-- ¿Con qué frecuencia lo sufre?
-- ¿Qué hace ahora para resolverlo?
-- ¿Qué le costaría cambiar?
-- ¿Qué tendría que ocurrir para que pagara?
-- ¿Qué parte del sistema genera valor y cuál solo decora?
-
-::right::
-
-<img class="side-asset" src="/images/preguntas-usuarios-side-right.png" alt="Dos personas conversan junto a un mapa de preguntas y una lupa" />
+<QuestionFamilies />
 
 <!--
 Notas del ponente:
@@ -225,12 +199,7 @@ class: responsibility-slide
 
 ## Ya no solo construimos: alguien depende de que funcione.
 
-- Mantenemos y damos soporte.
-- Respondemos a expectativas y errores reales.
-- Observamos el uso, no solo las entregas.
-- Priorizamos también fiabilidad y continuidad.
-
-<img class="responsibility-side-asset" src="/images/usuarios-responsabilidad-side-right-v2.png" alt="Una persona mantiene un servicio mientras atiende necesidades reales de usuarios" />
+<ResponsibilityMap />
 
 <!--
 Notas del ponente:
@@ -327,26 +296,15 @@ Caso hipotético, no diagnóstico de un problema real. Reservar tres minutos inc
 -->
 
 ---
-layout: two-cols-header
+layout: default
+class: experiment-shift-slide
 ---
 
 # Experimentos baratos,
 
 # aprendizaje rápido
 
-::left::
-
-Antes de construir la versión grande, prueba la intervención que reduce mejor la incertidumbre.
-
-- Conversación antes que soluciones para usuarios imaginados.
-- Proceso manual antes de automatizar lo incierto.
-- Prototipo para validar comprensión.
-- Prueba controlada antes de ampliar el alcance.
-- Señal accionable antes que dashboard universal.
-
-::right::
-
-<img class="side-asset" src="/images/experimentos-baratos-side-right.png" alt="Un experimento manual ligero frente a una plataforma compleja aún en construcción" />
+<ExperimentShift />
 
 <!--
 Notas del ponente:
@@ -367,11 +325,7 @@ class: stop-signals-slide
 
 ## A veces, la mejor decisión es dejar de invertir.
 
-- El valor para quien lo usa no justifica el coste de mantenerlo.
-- Seguimos añadiendo funciones, pero no aprendemos nada nuevo.
-- El coste de oportunidad supera lo que esperamos conseguir.
-
-<img class="stop-signals-side-asset" src="/images/senales-parar-side-right-v2.png" alt="Una persona detiene con calma un pequeño servicio y abre espacio para otra decisión" />
+<StopSignals />
 
 <!--
 Notas del ponente:
@@ -435,20 +389,15 @@ Una decisión técnica gana fuerza si podemos explicar qué riesgo reduce, cómo
 -->
 
 ---
-layout: two-cols-header
+layout: default
+class: ai-impact-slide
 ---
 
-# Cambia tu relación con la IA
+# La IA aumenta la velocidad
 
-::left::
+## El criterio decide la dirección.
 
-La IA puede ayudarnos a investigar, contrastar hipótesis, explorar alternativas y desarrollar.
-
-Pero también puede implementar muy rápido una respuesta a la pregunta equivocada.
-
-::right::
-
-<img class="side-asset" src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
+<AIImpact />
 
 <!--
 Notas del ponente:
@@ -513,9 +462,9 @@ class: takeaway-slide
 
 <div class="takeaway-questions">
   <div><span>01</span><strong>¿Qué problema real estamos resolviendo?</strong></div>
-  <div><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
-  <div><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
-  <div><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
+  <div v-click><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
+  <div v-click><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
+  <div v-click><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
 </div>
 
 <!--
