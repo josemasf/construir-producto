@@ -87,16 +87,25 @@ class: concept-slide
 
 # Web, servicio y producto
 
-## No son peldaños de una escalera.
+## Construir una web es solo el principio.
 
 <ConceptLayers />
 
 <!--
 Notas del ponente:
-La web, el servicio y el producto no son niveles universales de madurez ni categorías excluyentes.
-Una web puede ser un producto y un producto puede ser interno o gratuito.
-No exigir recurrencia a cualquier problema: algunos productos resuelven necesidades puntuales.
-La pregunta importante no es cómo llamamos lo que hacemos, sino qué evidencias tenemos para justificar su valor y la inversión: ¿quién tiene el problema?, ¿lo resuelve?, ¿qué alternativa supera? y ¿cuánto cuesta sostenerlo?
+En esta charla uso una definición deliberadamente práctica, no una definición académica universal.
+
+Todo puede empezar siendo una web: algo que hemos construido y funciona.
+Si además resuelve un problema real para alguien, empiezo a tratarlo como un servicio.
+Y si ese problema tiene suficiente valor como para que alguien esté dispuesto a pagar por resolverlo, entonces hablo de producto.
+
+La idea que quiero fijar no es la etiqueta, sino el salto de criterio:
+- Web: ¿funciona?
+- Servicio: ¿resuelve un problema?
+- Producto: ¿el problema tiene suficiente valor como para pagar por resolverlo?
+
+Remate:
+El código puede demostrar que sabemos construir. El servicio demuestra utilidad. El producto necesita además una señal económica de valor.
 -->
 
 ---
