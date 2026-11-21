@@ -1,9 +1,9 @@
 <template>
   <figure class="experiment-shift" aria-label="Cambios de intervenciones grandes a experimentos que permiten aprender antes">
     <div class="experiment-shift__row" v-click>
-      <section><small>EVITA EMPEZAR POR</small><strong>Solución completa</strong></section>
+      <section><small>EVITA EMPEZAR POR</small><strong>Funcionalidad completa</strong></section>
       <span aria-hidden="true">→</span>
-      <section class="experiment-shift__better"><small>EMPIEZA POR</small><strong>Conversación</strong><p>Entender el problema antes de diseñar para usuarios imaginados.</p></section>
+      <section class="experiment-shift__better"><small>EMPIEZA POR</small><strong>Hipótesis + prototipo</strong><p>Conversar primero; si procede, Issue → agente → Storybook → feedback.</p></section>
     </div>
     <div class="experiment-shift__row" v-click>
       <section><small>EVITA EMPEZAR POR</small><strong>Automatización</strong></section>
