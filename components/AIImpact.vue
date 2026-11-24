@@ -9,7 +9,7 @@
         <small>DIRECCIÓN</small>
         <strong>El criterio sigue siendo nuestro.</strong>
       </div>
-      <p>También puede implementar muy rápido una respuesta a la pregunta equivocada.</p>
+      <p>Un prototipo no valida la hipótesis: producto, diseño e ingeniería deciden qué merece construirse.</p>
     </div>
     <img src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
   </figure>

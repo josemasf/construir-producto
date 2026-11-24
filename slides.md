@@ -317,12 +317,11 @@ class: experiment-shift-slide
 
 <!--
 Notas del ponente:
-No vender esto como metodología mágica. Simplemente como higiene.
+No vender esto como metodología mágica. El prototipo solo tiene sentido cuando reduce una incertidumbre concreta; una conversación o una medición pueden ser mejores.
 
-Frase posible:
-No todo MVP tiene que dar vergüenza, pero sí debería impedirte gastar seis meses en validar una suposición que podías validar en una semana.
+Ejemplo didáctico con Qué Veo Ahora: alguien propone añadir filtros para elegir película. Primero entendemos qué dificulta esa decisión; si hace falta contrastar una propuesta visual, el PO abre una GitHub Issue con la hipótesis y criterios de validación. Un agente especializado reutiliza los componentes Vue, prepara una rama prototype/* con stories de Storybook y estados simulados con MSW, y una PR ofrece la preview para recibir feedback de producto, diseño e ingeniería. Después decidimos si probarlo con usuarios, iterar, construir o descartar.
 
-Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerlo conceptual.
+Esto describe un posible flujo, no una automatización ya verificada ni un resultado real de usuarios. No confundir feedback interno con validación de la hipótesis.
 -->
 
 ---
@@ -410,17 +409,13 @@ class: ai-impact-slide
 
 <!--
 Notas del ponente:
-Meter aquí tu visión de IA con criterio.
+Plantear la pregunta incómoda: «Si un agente genera una interfaz navegable tan deprisa, ¿qué aportan ahora diseño e ingeniería?».
 
-Puedes decir:
-Usar IA para construir más rápido está bien. Pero antes hay que decidir qué merece la pena construir. Si no, solo estamos poniendo turbo a una dirección equivocada.
+Producto define la hipótesis y las prioridades; diseño evalúa la experiencia, la coherencia y la accesibilidad; ingeniería valora viabilidad, arquitectura, contratos, seguridad y mantenimiento. Los tres participan en decidir qué evidencia falta. El trabajo repetitivo de producir pantallas puede disminuir, pero eso no equivale a haber validado el problema ni garantiza que el prototipo esté preparado para producción. Vale la pena mencionar el reto de formar criterio en perfiles junior.
 
-Conectar con Research, Plan, Implement:
-- Research para entender.
-- Plan para decidir.
-- Implement para construir.
+Puedes decir: «Un agente puede construir cinco alternativas y las cinco pueden responder a la pregunta equivocada».
 
-La IA ayuda en las tres fases, pero no sustituye el criterio.
+Conectar con Research (entender), Plan (decidir), Implement (construir) y Measure (aprender). La IA acelera, no sustituye el criterio.
 -->
 
 ---
@@ -467,7 +462,7 @@ class: takeaway-slide
 
 # Antes de abrir una issue
 
-## Cuatro preguntas que merece la pena contestar
+## Cuatro preguntas, también al prototipar con IA
 
 <div class="takeaway-questions">
   <div><span>01</span><strong>¿Qué problema real estamos resolviendo?</strong></div>
@@ -478,7 +473,11 @@ class: takeaway-slide
 
 <!--
 Notas del ponente:
-Esta es la diapositiva para fotografiar y usar al día siguiente. No convertirla en burocracia: una corrección pequeña no requiere un documento. Sirve para pensar mejor tickets, refactors, funcionalidades y encargos a agentes de IA.
+Esta es la diapositiva para fotografiar y usar al día siguiente. Sus cuatro preguntas siguen siendo válidas aunque una Issue pueda activar un agente que genere un prototipo en Storybook.
+
+Antes de lanzar el flujo, preguntar: ¿qué problema tratamos de entender?, ¿qué evidencia tenemos?, ¿es un prototipo la intervención más barata y útil?, ¿qué observación nos hará iterar, descartar o desarrollar? Una preview bonita no contesta automáticamente la cuarta pregunta.
+
+No convertirlo en burocracia: una corrección pequeña no requiere un documento. Sirve para tickets, refactors, funcionalidades y encargos a agentes de IA.
 -->
 
 ---
