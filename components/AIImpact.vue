@@ -17,7 +17,6 @@
 
 <style scoped>
 .ai-impact {
-  isolation:isolate;
   display:grid;
   grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
   align-items:center;
@@ -32,18 +31,18 @@
 .ai-impact__direction small { color:var(--deck-accent-light); }
 .ai-impact strong { display:block; font-family:var(--deck-font-display); font-size:1.65rem; line-height:1.16; letter-spacing:-.04em; }
 .ai-impact p { margin:.2rem 0 0; font-size:.98rem; line-height:1.38; }
-.ai-impact img {
-  width:100%;
-  max-height:22rem;
+:global(.slidev-layout.ai-impact-slide) .ai-impact img {
+  /* Preserve the original illustration's colours; fade only the paper edges.
+     Size the actual image rather than masking a wider object-fit box. */
+  display:block;
+  justify-self:center;
+  width:auto;
+  height:17rem;
+  max-width:100%;
+  max-height:17rem;
   object-fit:contain;
-  /* Integrate the original white-paper illustration without altering the PNG. */
-  filter:invert(1) hue-rotate(180deg) saturate(.95) contrast(1.06);
-  mix-blend-mode:screen;
-  -webkit-mask-image:radial-gradient(ellipse 75% 78% at 50% 50%, #000 62%, transparent 100%);
-  mask-image:radial-gradient(ellipse 75% 78% at 50% 50%, #000 62%, transparent 100%);
-}
-@media (max-width:700px) {
-  .ai-impact { grid-template-columns:1fr; }
-  .ai-impact img { max-height:12rem; }
+  mask-image:linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
+             linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  mask-composite:intersect;
 }
 </style>
