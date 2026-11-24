@@ -50,23 +50,29 @@
 
 .concept-model__web {
   display: grid;
-  grid-template-columns: minmax(0, .72fr) 8.5rem minmax(0, 1.65fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  grid-template-rows: 1fr auto;
   align-items: stretch;
-  gap: 1rem;
+  gap: .6rem 1rem;
   padding: 1rem 1rem 1rem 1.15rem;
   border: 1px solid var(--deck-rule);
 }
 
 .concept-model__service {
   display: grid;
-  grid-template-columns: minmax(0, .9fr) 8.5rem minmax(0, 1.1fr);
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  grid-template-rows: 1fr auto;
   align-items: stretch;
-  gap: 1rem;
+  gap: .6rem .85rem;
   padding: .9rem .9rem .9rem 1rem;
   border: 2px solid var(--deck-evidence);
 }
 
 .concept-model__product {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   padding: .8rem .7rem .7rem 1rem;
   border-left: 4px solid var(--deck-accent);
   background: rgba(249, 115, 22, .07);
@@ -114,15 +120,15 @@
 
 .concept-model__gate {
   display: flex;
-  flex-direction: column;
+  grid-column: 1;
+  grid-row: 2;
   align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  text-align: center;
+  justify-content: space-between;
+  gap: .4rem;
+  text-align: left;
 }
 
 .concept-model__gate span {
-  max-width: 10ch;
   color: var(--deck-muted);
   font-size: .82rem;
   font-weight: 700;
@@ -131,7 +137,9 @@
 
 .concept-model__gate b {
   color: var(--deck-evidence);
+  flex: none;
   font-size: 1.65rem;
+  line-height: 1;
   font-weight: 500;
 }
 
@@ -154,14 +162,5 @@
   letter-spacing: 0;
 }
 
-@media (max-width: 700px) {
-  .concept-model__web,
-  .concept-model__service {
-    grid-template-columns: 1fr;
-  }
-
-  .concept-model__gate b {
-    transform: rotate(90deg);
-  }
-}
+/* Slidev scales its fixed canvas; keep the same composition on every viewport. */
 </style>
