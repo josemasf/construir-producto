@@ -87,22 +87,25 @@ class: concept-slide
 
 # Web, servicio y producto
 
-## No son peldaños de una escalera.
+## Construir una web es solo el principio.
 
-<div class="concept-grid">
-  <section class="concept-panel"><small>CANAL</small><strong>Web</strong><p>Una interfaz o punto de acceso. Puede formar parte de un producto.</p></section>
-  <section class="concept-panel"><small>EXPERIENCIA</small><strong>Servicio</strong><p>Resuelve una necesidad. También puede ser un producto.</p></section>
-  <section class="concept-panel"><small>PROPUESTA DE VALOR</small><strong>Producto</strong><p>Resuelve un problema de forma valiosa y viable.</p></section>
-</div>
-
-<p class="concept-note">No importa la etiqueta: ¿tenemos evidencias del <strong>problema, uso, valor y viabilidad</strong>?</p>
+<ConceptLayers />
 
 <!--
 Notas del ponente:
-La web, el servicio y el producto no son niveles universales de madurez ni categorías excluyentes.
-Una web puede ser un producto y un producto puede ser interno o gratuito.
-No exigir recurrencia a cualquier problema: algunos productos resuelven necesidades puntuales.
-La pregunta importante no es cómo llamamos lo que hacemos, sino qué evidencias tenemos para justificar su valor y la inversión: ¿quién tiene el problema?, ¿lo resuelve?, ¿qué alternativa supera? y ¿cuánto cuesta sostenerlo?
+En esta charla uso una definición deliberadamente práctica, no una definición académica universal.
+
+Todo puede empezar siendo una web: algo que hemos construido y funciona.
+Si además resuelve un problema real para alguien, empiezo a tratarlo como un servicio.
+Y si ese problema tiene suficiente valor como para que alguien esté dispuesto a pagar por resolverlo, entonces hablo de producto.
+
+La idea que quiero fijar no es la etiqueta, sino el salto de criterio:
+- Web: ¿funciona?
+- Servicio: ¿resuelve un problema?
+- Producto: ¿el problema tiene suficiente valor como para pagar por resolverlo?
+
+Remate:
+El código puede demostrar que sabemos construir. El servicio demuestra utilidad. El producto necesita además una señal económica de valor.
 -->
 
 ---
@@ -114,17 +117,7 @@ class: case-slide
 
 ## El usuario no busca filtros: quiere encontrar algo que ver.
 
-<div class="case-story">
-  <div class="case-story__question" aria-hidden="true">
-    <span>LA PREGUNTA</span>
-    <strong>¿Qué ayuda de verdad a decidir?</strong>
-  </div>
-  <div class="case-story__details">
-    <div><small>01 / LO QUE EXISTE</small><strong>Recomendaciones</strong><p>Estado de ánimo, duración, géneros y plataformas.</p></div>
-    <div><small>02 / HIPÓTESIS DE VALOR</small><strong>Menos fricción</strong><p>Encontrar algo adecuado sin recorrer varios catálogos.</p></div>
-    <div><small>03 / INCERTIDUMBRE</small><strong>Qué facilita elegir</strong><p>¿Más opciones, mejores propuestas o un recorrido más corto?</p></div>
-  </div>
-</div>
+<CaseDecisionFlow />
 
 <p class="hypothesis-note">Producto real; hipótesis y decisiones del ejemplo planteadas con fines didácticos, sin atribuirle métricas.</p>
 
@@ -168,23 +161,13 @@ La idea es que construir más nos da sensación de control, porque es el terreno
 -->
 
 ---
-layout: two-cols-header
+layout: default
+class: question-families-slide
 ---
 
 # Hay preguntas que no se contestan programando
 
-::left::
-
-- ¿Quién tiene realmente este problema?
-- ¿Con qué frecuencia lo sufre?
-- ¿Qué hace ahora para resolverlo?
-- ¿Qué le costaría cambiar?
-- ¿Qué tendría que ocurrir para que pagara?
-- ¿Qué parte del sistema genera valor y cuál solo decora?
-
-::right::
-
-<img class="side-asset" src="/images/preguntas-usuarios-side-right.png" alt="Dos personas conversan junto a un mapa de preguntas y una lupa" />
+<QuestionFamilies />
 
 <!--
 Notas del ponente:
@@ -225,12 +208,7 @@ class: responsibility-slide
 
 ## Ya no solo construimos: alguien depende de que funcione.
 
-- Mantenemos y damos soporte.
-- Respondemos a expectativas y errores reales.
-- Observamos el uso, no solo las entregas.
-- Priorizamos también fiabilidad y continuidad.
-
-<img class="responsibility-side-asset" src="/images/usuarios-responsabilidad-side-right-v2.png" alt="Una persona mantiene un servicio mientras atiende necesidades reales de usuarios" />
+<ResponsibilityMap />
 
 <!--
 Notas del ponente:
@@ -327,35 +305,23 @@ Caso hipotético, no diagnóstico de un problema real. Reservar tres minutos inc
 -->
 
 ---
-layout: two-cols-header
+layout: default
+class: experiment-shift-slide
 ---
 
 # Experimentos baratos,
 
 # aprendizaje rápido
 
-::left::
-
-Antes de construir la versión grande, prueba la intervención que reduce mejor la incertidumbre.
-
-- Conversación antes que soluciones para usuarios imaginados.
-- Proceso manual antes de automatizar lo incierto.
-- Prototipo para validar comprensión.
-- Prueba controlada antes de ampliar el alcance.
-- Señal accionable antes que dashboard universal.
-
-::right::
-
-<img class="side-asset" src="/images/experimentos-baratos-side-right.png" alt="Un experimento manual ligero frente a una plataforma compleja aún en construcción" />
+<ExperimentShift />
 
 <!--
 Notas del ponente:
-No vender esto como metodología mágica. Simplemente como higiene.
+No vender esto como metodología mágica. El prototipo solo tiene sentido cuando reduce una incertidumbre concreta; una conversación o una medición pueden ser mejores.
 
-Frase posible:
-No todo MVP tiene que dar vergüenza, pero sí debería impedirte gastar seis meses en validar una suposición que podías validar en una semana.
+Ejemplo didáctico con Qué Veo Ahora: alguien propone añadir filtros para elegir película. Primero entendemos qué dificulta esa decisión; si hace falta contrastar una propuesta visual, el PO abre una GitHub Issue con la hipótesis y criterios de validación. Un agente especializado reutiliza los componentes Vue, prepara una rama prototype/* con stories de Storybook y estados simulados con MSW, y una PR ofrece la preview para recibir feedback de producto, diseño e ingeniería. Después decidimos si probarlo con usuarios, iterar, construir o descartar.
 
-Evitar prometer tiempos concretos si lo usas como frase cerrada; mejor mantenerlo conceptual.
+Esto describe un posible flujo, no una automatización ya verificada ni un resultado real de usuarios. No confundir feedback interno con validación de la hipótesis.
 -->
 
 ---
@@ -367,11 +333,7 @@ class: stop-signals-slide
 
 ## A veces, la mejor decisión es dejar de invertir.
 
-- El valor para quien lo usa no justifica el coste de mantenerlo.
-- Seguimos añadiendo funciones, pero no aprendemos nada nuevo.
-- El coste de oportunidad supera lo que esperamos conseguir.
-
-<img class="stop-signals-side-asset" src="/images/senales-parar-side-right-v2.png" alt="Una persona detiene con calma un pequeño servicio y abre espacio para otra decisión" />
+<StopSignals />
 
 <!--
 Notas del ponente:
@@ -435,35 +397,25 @@ Una decisión técnica gana fuerza si podemos explicar qué riesgo reduce, cómo
 -->
 
 ---
-layout: two-cols-header
-class: ai-illustration-slide
+layout: default
+class: ai-impact-slide
 ---
 
-# Cambia tu relación con la IA
+# La IA aumenta la velocidad
 
-::left::
+## El criterio decide la dirección.
 
-La IA puede ayudarnos a investigar, contrastar hipótesis, explorar alternativas y desarrollar.
-
-Pero también puede implementar muy rápido una respuesta a la pregunta equivocada.
-
-::right::
-
-<img class="side-asset" src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
+<AIImpact />
 
 <!--
 Notas del ponente:
-Meter aquí tu visión de IA con criterio.
+Plantear la pregunta incómoda: «Si un agente genera una interfaz navegable tan deprisa, ¿qué aportan ahora diseño e ingeniería?».
 
-Puedes decir:
-Usar IA para construir más rápido está bien. Pero antes hay que decidir qué merece la pena construir. Si no, solo estamos poniendo turbo a una dirección equivocada.
+Producto define la hipótesis y las prioridades; diseño evalúa la experiencia, la coherencia y la accesibilidad; ingeniería valora viabilidad, arquitectura, contratos, seguridad y mantenimiento. Los tres participan en decidir qué evidencia falta. El trabajo repetitivo de producir pantallas puede disminuir, pero eso no equivale a haber validado el problema ni garantiza que el prototipo esté preparado para producción. Vale la pena mencionar el reto de formar criterio en perfiles junior.
 
-Conectar con Research, Plan, Implement:
-- Research para entender.
-- Plan para decidir.
-- Implement para construir.
+Puedes decir: «Un agente puede construir cinco alternativas y las cinco pueden responder a la pregunta equivocada».
 
-La IA ayuda en las tres fases, pero no sustituye el criterio.
+Conectar con Research (entender), Plan (decidir), Implement (construir) y Measure (aprender). La IA acelera, no sustituye el criterio.
 -->
 
 ---
@@ -510,18 +462,22 @@ class: takeaway-slide
 
 # Antes de abrir una issue
 
-## Cuatro preguntas que merece la pena contestar
+## Cuatro preguntas, también al prototipar con IA
 
 <div class="takeaway-questions">
   <div><span>01</span><strong>¿Qué problema real estamos resolviendo?</strong></div>
-  <div><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
-  <div><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
-  <div><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
+  <div v-click><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
+  <div v-click><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
+  <div v-click><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
 </div>
 
 <!--
 Notas del ponente:
-Esta es la diapositiva para fotografiar y usar al día siguiente. No convertirla en burocracia: una corrección pequeña no requiere un documento. Sirve para pensar mejor tickets, refactors, funcionalidades y encargos a agentes de IA.
+Esta es la diapositiva para fotografiar y usar al día siguiente. Sus cuatro preguntas siguen siendo válidas aunque una Issue pueda activar un agente que genere un prototipo en Storybook.
+
+Antes de lanzar el flujo, preguntar: ¿qué problema tratamos de entender?, ¿qué evidencia tenemos?, ¿es un prototipo la intervención más barata y útil?, ¿qué observación nos hará iterar, descartar o desarrollar? Una preview bonita no contesta automáticamente la cuarta pregunta.
+
+No convertirlo en burocracia: una corrección pequeña no requiere un documento. Sirve para tickets, refactors, funcionalidades y encargos a agentes de IA.
 -->
 
 ---
