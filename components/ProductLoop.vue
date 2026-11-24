@@ -48,7 +48,7 @@
 <style scoped>
 .product-loop { width: min(59rem,100%); margin: .25rem auto 0; }
 /* Size against the fixed Slidev canvas, never the device viewport. */
-.product-loop svg { display: block; width: 100%; height: 20rem; }
+.product-loop svg { display: block; width: 100%; height: 19rem; }
 .product-loop__route { stroke: var(--deck-accent, #f97316); }
 .product-loop__number {
   fill: var(--deck-accent-light, #fdba74);

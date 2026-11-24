@@ -70,8 +70,4 @@ const chapterLabel = computed(() => String(activeChapter.value + 1).padStart(2, 
 .deck-footer__progress span { height: 3px; flex: 1; background: rgba(148,163,184,.32); }
 .deck-footer__progress .deck-footer__progress-step--active { background: var(--deck-accent, #f97316); }
 .deck-footer__counter { color: var(--deck-ink, #f8fafc); font-variant-numeric: tabular-nums; white-space: nowrap; }
-@media (max-width: 700px) {
-  .deck-footer { left: 2rem; right: 2rem; gap: .6rem; font-size: .64rem; grid-template-columns: minmax(0,1fr) 4rem auto; }
-  .deck-footer__chapter { gap: .4rem; }
-}
 </style>

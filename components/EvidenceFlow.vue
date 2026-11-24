@@ -28,10 +28,10 @@ defineProps<{ belief: string; reality: string; learning: string }>()
   align-items: start;
   gap: .85rem;
   max-width: 59rem;
-  margin-top: 2.3rem;
+  margin-top: 1.4rem;
 }
 .evidence-flow__item {
-  min-height: 10rem;
+  min-height: 9rem;
   padding: 1.1rem .5rem .7rem 0;
   border-top: 2px solid var(--deck-rule, #64748b);
 }
@@ -61,10 +61,4 @@ defineProps<{ belief: string; reality: string; learning: string }>()
 }
 .evidence-flow__item--real { border-color: var(--deck-evidence, #67e8f9); }
 .evidence-flow__item--learning { border-color: var(--deck-accent, #f97316); }
-@media (max-width: 700px) {
-  .evidence-flow { grid-template-columns: 1fr; gap: .2rem; margin-top: .8rem; }
-  .evidence-flow__item { min-height: 0; padding: .35rem 0 .6rem; }
-  .evidence-flow__item small { margin-bottom: .2rem; }
-  .evidence-flow__arrow { margin: 0; transform: rotate(90deg); }
-}
 </style>
