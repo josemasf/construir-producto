@@ -11,7 +11,7 @@
       </div>
       <p>Un prototipo no valida la hipótesis: producto, diseño e ingeniería deciden qué merece construirse.</p>
     </div>
-    <img src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
+    <img class="ai-impact__illustration" src="/images/ia-criterio-side-right.png" alt="Una persona dirige un vehículo mientras un asistente de IA lo acelera" />
   </figure>
 </template>
 
@@ -31,18 +31,15 @@
 .ai-impact__direction small { color:var(--deck-accent-light); }
 .ai-impact strong { display:block; font-family:var(--deck-font-display); font-size:1.65rem; line-height:1.16; letter-spacing:-.04em; }
 .ai-impact p { margin:.2rem 0 0; font-size:.98rem; line-height:1.38; }
-:global(.slidev-layout.ai-impact-slide) .ai-impact img {
-  /* Preserve the original illustration's colours; fade only the paper edges.
-     Size the actual image rather than masking a wider object-fit box. */
+figure.ai-impact > img.ai-impact__illustration {
+  /* Show the complete original artwork as an illustration on paper.
+     Constrain both dimensions without clipping or altering its colours. */
   display:block;
   justify-self:center;
   width:auto;
-  height:17rem;
+  height:auto;
   max-width:100%;
   max-height:17rem;
   object-fit:contain;
-  mask-image:linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
-             linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
-  mask-composite:intersect;
 }
 </style>
