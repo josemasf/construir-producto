@@ -36,7 +36,7 @@ layout: statement
 class: statement-thesis
 ---
 
-# Un producto técnicamente impecable que nadie necesita sigue siendo algo que nadie necesita.
+# Un producto técnicamente impecable que nadie necesita sigue siendo algo que <span class="thesis-emphasis">nadie necesita</span>.
 
 <!--
 Notas del ponente:
@@ -58,7 +58,7 @@ class: progreso-visible
 
 Medir, escuchar, borrar, decidir y renunciar se ve mucho menos.
 
-Por eso muchas veces premiamos lo que parece avance, aunque no reduzca ninguna incertidumbre importante.
+No todo lo que parece avance reduce incertidumbre.
 
 <!--
 Notas del ponente:
@@ -242,8 +242,6 @@ class: evidence-slide
 
 <MetricsToDecision />
 
-<p class="metrics-case-note"><strong>Ejemplo hipotético:</strong> recomendación → ficha → enlace al proveedor. Ese recorrido puede orientar decisiones, pero un clic no demuestra satisfacción.</p>
-
 <!--
 Notas del ponente:
 Fusionamos la explicación de analítica y los eventos propuestos para Qué Veo Ahora.
@@ -309,9 +307,7 @@ layout: default
 class: experiment-shift-slide
 ---
 
-# Experimentos baratos,
-
-# aprendizaje rápido
+# Experimentos baratos, aprendizaje rápido
 
 <ExperimentShift />
 
@@ -465,10 +461,10 @@ class: takeaway-slide
 ## Cuatro preguntas, también al prototipar con IA
 
 <div class="takeaway-questions">
-  <div><span>01</span><strong>¿Qué problema real estamos resolviendo?</strong></div>
+  <div><span>01</span><strong>¿Qué problema real resolvemos?</strong></div>
   <div v-click><span>02</span><strong>¿Qué evidencia tenemos?</strong></div>
-  <div v-click><span>03</span><strong>¿Cuál es la intervención mínima que crea valor o reduce riesgo?</strong></div>
-  <div v-click><span>04</span><strong>¿Qué señal nos dirá si funcionó?</strong></div>
+  <div v-click><span>03</span><strong>¿Qué intervención mínima crea valor o reduce riesgo?</strong></div>
+  <div v-click><span>04</span><strong>¿Cómo sabremos si ha funcionado?</strong></div>
 </div>
 
 <!--

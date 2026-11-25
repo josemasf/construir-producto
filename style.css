@@ -39,7 +39,7 @@
   text-wrap: balance;
 }
 .slidev-layout h1 {
-  max-width: 24ch;
+  max-width: calc(100% - 3rem);
   margin-bottom: 1.05rem;
   font-family: var(--deck-font-display);
   font-size: 2.75rem;
@@ -69,14 +69,14 @@
 
 .slidev-layout.default,
 .slidev-layout.two-cols-header {
-  padding: 3rem 4.5rem 4.35rem;
+  padding: 2.5rem 4.5rem 3.75rem;
   background-color: var(--deck-bg);
   background-image: none;
 }
 .slidev-layout.default::after,
 .slidev-layout.two-cols-header::after {
   position: absolute;
-  top: 3.2rem;
+  top: 2.8rem;
   right: 4.5rem;
   width: 2rem;
   height: 3px;
@@ -198,16 +198,6 @@
 .slidev-layout.two-cols-header li { font-size: 1.07rem; line-height: 1.37; }
 .slidev-layout.two-cols-header p { max-width: 31rem; }
 
-.slidev-layout.responsibility-slide,
-.slidev-layout.stop-signals-slide { overflow: hidden; }
-.slidev-layout.responsibility-slide h1,
-.slidev-layout.stop-signals-slide h1 { max-width: 21ch; }
-.slidev-layout.responsibility-slide h2,
-.slidev-layout.stop-signals-slide h2,
-.slidev-layout.responsibility-slide ul,
-.slidev-layout.stop-signals-slide ul { max-width: 58%; }
-.slidev-layout.responsibility-slide li,
-.slidev-layout.stop-signals-slide li { font-size: 1.07rem; line-height: 1.4; }
 .responsibility-side-asset,
 .stop-signals-side-asset {
   /*
@@ -482,44 +472,6 @@
   line-height: 1.3;
 }
 
-@media (max-width: 700px) {
-  .slidev-layout.default,
-  .slidev-layout.two-cols-header,
-  .slidev-layout.section,
-  .slidev-layout.statement,
-  .slidev-layout.cover,
-  .slidev-layout.end { padding: 2rem; }
-  .slidev-layout.cover.progreso-visible { padding: 2rem 2rem 4rem 52%; }
-  .concept-grid,
-  .case-story,
-  .audience-choices,
-  .options-grid,
-  .technical-decision { gap: .65rem; }
-  .case-story { grid-template-columns: 1fr; }
-  .case-story__question { border-right: 0; border-bottom: 2px solid var(--deck-accent); padding: 0 0 .6rem; }
-  .slidev-layout.responsibility-slide ul,
-  .slidev-layout.stop-signals-slide ul,
-  .slidev-layout.responsibility-slide h2,
-  .slidev-layout.stop-signals-slide h2 { max-width: 58%; }
-  .responsibility-side-asset,
-  .stop-signals-side-asset {
-    right: 3%;
-    top: 50%;
-    bottom: auto;
-    transform: translateY(-40%);
-    width: 37%;
-    height: 70%;
-  }
-  .slidev-layout h1 { font-size: 2.3rem; }
-  .slidev-layout.cover h1 { font-size: 2.85rem; }
-  .slidev-layout.section h1 { font-size: 3rem; }
-  .slidev-layout.statement h1 { font-size: 2.35rem; }
-  .concept-panel strong,
-  .options-grid strong { font-size: 1.2rem; }
-  .technical-decision strong { font-size: 1.13rem; }
-  .takeaway-questions strong { font-size: 1.06rem; }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .slidev-layout *, .slidev-layout *::before, .slidev-layout *::after {
     animation-duration: .01ms !important;
@@ -528,74 +480,25 @@
 }
 
 
-/* Slides 17, 22 and 24: fit the fixed Slidev canvas, including the footer.
- * Keep these layouts independent of the viewport width. */
-.slidev-layout.experiment-shift-slide,
-.slidev-layout.ai-impact-slide,
-.slidev-layout.takeaway-slide {
-  padding: 2.5rem 4.5rem 3.75rem;
-}
-.slidev-layout.experiment-shift-slide h1,
-.slidev-layout.ai-impact-slide h1,
-.slidev-layout.takeaway-slide h1 {
-  max-width: 100%;
-  font-size: 2.5rem;
-  line-height: 1.08;
-  margin-bottom: .5rem;
-}
-.slidev-layout.experiment-shift-slide h1 + h1 { margin-top: 0; }
-.slidev-layout.ai-impact-slide h2,
-.slidev-layout.takeaway-slide h2 {
-  font-size: 1.2rem;
-  line-height: 1.3;
-  margin-bottom: .75rem;
-}
-.slidev-layout.experiment-shift-slide .experiment-shift { margin-top: .65rem; }
-.slidev-layout.experiment-shift-slide .experiment-shift__row {
-  grid-template-columns: minmax(0, .75fr) 2.25rem minmax(0, 1.25fr);
-  min-height: 4.9rem;
-  gap: .7rem;
-  padding: .4rem 0;
-}
-.slidev-layout.experiment-shift-slide .experiment-shift__row > span {
-  transform: none;
-  line-height: 1;
-}
-.slidev-layout.experiment-shift-slide .experiment-shift strong {
-  display: block;
-  font-size: 1.22rem;
-  line-height: 1.2;
-}
-.slidev-layout.experiment-shift-slide .experiment-shift p {
-  font-size: .92rem;
-  line-height: 1.25;
-  margin: .2rem 0 0;
-}
-.slidev-layout.experiment-shift-slide .experiment-shift figcaption {
-  margin-top: .6rem;
-  font-size: .98rem;
-  line-height: 1.25;
-}
-.slidev-layout.ai-impact-slide .ai-impact {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1.5rem;
-  margin-top: .5rem;
-}
-.slidev-layout.ai-impact-slide .ai-impact__message { gap: .75rem; }
-.slidev-layout.ai-impact-slide .ai-impact__message > div { padding: .4rem 0 .45rem .85rem; }
-.slidev-layout.ai-impact-slide .ai-impact strong { font-size: 1.5rem; line-height: 1.16; }
-.slidev-layout.ai-impact-slide .ai-impact p { font-size: .98rem; line-height: 1.35; }
-.slidev-layout.ai-impact-slide .ai-impact img {
-  width: 100%;
-  max-height: 17rem;
-  object-fit: contain;
-}
-.slidev-layout.takeaway-slide .takeaway-questions { margin-top: .75rem; }
-.slidev-layout.takeaway-slide .takeaway-questions > div {
-  min-height: 3.65rem;
-  padding: .45rem 0;
-}
-.slidev-layout.takeaway-slide .takeaway-questions strong {
-  font-size: 1.2rem;
-  line-height: 1.3;
-}
+
+/* Shared fixed-canvas composition; the footer has a dedicated safe area. */
+.thesis-emphasis { color: var(--deck-accent-dark); }
+.slidev-layout.default h1 { margin-bottom: .65rem; }
+.slidev-layout.default h2 { margin-bottom: .8rem; }
+.slidev-layout.evidence-slide { padding-bottom: 3.75rem; }
+.slidev-layout.loop-slide h1 { margin-bottom: .4rem; max-width: calc(100% - 3rem); }
+.slidev-layout.sequence-slide .build-sequence strong { color:var(--deck-accent-light); font-size:2.65rem; }
+.slidev-layout.audience-slide .audience-choices > div { min-height:4.5rem; padding:.45rem 0; }
+.slidev-layout.audience-slide .audience-choices span { display:grid; place-items:center; border:1px solid var(--deck-rule); border-radius:50%; height:2rem; font-size:1.1rem; }
+.slidev-layout.audience-slide .audience-reveal { margin-top:.65rem; }
+.slidev-layout.options-slide .options-grid { margin-top:1.1rem; gap:.9rem 2rem; }
+.slidev-layout.options-slide .options-grid section { min-height:6.5rem; }
+.slidev-layout.options-slide .options-grid section:nth-child(2) { border-color:var(--deck-evidence); }
+.slidev-layout.technical-decision-slide .technical-decision { gap:1.5rem; margin-top:1rem; }
+.slidev-layout.technical-decision-slide .technical-decision > div { min-height:8.5rem; padding:.8rem 1rem; }
+.technical-decision__old strong { color:var(--deck-muted); }
+.technical-decision__new { background:rgba(249,115,22,.06)!important; }
+.takeaway-questions { margin-top:.8rem; }
+.takeaway-questions > div { min-height:3.8rem; padding:.45rem 0; }
+.takeaway-questions span { font-size:1.3rem; }
+.takeaway-questions strong { font-size:1.35rem; line-height:1.22; }
