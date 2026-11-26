@@ -4,7 +4,7 @@ layout: cover
 background: /images/cover-producto.png
 title: "De escribir código a construir producto"
 info: |
-  Versión corta: 13 minutos de exposición y 2 de margen.
+  Versión corta: 11 minutos y 40 segundos de exposición, 1 minuto y 20 segundos de participación y 2 minutos de margen.
 class: text-left portada
 transition: slide-left
 mdc: true
@@ -42,6 +42,26 @@ class: statement-thesis
 
 ---
 layout: default
+class: audience-slide
+---
+
+# Levantad la mano
+
+## ¿Habéis desarrollado algo que después nadie ha utilizado?
+
+<div class="audience-choices">
+  <div><span>1</span><strong>Sí, una funcionalidad.</strong></div>
+  <div><span>2</span><strong>Sí, un proyecto entero.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">Que funcione no significa que aporte valor.</p>
+
+<!--
+01:00–01:10. Levantar la mano; no pedir explicaciones largas. Revelar el mensaje y pasar a web, servicio y producto.
+-->
+
+---
+layout: default
 class: concept-slide
 ---
 
@@ -52,7 +72,7 @@ class: concept-slide
 <ConceptLayers />
 
 <!--
-01:00–02:00. Es una definición práctica para esta charla, no universal: web, funciona; servicio, resuelve un problema; producto comercial, hay disposición a pagar directa o indirectamente por resolverlo.
+01:10–02:00. Es una definición práctica para esta charla, no universal: web, funciona; servicio, resuelve un problema; producto comercial, hay disposición a pagar directa o indirectamente por resolverlo.
 -->
 
 
@@ -75,6 +95,24 @@ class: case-slide
 
 ---
 layout: default
+class: audience-slide
+---
+
+# Una petición aparentemente sencilla
+
+## ¿Cuánto cuesta añadir un campo a una pantalla?
+
+<div class="audience-choices">
+  <div><span>1</span><strong>¿Qué hay que hacer para que funcione?</strong></div>
+  <div><span>2</span><strong>¿Qué cuesta mantenerlo después?</strong></div>
+</div>
+
+<!--
+03:00–03:20. Pedir una o dos respuestas cortas. Avanzar a la siguiente diapositiva para contrastarlas con los costes.
+-->
+
+---
+layout: default
 class: options-slide
 ---
 
@@ -90,7 +128,7 @@ class: options-slide
 </div>
 
 <!--
-03:00–04:00. Una petición menor puede merecer una respuesta rápida. No hace falta un estudio para cada campo: el esfuerzo de validación debe ser proporcional al riesgo, coste e incertidumbre. Escuchar al cliente no implica ejecutar automáticamente su solución. Incluso lo barato de construir tiene coste de existencia.
+03:20–04:00. Una petición menor puede merecer una respuesta rápida. No hace falta un estudio para cada campo: el esfuerzo de validación debe ser proporcional al riesgo, coste e incertidumbre. Escuchar al cliente no implica ejecutar automáticamente su solución. Incluso lo barato de construir tiene coste de existencia.
 -->
 
 ---
@@ -111,6 +149,28 @@ class: stop-signals-slide
 
 ---
 layout: default
+class: audience-slide
+---
+
+# Tú decides · 30 segundos
+
+## Un mercado exporta muchos más CSV que otro. ¿Qué harías primero?
+
+<div class="audience-choices">
+  <div><span>A</span><strong>Mejorar los filtros.</strong></div>
+  <div><span>B</span><strong>Mejorar las exportaciones.</strong></div>
+  <div><span>C</span><strong>Investigar por qué exportan tanto.</strong></div>
+  <div><span>D</span><strong>Esperar a tener más información.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">Sin conocer la causa, A y B son apuestas. C puede aportar evidencia para decidir.</p>
+
+<!--
+05:00–05:30. Pedir votar A, B, C o D. Escuchar un razonamiento breve; revelar el criterio, sin presentar una respuesta universal. Mostrar el descubrimiento real en la siguiente diapositiva.
+-->
+
+---
+layout: default
 class: options-slide
 ---
 
@@ -126,7 +186,7 @@ class: options-slide
 </div>
 
 <!--
-05:00–07:00. Caso real comentado en la charla: comparar el uso de búsqueda y exportación, preguntar por qué se exporta y descubrir el contexto de integración. La intervención puede ser comercial o de integración, no otra pantalla. No publicar cifras, mercados ni datos internos en una presentación pública; usar detalles solo oralmente ante audiencia autorizada. No afirmar que la solución ya se implantó.
+05:30–07:00. Caso real comentado en la charla: comparar el uso de búsqueda y exportación, preguntar por qué se exporta y descubrir el contexto de integración. La intervención puede ser comercial o de integración, no otra pantalla. No publicar cifras, mercados ni datos internos en una presentación pública; usar detalles solo oralmente ante audiencia autorizada. No afirmar que la solución ya se implantó.
 -->
 
 ---
@@ -157,6 +217,26 @@ class: loop-slide
 
 ---
 layout: default
+class: audience-slide
+---
+
+# Si construir es diez veces más barato…
+
+## ¿Deberíamos construir diez veces más funcionalidades?
+
+<div class="audience-choices">
+  <div><span>A</span><strong>Sí, aprovechar la capacidad extra.</strong></div>
+  <div><span>B</span><strong>Depende del valor que aporten.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">Abaratar la creación no elimina el coste de existencia.</p>
+
+<!--
+09:00–09:20. Supuesto hipotético, no dato medido. Pedir respuestas rápidas; revelar el mensaje y enlazar con el impacto de la IA.
+-->
+
+---
+layout: default
 class: ai-impact-slide
 ---
 
@@ -167,7 +247,7 @@ class: ai-impact-slide
 <AIImpact />
 
 <!--
-09:00–11:00. La IA abarata generar alternativas, no mantenerlas ni validarlas. Producto define hipótesis, diseño evalúa experiencia, ingeniería valora viabilidad, seguridad y mantenimiento. Un prototipo Storybook con componentes reales y MSW puede ser útil si reduce incertidumbre; una conversación puede ser todavía más barata. Evitar duplicar aplicaciones o automatizar procesos que no entendemos.
+09:20–11:00. La IA abarata generar alternativas, no mantenerlas ni validarlas. Producto define hipótesis, diseño evalúa experiencia, ingeniería valora viabilidad, seguridad y mantenimiento. Un prototipo Storybook con componentes reales y MSW puede ser útil si reduce incertidumbre; una conversación puede ser todavía más barata. Evitar duplicar aplicaciones o automatizar procesos que no entendemos.
 -->
 
 

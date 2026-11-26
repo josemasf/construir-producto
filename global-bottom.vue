@@ -5,10 +5,10 @@ import { useNav } from '@slidev/client'
 const { currentPage, total } = useNav()
 
 const shortChapters = [
-  { label: 'Del problema al producto', start: 1, end: 3 },
-  { label: 'El coste de construir', start: 4, end: 6 },
-  { label: 'Datos y contexto', start: 7, end: 8 },
-  { label: 'Ingeniería con criterio', start: 9, end: 12 },
+  { label: 'Del problema al producto', start: 1, end: 4 },
+  { label: 'El coste de construir', start: 5, end: 8 },
+  { label: 'Datos y contexto', start: 9, end: 11 },
+  { label: 'Ingeniería con criterio', start: 12, end: 16 },
 ] as const
 
 const extendedChapters = [
@@ -23,7 +23,7 @@ const totalSlides = computed(() => total.value)
 const chapters = computed(() => totalSlides.value === extendedChapters[extendedChapters.length - 1].end ? extendedChapters : shortChapters)
 const fullBleedSlides = computed(() => new Set(totalSlides.value === extendedChapters[extendedChapters.length - 1].end
   ? [1, 2, 3, 4, 7, 10, 14, 20, totalSlides.value]
-  : [1, 2, 8, totalSlides.value]))
+  : [1, 2, 11, totalSlides.value]))
 
 const visible = computed(() => !fullBleedSlides.value.has(currentPage.value))
 const activeChapter = computed(() => {
