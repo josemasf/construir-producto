@@ -2,26 +2,32 @@
 import { computed } from 'vue'
 import { useNav } from '@slidev/client'
 
-const { currentPage } = useNav()
+const { currentPage, total } = useNav()
 
-/**
- * Los capítulos coinciden con las 25 diapositivas del guion.
- * La navegación se oculta en ilustraciones de impacto y separadores.
- */
-const chapters = [
-  { label: 'Del código al problema', start: 1, end: 6 },
+const shortChapters = [
+  { label: 'Del problema al producto', start: 1, end: 3 },
+  { label: 'El coste de construir', start: 4, end: 6 },
+  { label: 'Datos y contexto', start: 7, end: 8 },
+  { label: 'Ingeniería con criterio', start: 9, end: 12 },
+] as const
+
+const extendedChapters = [
+  { label: 'Del problema al código', start: 1, end: 6 },
   { label: 'Seguir construyendo', start: 7, end: 10 },
   { label: 'La realidad del usuario', start: 11, end: 13 },
   { label: 'Aprender a decidir', start: 14, end: 19 },
   { label: 'Ingeniería con criterio', start: 20, end: 25 },
 ] as const
 
-const fullBleedSlides = new Set([1, 2, 3, 4, 7, 10, 14, 20, 25])
-const totalSlides = 25
+const totalSlides = computed(() => total.value)
+const chapters = computed(() => totalSlides.value === 25 ? extendedChapters : shortChapters)
+const fullBleedSlides = computed(() => new Set(totalSlides.value === 25
+  ? [1, 2, 3, 4, 7, 10, 14, 20, totalSlides.value]
+  : [1, 2, 8, totalSlides.value]))
 
-const visible = computed(() => !fullBleedSlides.has(currentPage.value))
+const visible = computed(() => !fullBleedSlides.value.has(currentPage.value))
 const activeChapter = computed(() => {
-  const index = chapters.findIndex((chapter) => currentPage.value >= chapter.start && currentPage.value <= chapter.end)
+  const index = chapters.value.findIndex((chapter) => currentPage.value >= chapter.start && currentPage.value <= chapter.end)
   return index >= 0 ? index : 0
 })
 const pageLabel = computed(() => String(currentPage.value).padStart(2, '0'))
