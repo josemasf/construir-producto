@@ -75,19 +75,38 @@ class: concept-slide
 
 ---
 layout: default
-class: case-slide
+class: example-cards-slide
 ---
 
 # Qué Veo Ahora
 
 ## Construir más no siempre es avanzar.
 
-<CaseDecisionFlow />
-
-<p class="hypothesis-note">Proyecto real; flujo ilustrativo, no resultados de analítica.</p>
+<div class="example-cards">
+  <section v-click class="example-card">
+    <small>01 · EL PROBLEMA</small>
+    <strong>Elegir una película</strong>
+    <p>Recomendaciones por estado de ánimo y plataformas.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · LA TRAMPA</small>
+    <strong>Otra funcionalidad</strong>
+    <p>Buscador, favoritos, listas compartidas… La IA lo hacía fácil.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>03 · EL COSTE</small>
+    <strong>Crear no es mantener</strong>
+    <p>Más código, servicios y gastos recurrentes.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>04 · LA DECISIÓN</small>
+    <strong>Cerrar el servicio</strong>
+    <p>No conseguí monetizarlo suficientemente.</p>
+  </section>
+</div>
 
 <!--
-03:15–04:45. Contar la experiencia personal: el usuario quiere encontrar algo que ver, no acumular filtros. La IA facilitó añadir funcionalidades. Cerré el servicio porque no conseguí monetizarlo suficientemente. No atribuir métricas o comportamientos no medidos. Reservar la explicación de cómo medir para el siguiente ejercicio.
+03:15–04:45. Contar una tarjeta por clic. No atribuir métricas no medidas. No repetir el caso al hablar de cierre.
 -->
 
 ---
@@ -160,22 +179,38 @@ class: audience-slide
 
 ---
 layout: default
-class: options-slide
+class: example-cards-slide
 ---
 
 # «Solo es añadir un campo»
 
 ## Crearlo es solo una parte del coste.
 
-<div class="options-grid">
-  <section><span>01</span><strong>Desarrollo</strong><p>Contratos, datos y dependencias.</p></section>
-  <section><span>02</span><strong>Calidad</strong><p>Pruebas y compatibilidad.</p></section>
-  <section><span>03</span><strong>Operación</strong><p>Soporte y mantenimiento.</p></section>
-  <section><span>04</span><strong>Producto</strong><p>Valor, frecuencia y alcance.</p></section>
+<div class="example-cards">
+  <section v-click class="example-card">
+    <small>01 · EJEMPLO</small>
+    <strong>El dato ya existe</strong>
+    <p>Quizá basta con mostrarlo o cambiar su etiqueta.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · DEPENDENCIAS</small>
+    <strong>El dato está en otra aplicación</strong>
+    <p>Puede requerir una API, sincronización, eventos y pruebas.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>03 · FRECUENCIA</small>
+    <strong>Crear un concesionario</strong>
+    <p>Una tarea pequeña, repetida muchas veces, puede justificar una inversión.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>04 · CRITERIO</small>
+    <strong>Validación proporcional</strong>
+    <p>Si es sencillo y aporta valor, hazlo. Si hay incertidumbre, entiende primero.</p>
+  </section>
 </div>
 
 <!--
-09:00–10:15. Escuchar una petición no implica ejecutar literalmente la solución. Añadir un campo puede requerir contratos, pruebas, eventos, documentación y soporte. Validación proporcional: si es una corrección clara y de bajo riesgo, actuar rápido; si hay alcance incierto o coste recurrente, entender primero el objetivo. Distinguir necesidad común de personalización a medida.
+09:00–10:15. Avanzar una tarjeta por clic. Contrastar ejemplos; evitar cifras internas. No convertir una petición pequeña en burocracia.
 -->
 
 ---
@@ -217,22 +252,38 @@ class: audience-slide
 
 ---
 layout: default
-class: options-slide
+class: example-cards-slide
 ---
 
 # ¿Por qué exportamos tanto a CSV?
 
-## Un comportamiento distinto no implica que falte una feature.
+## Un prototipo descartado nos llevó a investigar.
 
-<div class="options-grid">
-  <section><span>01</span><strong>Observación</strong><p>Distinto uso de CSV entre mercados.</p></section>
-  <section><span>02</span><strong>Hipótesis</strong><p>¿Mejorar búsqueda o exportación?</p></section>
-  <section><span>03</span><strong>Contexto</strong><p>Integraciones ausentes; verificaciones manuales.</p></section>
-  <section><span>04</span><strong>Decisión</strong><p>Explorar la integración antes de construir.</p></section>
+<div class="example-cards">
+  <section v-click class="example-card">
+    <small>01 · INTUICIÓN</small>
+    <strong>Simplificar el buscador</strong>
+    <p>Muchas columnas. Prototipo rápido, descartado antes de implementarlo.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · EVIDENCIA</small>
+    <strong>Comparar el uso real</strong>
+    <p>Exportaciones por mercado; ponderar también por usuarios y frecuencia.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>03 · CONTEXTO</small>
+    <strong>Faltan integraciones</strong>
+    <p>El equipo explicó por qué algunos usuarios necesitan verificar datos fuera.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>04 · DECISIÓN</small>
+    <strong>Explorar antes de construir</strong>
+    <p>Valorar una integración o acción comercial, no otra pantalla.</p>
+  </section>
 </div>
 
 <!--
-12:45–15:00. Caso real: describir la comparación de búsquedas y exportaciones, preguntar qué podría explicar las diferencias y contar cómo el contexto de integración reveló verificaciones manuales. La respuesta puede ser comercial o de integración, no una pantalla nueva. No afirmar que se implantó la solución. No publicar cifras, nombres de mercados ni datos internos; detalles solo oralmente ante audiencia autorizada.
+12:45–15:00. Revelar 01 y 02; dejar que el público aporte su hipótesis antes de 03. No presentar la explicación como validada con clientes ni la solución como implantada.
 -->
 
 ---
@@ -263,35 +314,64 @@ class: loop-slide
 
 ---
 layout: default
-class: technical-decision-slide
+class: example-cards-slide
 ---
 
 # Cambia la conversación técnica
 
-## De «¿qué podemos construir?» a «¿qué riesgo o problema reducimos?».
+## Del diseño de una pieza al riesgo que reduce.
 
-<div class="technical-decision">
-  <div class="technical-decision__old"><small>ANTES</small><strong>«Hay que rehacer este módulo porque está mal diseñado».</strong></div>
-  <div class="technical-decision__new"><small>CON CRITERIO DE PRODUCTO</small><strong>«Esta complejidad provoca fallos y retrasos; simplifiquemos y comprobemos el efecto».</strong></div>
+<div class="example-cards example-cards--three">
+  <section v-click class="example-card">
+    <small>01 · ANTES</small>
+    <strong>«Hay que rehacer el módulo»</strong>
+    <p>Una preferencia técnica no explica la prioridad.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · EJEMPLO</small>
+    <strong>La complejidad provoca bloqueos</strong>
+    <p>Timeouts, entregas lentas o fallos de base de datos.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>03 · DESPUÉS</small>
+    <strong>Reducir el riesgo</strong>
+    <p>Simplificar y medir fallos, latencia o tiempo de entrega.</p>
+  </section>
 </div>
 
-<p class="technical-decision__bottom">La buena ingeniería no deja de priorizar refactors: explica su impacto en el equipo, en el usuario o en el riesgo.</p>
-
 <!--
-16:45–18:00. Comparar las dos formulaciones del refactor. Seguridad, accesibilidad, fiabilidad y mantenibilidad no necesitan una justificación directa en ingresos; sí explicar el riesgo o problema que reducen. Ejemplo: medir fallos, retrasos o tiempo de cambio antes y después.
+16:45–18:00. Relacionar el ejemplo con fiabilidad y mantenibilidad. No reducir toda mejora a ingresos.
 -->
 
 ---
 layout: default
-class: experiment-shift-slide
+class: example-cards-slide
 ---
 
 # Experimentos baratos, aprendizaje rápido
 
-<ExperimentShift />
+## Aprender antes de comprometerse con una implementación.
+
+<div class="example-cards example-cards--three">
+  <section v-click class="example-card">
+    <small>01 · FACTURACIÓN</small>
+    <strong>Una factura en modo lectura</strong>
+    <p>Descubrir necesidades de impuestos sin construir todo el flujo.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · AUTOMATIZACIÓN</small>
+    <strong>Validar primero con personas</strong>
+    <p>Entender el flujo y sus excepciones antes de automatizarlo.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>03 · PROTOTIPO</small>
+    <strong>Issue → agente → Storybook</strong>
+    <p>Simular con MSW, obtener feedback y decidir qué validar.</p>
+  </section>
+</div>
 
 <!--
-18:00–19:30. Validar primero con la intervención más barata: conversación, observación o proceso manual asistido antes de automatizarlo. Si hace falta contrastar una interfaz, una issue puede describir hipótesis y criterio de validación; un agente reutiliza componentes Vue, genera stories de Storybook con MSW y comparte preview. Es un flujo propuesto, no un resultado real; feedback interno no equivale a validación con usuarios. Decidir si iterar, descartar o implementar.
+18:00–19:30. Un ejemplo por clic. El flujo Storybook es una propuesta; feedback interno no equivale a validación de usuario.
 -->
 
 ---
@@ -316,17 +396,33 @@ class: audience-slide
 
 ---
 layout: default
-class: ai-impact-slide
+class: example-cards-slide
 ---
 
 # La IA aumenta la velocidad
 
 ## El criterio decide la dirección.
 
-<AIImpact />
+<div class="example-cards example-cards--three">
+  <section v-click class="example-card">
+    <small>01 · PRODUCTO</small>
+    <strong>¿Qué problema y para quién?</strong>
+    <p>Hipótesis, prioridad y criterio de éxito.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · DISEÑO</small>
+    <strong>¿Cómo se usa?</strong>
+    <p>Experiencia, coherencia y accesibilidad.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>03 · INGENIERÍA</small>
+    <strong>¿Cómo lo hacemos sostenible?</strong>
+    <p>Viabilidad, contratos, seguridad y mantenimiento.</p>
+  </section>
+</div>
 
 <!--
-20:15–21:45. La IA acelera alternativas, no garantiza que respondan al problema ni que estén listas para producción. Producto define hipótesis y prioridades; diseño evalúa experiencia y accesibilidad; ingeniería evalúa viabilidad, contratos, seguridad y mantenimiento. Los tres participan en identificar evidencia que falta. No duplicar la explicación de Storybook ni la del coste de existencia.
+20:15–21:45. Explicar el Product Trio como responsabilidades, no necesariamente tres personas. Un prototipo no valida por sí mismo la hipótesis.
 -->
 
 ---
