@@ -4,12 +4,12 @@ layout: cover
 background: /images/cover-producto.png
 title: "De escribir código a construir producto"
 info: |
-  Versión corta: 11 minutos y 40 segundos de exposición, 1 minuto y 20 segundos de participación y 2 minutos de margen.
+  Versión principal: 19 minutos y 5 segundos de exposición, 4 minutos y 25 segundos de participación y 1 minuto y 30 segundos de margen.
 class: text-left portada
 transition: slide-left
 mdc: true
 colorSchema: dark
-duration: 15min
+duration: 25min
 ---
 
 # De escribir código
@@ -24,9 +24,8 @@ José María Santos
 Tech Lead
 
 <!--
-00:00–00:20. No vengo a decir que el código no importe. Importa más cuando sabemos para qué lo escribimos.
+00:00–00:30. Abrir con calma. No vengo a decir que el código no importe: importa más cuando sabemos para qué lo escribimos. Plantear la diferencia entre actividad y resultado.
 -->
-
 
 ---
 layout: statement
@@ -36,9 +35,8 @@ class: statement-thesis
 # Un producto técnicamente impecable que nadie necesita sigue siendo algo que <span class="thesis-emphasis">nadie necesita</span>.
 
 <!--
-00:20–01:00. Una arquitectura impecable no compensa la falta de valor. Desarrollar se ve; medir, escuchar y renunciar se ve menos. No confundamos actividad con progreso.
+00:30–01:20. Dejar unos segundos para leer. Una arquitectura impecable no compensa la falta de valor. No confundir cantidad de entregas con progreso; medir y renunciar también son trabajo.
 -->
-
 
 ---
 layout: default
@@ -57,7 +55,7 @@ class: audience-slide
 <p v-click class="audience-reveal">Que funcione no significa que aporte valor.</p>
 
 <!--
-01:00–01:10. Levantar la mano; no pedir explicaciones largas. Revelar el mensaje y pasar a web, servicio y producto.
+01:20–02:00. Pedir levantar la mano. Escuchar un ejemplo breve si aparece y revelar el mensaje. No abrir debate largo.
 -->
 
 ---
@@ -72,9 +70,8 @@ class: concept-slide
 <ConceptLayers />
 
 <!--
-01:10–02:00. Es una definición práctica para esta charla, no universal: web, funciona; servicio, resuelve un problema; producto comercial, hay disposición a pagar directa o indirectamente por resolverlo.
+02:00–03:15. Definición práctica, no universal: web, funciona; servicio, resuelve un problema; producto comercial, existe disposición a pagar por resolverlo, directa o indirectamente. La señal económica no sustituye a la utilidad.
 -->
-
 
 ---
 layout: default
@@ -90,7 +87,57 @@ class: case-slide
 <p class="hypothesis-note">Proyecto real; flujo ilustrativo, no resultados de analítica.</p>
 
 <!--
-02:00–03:00. El usuario quiere encontrar algo que ver, no acumular filtros. Con IA era fácil añadir funcionalidades. El servicio acabó cerrándose porque no conseguí monetizarlo suficientemente. No atribuir métricas ni comportamientos no medidos.
+03:15–04:45. Contar la experiencia personal: el usuario quiere encontrar algo que ver, no acumular filtros. La IA facilitó añadir funcionalidades. Cerré el servicio porque no conseguí monetizarlo suficientemente. No atribuir métricas o comportamientos no medidos. Reservar la explicación de cómo medir para el siguiente ejercicio.
+-->
+
+---
+layout: default
+class: audience-slide
+---
+
+# Tú decides · 75 segundos
+
+## Entran en la web, pero no sabemos si consiguen elegir. ¿Qué harías primero?
+
+<div class="audience-choices">
+  <div><span>A</span><strong>Construir un recomendador más avanzado con IA.</strong></div>
+  <div><span>B</span><strong>Hablar con personas para entender cómo eligen.</strong></div>
+  <div><span>C</span><strong>Instrumentar el recorrido hasta el proveedor.</strong></div>
+  <div><span>D</span><strong>Simplificar directamente el flujo existente.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">No hay respuesta universal: B y C pueden aportar evidencia para decidir si D tiene sentido. A sigue siendo una apuesta sin justificar.</p>
+
+<!--
+04:45–06:00. Ejercicio hipotético, no diagnóstico de Qué Veo Ahora. Pedir votar, escuchar dos razones breves y revelar el criterio. No hay solución universal: hablar o medir ayuda a decidir si simplificar tiene sentido.
+-->
+
+---
+layout: default
+class: evidence-slide
+---
+
+# Medir para decidir · Qué Veo Ahora
+
+<MetricsToDecision />
+
+<!--
+06:00–07:15. Pregunta previa: ¿ayudamos a elegir? Ejemplos de eventos que podríamos instrumentar: abrir recomendación, ficha, enlace del proveedor, nueva búsqueda o abandono. Pulsar un enlace no prueba satisfacción ni reproducción. Contrastar con conversaciones y decidir qué intervención probar. Son hipótesis de instrumentación, no resultados reales.
+-->
+
+---
+layout: default
+class: responsibility-slide
+---
+
+# Con usuarios cambia la responsabilidad
+
+## Ya no solo construimos: alguien depende de que funcione.
+
+<ResponsibilityMap />
+
+<!--
+07:15–08:15. Pasar de la utilidad a la responsabilidad: alguien depende del servicio. Explicar disponibilidad, seguridad, soporte y expectativas desde el punto de vista de quien lo usa. No repetir aquí el coste de cada feature; ese es el siguiente caso.
 -->
 
 ---
@@ -108,7 +155,7 @@ class: audience-slide
 </div>
 
 <!--
-03:00–03:20. Pedir una o dos respuestas cortas. Avanzar a la siguiente diapositiva para contrastarlas con los costes.
+08:15–09:00. Pedir dos respuestas concretas: qué hay que tocar y qué ocurre una vez desplegado. No mostrar todavía los costes; avanzar para contrastar.
 -->
 
 ---
@@ -128,7 +175,7 @@ class: options-slide
 </div>
 
 <!--
-03:20–04:00. Una petición menor puede merecer una respuesta rápida. No hace falta un estudio para cada campo: el esfuerzo de validación debe ser proporcional al riesgo, coste e incertidumbre. Escuchar al cliente no implica ejecutar automáticamente su solución. Incluso lo barato de construir tiene coste de existencia.
+09:00–10:15. Escuchar una petición no implica ejecutar literalmente la solución. Añadir un campo puede requerir contratos, pruebas, eventos, documentación y soporte. Validación proporcional: si es una corrección clara y de bajo riesgo, actuar rápido; si hay alcance incierto o coste recurrente, entender primero el objetivo. Distinguir necesidad común de personalización a medida.
 -->
 
 ---
@@ -143,16 +190,15 @@ class: stop-signals-slide
 <StopSignals />
 
 <!--
-04:00–05:00. Qué Veo Ahora ilustra que retirar puede ser una decisión responsable cuando el valor no compensa el coste. También podemos mantener pequeño, experimentar o invertir. Si cerramos, comunicar y retirar ordenadamente.
+10:15–11:45. Retomar el cierre de Qué Veo Ahora. Retirar puede ser una decisión responsable, no un fracaso. No es un dilema binario: invertir cuando hay valor, experimentar si falta evidencia, mantener pequeño si funciona, retirar si no compensa. Avisar, preservar datos cuando proceda y documentar aprendizajes. No repetir la historia completa del proyecto.
 -->
-
 
 ---
 layout: default
 class: audience-slide
 ---
 
-# Tú decides · 30 segundos
+# Tú decides · 60 segundos
 
 ## Un mercado exporta muchos más CSV que otro. ¿Qué harías primero?
 
@@ -166,7 +212,7 @@ class: audience-slide
 <p v-click class="audience-reveal">Sin conocer la causa, A y B son apuestas. C puede aportar evidencia para decidir.</p>
 
 <!--
-05:00–05:30. Pedir votar A, B, C o D. Escuchar un razonamiento breve; revelar el criterio, sin presentar una respuesta universal. Mostrar el descubrimiento real en la siguiente diapositiva.
+11:45–12:45. Votar A, B, C o D. Escuchar un par de razonamientos antes de revelar. No presentar una respuesta universal. Avanzar al descubrimiento real.
 -->
 
 ---
@@ -186,7 +232,7 @@ class: options-slide
 </div>
 
 <!--
-05:30–07:00. Caso real comentado en la charla: comparar el uso de búsqueda y exportación, preguntar por qué se exporta y descubrir el contexto de integración. La intervención puede ser comercial o de integración, no otra pantalla. No publicar cifras, mercados ni datos internos en una presentación pública; usar detalles solo oralmente ante audiencia autorizada. No afirmar que la solución ya se implantó.
+12:45–15:00. Caso real: describir la comparación de búsquedas y exportaciones, preguntar qué podría explicar las diferencias y contar cómo el contexto de integración reveló verificaciones manuales. La respuesta puede ser comercial o de integración, no una pantalla nueva. No afirmar que se implantó la solución. No publicar cifras, nombres de mercados ni datos internos; detalles solo oralmente ante audiencia autorizada.
 -->
 
 ---
@@ -199,7 +245,7 @@ class: statement-thesis
 # El contexto explica <span class="thesis-emphasis">por qué</span>.
 
 <!--
-07:00–08:00. La telemetría permite observar uso real, no leer intenciones. Complementarla con conversaciones y comprobar calidad de la instrumentación. Una exportación frecuente puede indicar una necesidad fuera de nuestra aplicación.
+15:00–15:45. La telemetría registra comportamiento, no intención. Comprobar instrumentación y complementar con personas. El ejemplo anterior demuestra que una misma señal admite explicaciones distintas.
 -->
 
 ---
@@ -212,7 +258,40 @@ class: loop-slide
 <ProductLoop />
 
 <!--
-08:00–09:00. Primero entender el problema, luego decidir la intervención mínima, implementar si procede y medir. No es una cascada obligatoria. Seguridad, accesibilidad y fiabilidad también justifican acciones. El código es una consecuencia de la decisión.
+15:45–16:45. Research: entender. Plan: decidir alcance, riesgos y señal de éxito. Implement: construir si procede. Measure: aprender. No es una cascada rígida. Conectar ahora con decisiones técnicas y experimentos concretos.
+-->
+
+---
+layout: default
+class: technical-decision-slide
+---
+
+# Cambia la conversación técnica
+
+## De «¿qué podemos construir?» a «¿qué riesgo o problema reducimos?».
+
+<div class="technical-decision">
+  <div class="technical-decision__old"><small>ANTES</small><strong>«Hay que rehacer este módulo porque está mal diseñado».</strong></div>
+  <div class="technical-decision__new"><small>CON CRITERIO DE PRODUCTO</small><strong>«Esta complejidad provoca fallos y retrasos; simplifiquemos y comprobemos el efecto».</strong></div>
+</div>
+
+<p class="technical-decision__bottom">La buena ingeniería no deja de priorizar refactors: explica su impacto en el equipo, en el usuario o en el riesgo.</p>
+
+<!--
+16:45–18:00. Comparar las dos formulaciones del refactor. Seguridad, accesibilidad, fiabilidad y mantenibilidad no necesitan una justificación directa en ingresos; sí explicar el riesgo o problema que reducen. Ejemplo: medir fallos, retrasos o tiempo de cambio antes y después.
+-->
+
+---
+layout: default
+class: experiment-shift-slide
+---
+
+# Experimentos baratos, aprendizaje rápido
+
+<ExperimentShift />
+
+<!--
+18:00–19:30. Validar primero con la intervención más barata: conversación, observación o proceso manual asistido antes de automatizarlo. Si hace falta contrastar una interfaz, una issue puede describir hipótesis y criterio de validación; un agente reutiliza componentes Vue, genera stories de Storybook con MSW y comparte preview. Es un flujo propuesto, no un resultado real; feedback interno no equivale a validación con usuarios. Decidir si iterar, descartar o implementar.
 -->
 
 ---
@@ -232,7 +311,7 @@ class: audience-slide
 <p v-click class="audience-reveal">Abaratar la creación no elimina el coste de existencia.</p>
 
 <!--
-09:00–09:20. Supuesto hipotético, no dato medido. Pedir respuestas rápidas; revelar el mensaje y enlazar con el impacto de la IA.
+19:30–20:15. Supuesto hipotético, no dato medido. Pedir respuestas rápidas y revelar la conclusión. Trasladar la conversación de capacidad de producción a criterio.
 -->
 
 ---
@@ -247,9 +326,8 @@ class: ai-impact-slide
 <AIImpact />
 
 <!--
-09:20–11:00. La IA abarata generar alternativas, no mantenerlas ni validarlas. Producto define hipótesis, diseño evalúa experiencia, ingeniería valora viabilidad, seguridad y mantenimiento. Un prototipo Storybook con componentes reales y MSW puede ser útil si reduce incertidumbre; una conversación puede ser todavía más barata. Evitar duplicar aplicaciones o automatizar procesos que no entendemos.
+20:15–21:45. La IA acelera alternativas, no garantiza que respondan al problema ni que estén listas para producción. Producto define hipótesis y prioridades; diseño evalúa experiencia y accesibilidad; ingeniería evalúa viabilidad, contratos, seguridad y mantenimiento. Los tres participan en identificar evidencia que falta. No duplicar la explicación de Storybook ni la del coste de existencia.
 -->
-
 
 ---
 layout: default
@@ -268,9 +346,8 @@ class: takeaway-slide
 </div>
 
 <!--
-11:00–12:40. Recorrer las cuatro preguntas. Aplicarlas proporcionalmente: una corrección pequeña no requiere un documento. Sirven también antes de encargar trabajo a agentes. Esta es la diapositiva para fotografiar.
+21:45–23:00. Recorrer las cuatro preguntas progresivamente. Aplicarlas proporcionalmente, sin burocratizar cambios pequeños. Sirven también antes de encargar un prototipo o un refactor a un agente. Es la diapositiva para fotografiar.
 -->
-
 
 ---
 layout: end
@@ -284,5 +361,5 @@ José María Santos
 josemariasantos.com
 
 <!--
-12:40–13:00. Cerrar con la pregunta. Dos minutos de margen hasta los 15; debate después de la exposición.
+23:00–23:30. Cerrar con la pregunta y dejar unos segundos de reflexión. Margen de 1 minuto y 30 segundos hasta el objetivo de 25 minutos; debate abierto después.
 -->
