@@ -20,8 +20,8 @@ const extendedChapters = [
 ] as const
 
 const totalSlides = computed(() => total.value)
-const chapters = computed(() => totalSlides.value === 25 ? extendedChapters : shortChapters)
-const fullBleedSlides = computed(() => new Set(totalSlides.value === 25
+const chapters = computed(() => totalSlides.value === extendedChapters[extendedChapters.length - 1].end ? extendedChapters : shortChapters)
+const fullBleedSlides = computed(() => new Set(totalSlides.value === extendedChapters[extendedChapters.length - 1].end
   ? [1, 2, 3, 4, 7, 10, 14, 20, totalSlides.value]
   : [1, 2, 8, totalSlides.value]))
 

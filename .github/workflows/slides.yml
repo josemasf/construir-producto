@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "slides.md"
+      - "slides-extended.md"
       - "style.css"
       - "global-bottom.vue"
       - "components/**"
@@ -17,6 +18,7 @@ on:
       - main
     paths:
       - "slides.md"
+      - "slides-extended.md"
       - "style.css"
       - "global-bottom.vue"
       - "components/**"
