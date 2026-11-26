@@ -502,3 +502,28 @@
 .takeaway-questions > div { min-height:3.8rem; padding:.45rem 0; }
 .takeaway-questions span { font-size:1.3rem; }
 .takeaway-questions strong { font-size:1.35rem; line-height:1.22; }
+
+/* Ejemplos progresivos: mantienen el espacio reservado durante los clics. */
+.slidev-layout.example-cards-slide h1 { margin-bottom:.65rem; font-size:2.55rem; }
+.slidev-layout.example-cards-slide h2 { margin-bottom:.85rem; }
+.example-cards {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.85rem;
+  margin-top:.85rem;
+}
+.example-cards--three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.example-card {
+  min-width:0;
+  min-height:8.1rem;
+  padding:.85rem 1rem;
+  background:var(--deck-surface);
+  border:1px solid var(--deck-rule);
+  border-radius:.65rem;
+  border-top:3px solid var(--deck-accent);
+}
+.example-card small { display:block; margin-bottom:.45rem; color:var(--deck-accent-light); font-size:.72rem; font-weight:800; letter-spacing:.075em; }
+.example-card strong { display:block; font-family:var(--deck-font-display); font-size:1.28rem; line-height:1.2; }
+.slidev-layout .example-card p { margin:.48rem 0 0; font-size:1rem; line-height:1.38; }
+.example-card--last { border-top-color:var(--deck-evidence); }
+.example-card--last small { color:var(--deck-evidence); }

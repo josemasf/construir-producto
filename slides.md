@@ -4,12 +4,12 @@ layout: cover
 background: /images/cover-producto.png
 title: "De escribir código a construir producto"
 info: |
-  Guion detallado para ponencia técnica en Slidev.
+  Versión principal: 19 minutos y 5 segundos de exposición, 4 minutos y 25 segundos de participación y 1 minuto y 30 segundos de margen.
 class: text-left portada
 transition: slide-left
 mdc: true
 colorSchema: dark
-duration: 45min
+duration: 25min
 ---
 
 # De escribir código
@@ -24,11 +24,7 @@ José María Santos
 Tech Lead
 
 <!--
-Notas del ponente:
-Abrir con calma, sin vender humo. La idea principal es sencilla: muchas veces confundimos construir software con avanzar. Esta charla va de cambiar esa mirada.
-
-Mensaje clave:
-No vengo a decir que el código no importe. Vengo a decir que el código importa más cuando sabemos para qué lo estamos escribiendo.
+00:00–00:30. Abrir con calma. No vengo a decir que el código no importe: importa más cuando sabemos para qué lo escribimos. Plantear la diferencia entre actividad y resultado.
 -->
 
 ---
@@ -39,46 +35,28 @@ class: statement-thesis
 # Un producto técnicamente impecable que nadie necesita sigue siendo algo que <span class="thesis-emphasis">nadie necesita</span>.
 
 <!--
-Notas del ponente:
-Dejar unos segundos de silencio tras la frase. Es la tesis emocional de la charla.
-
-Puedes decir:
-Esta frase duele un poco, sobre todo a quienes disfrutamos construyendo. Pero es bastante sana. Porque nos recuerda que la calidad técnica no compensa la falta de valor.
+00:30–01:20. Dejar unos segundos para leer. Una arquitectura impecable no compensa la falta de valor. No confundir cantidad de entregas con progreso; medir y renunciar también son trabajo.
 -->
 
 ---
-layout: cover
-background: /images/progreso-visible.png
-class: progreso-visible
+layout: default
+class: audience-slide
 ---
 
-# La trampa del progreso visible
+# Levantad la mano
 
-## Desarrollar se ve.
+## ¿Habéis desarrollado algo que después nadie ha utilizado?
 
-Medir, escuchar, borrar, decidir y renunciar se ve mucho menos.
+<div class="audience-choices">
+  <div><span>1</span><strong>Sí, una funcionalidad.</strong></div>
+  <div><span>2</span><strong>Sí, un proyecto entero.</strong></div>
+</div>
 
-No todo lo que parece avance reduce incertidumbre.
+<p v-click class="audience-reveal">Que funcione no significa que aporte valor.</p>
 
 <!--
-Notas del ponente:
-Puedes usar ejemplos:
-- Hemos montado autenticación.
-- Hemos añadido filtros.
-- Hemos creado un dashboard.
-- Hemos metido una cola, caché, analítica, tests E2E, IA, notificaciones.
-
-Y luego lanzar la pregunta:
-¿Y estamos más cerca de resolver un problema real o solo tenemos una aplicación más sofisticada?
+01:20–02:00. Pedir levantar la mano. Escuchar un ejemplo breve si aparece y revelar el mensaje. No abrir debate largo.
 -->
-
----
-layout: section
----
-
-# 1 · Del código al problema
-
-## Antes de preguntarnos si podemos construirlo, necesitamos saber para quién y para qué.
 
 ---
 layout: default
@@ -92,189 +70,43 @@ class: concept-slide
 <ConceptLayers />
 
 <!--
-Notas del ponente:
-En esta charla uso una definición deliberadamente práctica, no una definición académica universal.
-
-Todo puede empezar siendo una web: algo que hemos construido y funciona.
-Si además resuelve un problema real para alguien, empiezo a tratarlo como un servicio.
-Y si ese problema tiene suficiente valor como para que alguien esté dispuesto a pagar por resolverlo, entonces hablo de producto.
-
-La idea que quiero fijar no es la etiqueta, sino el salto de criterio:
-- Web: ¿funciona?
-- Servicio: ¿resuelve un problema?
-- Producto: ¿el problema tiene suficiente valor como para pagar por resolverlo?
-
-Remate:
-El código puede demostrar que sabemos construir. El servicio demuestra utilidad. El producto necesita además una señal económica de valor.
+02:00–03:15. Definición práctica, no universal: web, funciona; servicio, resuelve un problema; producto comercial, existe disposición a pagar por resolverlo, directa o indirectamente. La señal económica no sustituye a la utilidad.
 -->
 
 ---
 layout: default
-class: case-slide
+class: example-cards-slide
 ---
 
-# Caso conductor · Qué Veo Ahora
+# Qué Veo Ahora
 
-## El usuario no busca filtros: quiere encontrar algo que ver.
+## Construir más no siempre es avanzar.
 
-<CaseDecisionFlow />
-
-<p class="hypothesis-note">Producto real; hipótesis y decisiones del ejemplo planteadas con fines didácticos, sin atribuirle métricas.</p>
-
-<!--
-Notas del ponente:
-Qué Veo Ahora es un proyecto real con recomendaciones por estado de ánimo y preferencias, filtros y datos de plataformas. Fuente: README de josemasf/que-veo-hoy.
-Las hipótesis siguientes NO son resultados demostrados del proyecto. Evitar cualquier afirmación sobre uso o conversión sin datos.
-Volveremos a este caso después para tomar decisiones distintas.
--->
-
----
-layout: section
----
-
-# 2 · El espejismo de seguir construyendo
-
-## Cuando no sabemos qué hacer, solemos hacer más de lo que ya dominamos.
-
----
-layout: default
-class: sequence-slide
----
-
-# Cuando algo no despega,
-
-# hacemos lo que sabemos hacer
-
-<div class="build-sequence">
-  <span v-click>OTRA FEATURE</span>
-  <span v-click>OTRO REFACTOR</span>
-  <span v-click>OTRO DASHBOARD</span>
-  <strong v-click>¿Pero qué hemos aprendido?</strong>
+<div class="example-cards">
+  <section v-click class="example-card">
+    <small>01 · EL PROBLEMA</small>
+    <strong>Elegir una película</strong>
+    <p>Recomendaciones por estado de ánimo y plataformas.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · LA TRAMPA</small>
+    <strong>Otra funcionalidad</strong>
+    <p>Buscador, favoritos, listas compartidas… La IA lo hacía fácil.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>03 · EL COSTE</small>
+    <strong>Crear no es mantener</strong>
+    <p>Más código, servicios y gastos recurrentes.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>04 · LA DECISIÓN</small>
+    <strong>Cerrar el servicio</strong>
+    <p>No conseguí monetizarlo suficientemente.</p>
+  </section>
 </div>
 
 <!--
-Notas del ponente:
-Aquí puedes meter humor seco:
-Cuando eres técnico, cualquier problema empieza pareciendo una issue de Jira. Incluso cuando el problema no es técnico.
-
-La idea es que construir más nos da sensación de control, porque es el terreno que conocemos.
--->
-
----
-layout: default
-class: question-families-slide
----
-
-# Hay preguntas que no se contestan programando
-
-<QuestionFamilies />
-
-<!--
-Notas del ponente:
-Insistir en que estas preguntas son incómodas pero necesarias.
-
-No hace falta convertirnos en Product Managers, pero sí necesitamos criterio de producto para no usar la ingeniería como anestesia.
--->
-
----
-layout: cover
-background: /images/feature-peligrosa.png
----
-
-# La feature más peligrosa
-
-La que construimos para evitar una conversación incómoda.
-
-<!--
-Notas del ponente:
-De nuevo, pausa.
-
-Ejemplos:
-- Añadimos más opciones porque no sabemos para quién estamos diseñando.
-- Creamos configuración avanzada porque no queremos elegir un flujo principal.
-- Automatizamos algo que todavía no sabemos si merece ser automatizado.
-- Metemos IA antes de entender el proceso manual.
-
-Remate:
-A veces una feature no es una solución. Es una forma elegante de aplazar una decisión.
--->
-
----
-layout: default
-class: responsibility-slide
----
-
-# 3 · Con usuarios cambia la responsabilidad
-
-## Ya no solo construimos: alguien depende de que funcione.
-
-<ResponsibilityMap />
-
-<!--
-Notas del ponente:
-Esta diapositiva sustituye la separadora del bloque y la lista de responsabilidades.
-Tener usuarios no convierte por sí solo algo en un producto viable, pero sí introduce obligaciones. Una decisión de arquitectura o un refactor puede afectar a gente real.
-Pasa del ejemplo de funcionalidades al coste de mantener un servicio. Recuperar Qué Veo Ahora para preguntar qué cambia cuando alguien espera poder elegir qué ver.
--->
-
----
-layout: default
-class: evidence-slide
----
-
-# El usuario rompe nuestras fantasías
-
-<EvidenceFlow belief="Pensamos que más filtros facilitarán elegir." reality="Puede explorar, abandonar o no entender una opción." learning="Antes de ampliar filtros, hay que descubrir qué dificulta decidir." />
-
-<p class="hypothesis-note">Ejemplo hipotético: una hipótesis de comportamiento, no un resultado medido.</p>
-
-<!--
-Notas del ponente:
-No inventar datos ni afirmar que este comportamiento ha ocurrido en Qué Veo Ahora. Si existen observaciones contrastadas, mostrar las evidencias. Un usuario no siempre utiliza lo que construimos como imaginábamos.
--->
-
----
-layout: default
-class: evidence-slide
----
-
-# Medir para decidir · Qué Veo Ahora
-
-<MetricsToDecision />
-
-<!--
-Notas del ponente:
-Fusionamos la explicación de analítica y los eventos propuestos para Qué Veo Ahora.
-Antes de instrumentar, formular la pregunta: ¿ayudamos al usuario a encontrar algo?
-Señales que podríamos instrumentar, sin asegurar que ya existan: abre recomendación, consulta ficha, pulsa enlace del proveedor, vuelve a buscar o abandona.
-Luego interpretar con cautela y complementar con conversaciones: pulsar un enlace no significa ver la película ni estar satisfecho.
-Elegir una intervención con la evidencia obtenida. Un dashboard que nunca cambia decisiones no sirve como producto de análisis.
-NO presentar métricas, conversiones o comportamientos hipotéticos como resultados reales.
--->
-
----
-layout: section
----
-
-# 4 · Aprender a no construir
-
-## La decisión más madura reduce incertidumbre antes de añadir complejidad.
-
----
-layout: default
-class: decision-slide
----
-
-# Antes de desarrollar
-
-<p class="product-criterion-intro"><span>CRITERIO DE PRODUCTO</span> Elegir qué merece la pena hacer, no solo qué sabemos implementar.</p>
-
-<DecisionTree />
-
-<!--
-Notas del ponente:
-No todo problema se resuelve con código; tampoco toda decisión técnica requiere investigar usuarios.
-Seguridad, accesibilidad, fiabilidad y mantenimiento pueden reducir riesgos significativos. La pregunta es qué justifica actuar y qué intervención lo resuelve con menos coste.
+03:15–04:45. Contar una tarjeta por clic. No atribuir métricas no medidas. No repetir el caso al hablar de cierre.
 -->
 
 ---
@@ -282,7 +114,7 @@ layout: default
 class: audience-slide
 ---
 
-# Tú decides · 90 segundos
+# Tú decides · 75 segundos
 
 ## Entran en la web, pero no sabemos si consiguen elegir. ¿Qué harías primero?
 
@@ -296,28 +128,89 @@ class: audience-slide
 <p v-click class="audience-reveal">No hay respuesta universal: B y C pueden aportar evidencia para decidir si D tiene sentido. A sigue siendo una apuesta sin justificar.</p>
 
 <!--
-Notas del ponente:
-Pedir levantar la mano y razonar la opción elegida; revelar la respuesta después.
-El resultado depende de la evidencia disponible y del coste de cada intervención. Evitar ridiculizar cualquiera de las opciones.
-Caso hipotético, no diagnóstico de un problema real. Reservar tres minutos incluyendo el debate.
+04:45–06:00. Ejercicio hipotético, no diagnóstico de Qué Veo Ahora. Pedir votar, escuchar dos razones breves y revelar el criterio. No hay solución universal: hablar o medir ayuda a decidir si simplificar tiene sentido.
 -->
 
 ---
 layout: default
-class: experiment-shift-slide
+class: evidence-slide
 ---
 
-# Experimentos baratos, aprendizaje rápido
+# Medir para decidir · Qué Veo Ahora
 
-<ExperimentShift />
+<MetricsToDecision />
 
 <!--
-Notas del ponente:
-No vender esto como metodología mágica. El prototipo solo tiene sentido cuando reduce una incertidumbre concreta; una conversación o una medición pueden ser mejores.
+06:00–07:15. Pregunta previa: ¿ayudamos a elegir? Ejemplos de eventos que podríamos instrumentar: abrir recomendación, ficha, enlace del proveedor, nueva búsqueda o abandono. Pulsar un enlace no prueba satisfacción ni reproducción. Contrastar con conversaciones y decidir qué intervención probar. Son hipótesis de instrumentación, no resultados reales.
+-->
 
-Ejemplo didáctico con Qué Veo Ahora: alguien propone añadir filtros para elegir película. Primero entendemos qué dificulta esa decisión; si hace falta contrastar una propuesta visual, el PO abre una GitHub Issue con la hipótesis y criterios de validación. Un agente especializado reutiliza los componentes Vue, prepara una rama prototype/* con stories de Storybook y estados simulados con MSW, y una PR ofrece la preview para recibir feedback de producto, diseño e ingeniería. Después decidimos si probarlo con usuarios, iterar, construir o descartar.
+---
+layout: default
+class: responsibility-slide
+---
 
-Esto describe un posible flujo, no una automatización ya verificada ni un resultado real de usuarios. No confundir feedback interno con validación de la hipótesis.
+# Con usuarios cambia la responsabilidad
+
+## Ya no solo construimos: alguien depende de que funcione.
+
+<ResponsibilityMap />
+
+<!--
+07:15–08:15. Pasar de la utilidad a la responsabilidad: alguien depende del servicio. Explicar disponibilidad, seguridad, soporte y expectativas desde el punto de vista de quien lo usa. No repetir aquí el coste de cada feature; ese es el siguiente caso.
+-->
+
+---
+layout: default
+class: audience-slide
+---
+
+# Una petición aparentemente sencilla
+
+## ¿Cuánto cuesta añadir un campo a una pantalla?
+
+<div class="audience-choices">
+  <div><span>1</span><strong>¿Qué hay que hacer para que funcione?</strong></div>
+  <div><span>2</span><strong>¿Qué cuesta mantenerlo después?</strong></div>
+</div>
+
+<!--
+08:15–09:00. Pedir dos respuestas concretas: qué hay que tocar y qué ocurre una vez desplegado. No mostrar todavía los costes; avanzar para contrastar.
+-->
+
+---
+layout: default
+class: example-cards-slide
+---
+
+# «Solo es añadir un campo»
+
+## Crearlo es solo una parte del coste.
+
+<div class="example-cards">
+  <section v-click class="example-card">
+    <small>01 · EJEMPLO</small>
+    <strong>El dato ya existe</strong>
+    <p>Quizá basta con mostrarlo o cambiar su etiqueta.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · DEPENDENCIAS</small>
+    <strong>El dato está en otra aplicación</strong>
+    <p>Puede requerir una API, sincronización, eventos y pruebas.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>03 · FRECUENCIA</small>
+    <strong>Crear un concesionario</strong>
+    <p>Una tarea pequeña, repetida muchas veces, puede justificar una inversión.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>04 · CRITERIO</small>
+    <strong>Validación proporcional</strong>
+    <p>Si es sencillo y aporta valor, hazlo. Si hay incertidumbre, entiende primero.</p>
+  </section>
+</div>
+
+<!--
+09:00–10:15. Avanzar una tarjeta por clic. Contrastar ejemplos; evitar cifras internas. No convertir una petición pequeña en burocracia.
 -->
 
 ---
@@ -332,86 +225,78 @@ class: stop-signals-slide
 <StopSignals />
 
 <!--
-Notas del ponente:
-Fusiona «Cerrar no siempre es fracasar» con las señales para parar.
-El humor se conserva para decir en voz alta: seguir invirtiendo no siempre es constancia, a veces es apego con repositorio.
-No existe una métrica universal que obligue a cerrar. Importan el valor, las personas afectadas, el mantenimiento y el coste de oportunidad.
-Cerrar responsablemente implica avisar, preservar datos si corresponde, retirar el servicio ordenadamente y documentar aprendizajes.
-Conectar con la siguiente diapositiva: no todo exige cerrar; mantener pequeño o experimentar también son decisiones maduras.
+10:15–11:45. Retomar el cierre de Qué Veo Ahora. Retirar puede ser una decisión responsable, no un fracaso. No es un dilema binario: invertir cuando hay valor, experimentar si falta evidencia, mantener pequeño si funciona, retirar si no compensa. Avisar, preservar datos cuando proceda y documentar aprendizajes. No repetir la historia completa del proyecto.
 -->
 
 ---
 layout: default
-class: options-slide
+class: audience-slide
 ---
 
-# No todo acaba en «hacerlo» o «cerrarlo»
+# Tú decides · 60 segundos
 
-<div class="options-grid">
-  <section><span>01</span><strong>Invertir</strong><p>Hay señales de valor y una mejora concreta que merece la pena.</p></section>
-  <section><span>02</span><strong>Experimentar</strong><p>La incertidumbre aún pesa más que la implementación.</p></section>
-  <section><span>03</span><strong>Mantener</strong><p>Ya resuelve una necesidad y no hace falta hacerlo más grande.</p></section>
-  <section><span>04</span><strong>Retirar</strong><p>El valor o aprendizaje no justifican seguir asumiendo el coste.</p></section>
+## Un mercado exporta muchos más CSV que otro. ¿Qué harías primero?
+
+<div class="audience-choices">
+  <div><span>A</span><strong>Mejorar los filtros.</strong></div>
+  <div><span>B</span><strong>Mejorar las exportaciones.</strong></div>
+  <div><span>C</span><strong>Investigar por qué exportan tanto.</strong></div>
+  <div><span>D</span><strong>Esperar a tener más información.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">Sin conocer la causa, A y B son apuestas. C puede aportar evidencia para decidir.</p>
+
+<!--
+11:45–12:45. Votar A, B, C o D. Escuchar un par de razonamientos antes de revelar. No presentar una respuesta universal. Avanzar al descubrimiento real.
+-->
+
+---
+layout: default
+class: example-cards-slide
+---
+
+# ¿Por qué exportamos tanto a CSV?
+
+## Un prototipo descartado nos llevó a investigar.
+
+<div class="example-cards">
+  <section v-click class="example-card">
+    <small>01 · INTUICIÓN</small>
+    <strong>Simplificar el buscador</strong>
+    <p>Muchas columnas. Prototipo rápido, descartado antes de implementarlo.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · EVIDENCIA</small>
+    <strong>Comparar el uso real</strong>
+    <p>Exportaciones por mercado; ponderar también por usuarios y frecuencia.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>03 · CONTEXTO</small>
+    <strong>Faltan integraciones</strong>
+    <p>El equipo explicó por qué algunos usuarios necesitan verificar datos fuera.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>04 · DECISIÓN</small>
+    <strong>Explorar antes de construir</strong>
+    <p>Valorar una integración o acción comercial, no otra pantalla.</p>
+  </section>
 </div>
 
 <!--
-Notas del ponente:
-Evitar el falso dilema entre escalar y fracasar. Muchos productos y servicios deben mantenerse estables.
-Cerrar exige responsabilidad: comunicarlo, preservar datos, desactivar con orden y documentar aprendizajes.
+12:45–15:00. Revelar 01 y 02; dejar que el público aporte su hipótesis antes de 03. No presentar la explicación como validada con clientes ni la solución como implantada.
 -->
 
 ---
-layout: section
+layout: statement
+class: statement-thesis
 ---
 
-# 5 · Criterio de producto en ingeniería
+# Los datos muestran qué.
 
-## No sustituye a la calidad técnica: conecta decisiones de ingeniería con resultados y riesgos.
-
----
-layout: default
-class: technical-decision-slide
----
-
-# Cambia la conversación técnica
-
-## De «¿qué podemos construir?» a «¿qué riesgo o problema reducimos?».
-
-<div class="technical-decision">
-  <div class="technical-decision__old"><small>ANTES</small><strong>«Hay que rehacer este módulo porque está mal diseñado».</strong></div>
-  <div class="technical-decision__new"><small>CON CRITERIO DE PRODUCTO</small><strong>«Esta complejidad provoca fallos y retrasos; simplifiquemos y comprobemos el efecto».</strong></div>
-</div>
-
-<p class="technical-decision__bottom">La buena ingeniería no deja de priorizar refactors: explica su impacto en el equipo, en el usuario o en el riesgo.</p>
+# El contexto explica <span class="thesis-emphasis">por qué</span>.
 
 <!--
-Notas del ponente:
-Fusiona la priorización y la conversación técnica.
-Antes: más features, backlog o una preferencia arquitectónica. Después: aprendizaje, impacto, riesgo o capacidad de entrega.
-No hay que justificar toda mejora con ingresos. Fiabilidad, accesibilidad, seguridad y mantenibilidad pueden ser razones suficientes.
-Una decisión técnica gana fuerza si podemos explicar qué riesgo reduce, cómo sabremos que mejora y qué coste asumimos.
--->
-
----
-layout: default
-class: ai-impact-slide
----
-
-# La IA aumenta la velocidad
-
-## El criterio decide la dirección.
-
-<AIImpact />
-
-<!--
-Notas del ponente:
-Plantear la pregunta incómoda: «Si un agente genera una interfaz navegable tan deprisa, ¿qué aportan ahora diseño e ingeniería?».
-
-Producto define la hipótesis y las prioridades; diseño evalúa la experiencia, la coherencia y la accesibilidad; ingeniería valora viabilidad, arquitectura, contratos, seguridad y mantenimiento. Los tres participan en decidir qué evidencia falta. El trabajo repetitivo de producir pantallas puede disminuir, pero eso no equivale a haber validado el problema ni garantiza que el prototipo esté preparado para producción. Vale la pena mencionar el reto de formar criterio en perfiles junior.
-
-Puedes decir: «Un agente puede construir cinco alternativas y las cinco pueden responder a la pregunta equivocada».
-
-Conectar con Research (entender), Plan (decidir), Implement (construir) y Measure (aprender). La IA acelera, no sustituye el criterio.
+15:00–15:45. La telemetría registra comportamiento, no intención. Comprobar instrumentación y complementar con personas. El ejemplo anterior demuestra que una misma señal admite explicaciones distintas.
 -->
 
 ---
@@ -419,36 +304,125 @@ layout: default
 class: loop-slide
 ---
 
-# Todo desemboca aquí
+# Del problema al código
 
 <ProductLoop />
 
 <!--
-Notas del ponente:
-Esta slide reúne las decisiones de la charla. El ciclo no es una cascada obligatoria y el criterio no es una fase aislada.
+15:45–16:45. Research: entender. Plan: decidir alcance, riesgos y señal de éxito. Implement: construir si procede. Measure: aprender. No es una cascada rígida. Conectar ahora con decisiones técnicas y experimentos concretos.
+-->
 
-Research:
-- Usuarios.
-- Contexto.
-- Alternativas.
-- Problema real.
+---
+layout: default
+class: example-cards-slide
+---
 
-Plan:
-- Alcance.
-- Riesgos.
-- Métricas.
-- Decisiones explícitas.
+# Cambia la conversación técnica
 
-Implement:
-- Código.
-- Tests.
-- Observabilidad.
-- Entrega.
+## Del diseño de una pieza al riesgo que reduce.
 
-Measure:
-- Uso real.
-- Feedback.
-- Decisiones nuevas.
+<div class="example-cards example-cards--three">
+  <section v-click class="example-card">
+    <small>01 · ANTES</small>
+    <strong>«Hay que rehacer el módulo»</strong>
+    <p>Una preferencia técnica no explica la prioridad.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · EJEMPLO</small>
+    <strong>La complejidad provoca bloqueos</strong>
+    <p>Timeouts, entregas lentas o fallos de base de datos.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>03 · DESPUÉS</small>
+    <strong>Reducir el riesgo</strong>
+    <p>Simplificar y medir fallos, latencia o tiempo de entrega.</p>
+  </section>
+</div>
+
+<!--
+16:45–18:00. Relacionar el ejemplo con fiabilidad y mantenibilidad. No reducir toda mejora a ingresos.
+-->
+
+---
+layout: default
+class: example-cards-slide
+---
+
+# Experimentos baratos, aprendizaje rápido
+
+## Aprender antes de comprometerse con una implementación.
+
+<div class="example-cards example-cards--three">
+  <section v-click class="example-card">
+    <small>01 · FACTURACIÓN</small>
+    <strong>Una factura en modo lectura</strong>
+    <p>Descubrir necesidades de impuestos sin construir todo el flujo.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · AUTOMATIZACIÓN</small>
+    <strong>Validar primero con personas</strong>
+    <p>Entender el flujo y sus excepciones antes de automatizarlo.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>03 · PROTOTIPO</small>
+    <strong>Issue → agente → Storybook</strong>
+    <p>Simular con MSW, obtener feedback y decidir qué validar.</p>
+  </section>
+</div>
+
+<!--
+18:00–19:30. Un ejemplo por clic. El flujo Storybook es una propuesta; feedback interno no equivale a validación de usuario.
+-->
+
+---
+layout: default
+class: audience-slide
+---
+
+# Si construir es diez veces más barato…
+
+## ¿Deberíamos construir diez veces más funcionalidades?
+
+<div class="audience-choices">
+  <div><span>A</span><strong>Sí, aprovechar la capacidad extra.</strong></div>
+  <div><span>B</span><strong>Depende del valor que aporten.</strong></div>
+</div>
+
+<p v-click class="audience-reveal">Abaratar la creación no elimina el coste de existencia.</p>
+
+<!--
+19:30–20:15. Supuesto hipotético, no dato medido. Pedir respuestas rápidas y revelar la conclusión. Trasladar la conversación de capacidad de producción a criterio.
+-->
+
+---
+layout: default
+class: example-cards-slide
+---
+
+# La IA aumenta la velocidad
+
+## El criterio decide la dirección.
+
+<div class="example-cards example-cards--three">
+  <section v-click class="example-card">
+    <small>01 · PRODUCTO</small>
+    <strong>¿Qué problema y para quién?</strong>
+    <p>Hipótesis, prioridad y criterio de éxito.</p>
+  </section>
+  <section v-click class="example-card">
+    <small>02 · DISEÑO</small>
+    <strong>¿Cómo se usa?</strong>
+    <p>Experiencia, coherencia y accesibilidad.</p>
+  </section>
+  <section v-click class="example-card example-card--last">
+    <small>03 · INGENIERÍA</small>
+    <strong>¿Cómo lo hacemos sostenible?</strong>
+    <p>Viabilidad, contratos, seguridad y mantenimiento.</p>
+  </section>
+</div>
+
+<!--
+20:15–21:45. Explicar el Product Trio como responsabilidades, no necesariamente tres personas. Un prototipo no valida por sí mismo la hipótesis.
 -->
 
 ---
@@ -468,12 +442,7 @@ class: takeaway-slide
 </div>
 
 <!--
-Notas del ponente:
-Esta es la diapositiva para fotografiar y usar al día siguiente. Sus cuatro preguntas siguen siendo válidas aunque una Issue pueda activar un agente que genere un prototipo en Storybook.
-
-Antes de lanzar el flujo, preguntar: ¿qué problema tratamos de entender?, ¿qué evidencia tenemos?, ¿es un prototipo la intervención más barata y útil?, ¿qué observación nos hará iterar, descartar o desarrollar? Una preview bonita no contesta automáticamente la cuarta pregunta.
-
-No convertirlo en burocracia: una corrección pequeña no requiere un documento. Sirve para tickets, refactors, funcionalidades y encargos a agentes de IA.
+21:45–23:00. Recorrer las cuatro preguntas progresivamente. Aplicarlas proporcionalmente, sin burocratizar cambios pequeños. Sirven también antes de encargar un prototipo o un refactor a un agente. Es la diapositiva para fotografiar.
 -->
 
 ---
@@ -482,17 +451,11 @@ layout: end
 
 # Gracias
 
-## ¿Qué decisión estamos evitando?
-
-¿Y qué necesitaríamos aprender antes de volver a construir?
+## ¿Qué problema resolvemos antes de escribir más código?
 
 José María Santos  
 josemariasantos.com
 
 <!--
-Notas del ponente:
-La diapositiva anterior presenta cuatro preguntas aplicables al día siguiente.
-Cerrar con una pregunta, no recitar de nuevo los aprendizajes.
-Mensaje final: el código importa más cuando sabemos para qué lo estamos escribiendo.
-Dejar silencio para la reflexión y abrir preguntas del público si hay tiempo.
+23:00–23:30. Cerrar con la pregunta y dejar unos segundos de reflexión. Margen de 1 minuto y 30 segundos hasta el objetivo de 25 minutos; debate abierto después.
 -->
