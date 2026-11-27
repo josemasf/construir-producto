@@ -527,3 +527,11 @@
 .slidev-layout .example-card p { margin:.48rem 0 0; font-size:1rem; line-height:1.38; }
 .example-card--last { border-top-color:var(--deck-evidence); }
 .example-card--last small { color:var(--deck-evidence); }
+
+/* Apertura participativa: pregunta protagonista, sin opciones prefijadas. */
+.slidev-layout.opening-question-slide { display:flex; flex-direction:column; justify-content:center; }
+.opening-question { width:100%; max-width:48rem; margin:0 auto; text-align:center; }
+.opening-question small { display:block; margin-bottom:1.35rem; color:var(--deck-accent-light); font-size:.8rem; font-weight:800; letter-spacing:.14em; }
+.slidev-layout.opening-question-slide .opening-question h1 { max-width:100%; margin:0 auto 1.15rem; font-size:3.1rem; line-height:1.16; text-wrap:balance; }
+.slidev-layout.opening-question-slide .opening-question p { margin:0; color:var(--deck-muted); font-size:1.35rem; }
+.opening-question__followup { margin:2rem auto 0; padding:1rem 1.25rem; max-width:39rem; border-top:2px solid var(--deck-accent); color:var(--deck-accent-light); font-size:1.35rem; font-weight:700; line-height:1.35; text-wrap:balance; }

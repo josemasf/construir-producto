@@ -40,22 +40,18 @@ class: statement-thesis
 
 ---
 layout: default
-class: audience-slide
+class: opening-question-slide
 ---
 
-# Levantad la mano
-
-## ¿Habéis desarrollado algo que después nadie ha utilizado?
-
-<div class="audience-choices">
-  <div><span>1</span><strong>Sí, una funcionalidad.</strong></div>
-  <div><span>2</span><strong>Sí, un proyecto entero.</strong></div>
+<div class="opening-question">
+  <small>PREGUNTA A LA AUDIENCIA</small>
+  <h1>¿Alguna vez habéis construido algo que nadie terminó utilizando?</h1>
+  <p>Levantad la mano.</p>
+  <div v-click class="opening-question__followup">¿Qué os habría gustado saber antes de construirlo?</div>
 </div>
 
-<p v-click class="audience-reveal">Que funcione no significa que aporte valor.</p>
-
 <!--
-01:20–02:00. Pedir levantar la mano. Escuchar un ejemplo breve si aparece y revelar el mensaje. No abrir debate largo.
+01:20–02:00. Pedir levantar la mano. Esperar unos segundos. Revelar la segunda pregunta y escuchar un ejemplo breve si surge. Enlazar con la diferencia entre funcionar, resolver y aportar valor.
 -->
 
 ---
